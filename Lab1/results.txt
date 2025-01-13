@@ -1,0 +1,9 @@
+Simulation Cycle Count - 36 clock cycles
+
+Resource Utilization:
+	Logic Elements - 34
+	Registers      - 36
+	Memory         - 0
+	Multipliers    - 0
+
+Maximum Frequency - 265.1MHz
