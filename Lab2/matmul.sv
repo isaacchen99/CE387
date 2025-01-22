@@ -57,7 +57,7 @@ module matmul #(
             a_rd_addr <= ((i / N) * N) + j; // A is row major
             b_rd_addr <= (j * N) + (i % N); // B must go column major
 
-            accum <= accum + (a_dout * B_dout);
+            accum <= accum + (a_dout * b_dout);
           end
 
           else if (j == N) begin // writeback
