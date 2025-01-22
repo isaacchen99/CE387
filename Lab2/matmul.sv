@@ -2,21 +2,21 @@ module matmul #(
   parameter N = 8,
   parameter LOG2_N = 3,
   parameter DATA_WIDTH = 32,
-  parameter ADDR_WIDTH = 6,
+  parameter ADDR_WIDTH = 6
 ) (
   input logic clock,
   input logic reset,
   input logic start,
   output logic done,
   
-  input logic [DATA_WIDTH-1 : 0] a_data,
-  output logic [ADDR_WIDTH-1 : 0] a_addr,
+  input logic [DATA_WIDTH-1 : 0] a_dout,
+  output logic [ADDR_WIDTH-1 : 0] a_rd_addr,
 
-  input logic [DATA_WIDTH-1 : 0] b_data,
-  output logic [ADDR_WIDTH-1 : 0] b_addr,
+  input logic [DATA_WIDTH-1 : 0] b_dout,
+  output logic [ADDR_WIDTH-1 : 0] b_rd_addr,
 
-  output logic [DATA_WIDTH-1 : 0] c_data,
-  output logic [ADDR_WIDTH-1 : 0] c_addr,
+  output logic [DATA_WIDTH-1 : 0] c_din,
+  output logic [ADDR_WIDTH-1 : 0] c_wr_addr,
   output logic c_wr_en
 );
 
@@ -39,10 +39,10 @@ module matmul #(
       case (curr_state)
         IDLE: begin
           done <= 1'b0;
-          a_addr <= 0;
-          b_addr <= 0;
-          c_data <= 0;
-          c_addr <= 0;
+          a_rd_addr <= 0;
+          b_rd_addr <= 0;
+          c_din <= 0;
+          c_wr_addr <= 0;
           c_wr_en <= 1'b0;
 
           i <= 0;
@@ -54,16 +54,16 @@ module matmul #(
           if (j < N) begin // accumulation
             j <= j + 1;
 
-            a_addr <= ((i / N) * N) + j; // A is row major
-            b_addr <= (j * N) + (i % N); // B must go column major
+            a_rd_addr <= ((i / N) * N) + j; // A is row major
+            b_rd_addr <= (j * N) + (i % N); // B must go column major
 
-            accum <= accum + (a_data * b_data);
+            accum <= accum + (a_dout * B_dout);
           end
 
           else if (j == N) begin // writeback
-            c_addr <= i;
+            c_wr_addr <= i;
             c_wr_en <= 1'b1;
-            c_data <= accum;
+            c_din <= accum;
             accum <= 0;
             i <= i + 1;
             j <= 0;
@@ -87,7 +87,7 @@ module matmul #(
       end
 
       CALC: begin
-        if (i == 64) 
+        if (i == N * N) 
           next_state = DONE;
       end
 
