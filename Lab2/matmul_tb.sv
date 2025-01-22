@@ -155,6 +155,8 @@ module matmul_tb ();
 
     @(posedge clock);
     #(CLOCK_PERIOD) start = 1'b1;
+    #(CLOCK_PERIOD)
+    #(CLOCK_PERIOD)
     #(CLOCK_PERIOD) start = 1'b0;
     wait(done);
 
