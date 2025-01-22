@@ -1,0 +1,1 @@
+g++ -O3 -std=c++14  -o motion_detect motion_detect.cpp `pkg-config --cflags --libs opencv4`
