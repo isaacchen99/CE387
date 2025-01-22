@@ -43,11 +43,11 @@ module matmul_top #(
     .start(start),
     .done(done),
     .a_dout(a_dout),
-    .a_addr(a_rd_addr),
+    .a_rd_addr(a_rd_addr),
     .b_dout(b_dout),
-    .b_addr(b_rd_addr),
+    .b_rd_addr(b_rd_addr),
     .c_din(c_din),
-    .c_addr(c_wr_addr),
+    .c_wr_addr(c_wr_addr),
     .c_wr_en(c_wr_en)
   );
 

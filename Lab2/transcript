@@ -1,0 +1,329 @@
+# //  ModelSim SE-64 2020.1 Jan 28 2020 Linux 4.18.0-553.33.1.el8_10.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do matmul_sim.do
+# -9
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vmap 2020.1 Lib Mapping Utility 2020.01 Jan 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:18:01 on Jan 21,2025
+# vlog -reportprogress 300 -work work bram.sv 
+# -- Compiling module bram
+# 
+# Top level modules:
+# 	bram
+# End time: 20:18:01 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:18:01 on Jan 21,2025
+# vlog -reportprogress 300 -work work matmul.sv 
+# -- Compiling module matmul
+# 
+# Top level modules:
+# 	matmul
+# End time: 20:18:01 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:18:01 on Jan 21,2025
+# vlog -reportprogress 300 -work work matmul_top.sv 
+# -- Compiling module matmul_top
+# 
+# Top level modules:
+# 	matmul_top
+# End time: 20:18:01 on Jan 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 20:18:01 on Jan 21,2025
+# vlog -reportprogress 300 -work work matmul_tb.sv 
+# -- Compiling module matmul_tb
+# 
+# Top level modules:
+# 	matmul_tb
+# End time: 20:18:02 on Jan 21,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -classdebug -voptargs="+acc" "+notimingchecks" -L work work.matmul_tb -wlf matmul_tb.wlf 
+# Start time: 20:18:02 on Jan 21,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "matmul(fast)".
+# Loading sv_std.std
+# Loading work.matmul_tb(fast)
+# Loading work.matmul_top(fast)
+# Loading work.matmul(fast)
+# Loading work.bram(fast)
+# @ 20: Loading file b.txt...
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "b.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : matmul_tb.sv(100)
+#    Time: 20 ns  Iteration: 1  Instance: /matmul_tb
+# @ 20: Loading file a.txt...
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "a.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : matmul_tb.sv(76)
+#    Time: 20 ns  Iteration: 1  Instance: /matmul_tb
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 25 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 25 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 35 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 35 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 45 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 45 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 55 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 55 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 65 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 65 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 75 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 75 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 85 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 85 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 95 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 95 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 105 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 105 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 115 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 115 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 125 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 125 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 135 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 135 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 145 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 145 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 155 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 155 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 165 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 165 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 175 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 175 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 185 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 185 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 195 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 195 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 205 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 205 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 215 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 215 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 225 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 225 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 235 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 235 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 245 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 245 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 255 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 255 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 265 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 265 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 275 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 275 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 285 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 285 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 295 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 295 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 305 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 305 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 315 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 315 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 325 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 325 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 335 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 335 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 345 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 345 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 355 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 355 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 365 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 365 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 375 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 375 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 385 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 385 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 395 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 395 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 405 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 405 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 415 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 415 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 425 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 425 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 435 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 435 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 445 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 445 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 455 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 455 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 465 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 465 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 475 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 475 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 485 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 485 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 495 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 495 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 505 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 505 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 515 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 515 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 525 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 525 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 535 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 535 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 545 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 545 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 555 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 555 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 565 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 565 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 575 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 575 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 585 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 585 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 595 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 595 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 605 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 605 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 615 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 615 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 625 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 625 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 635 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 635 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 645 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 645 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 655 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#92(b_write) File: matmul_tb.sv Line: 104
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 655 ns  Iteration: 1  Process: /matmul_tb/#INITIAL#68(a_write) File: matmul_tb.sv Line: 80
+# @ 675: Beginning simulation...
