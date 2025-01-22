@@ -1,0 +1,31 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MT206 |Auto Constrain mode is enabled
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance c_inst.read_addr[0] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance c_inst.read_addr[1] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance c_inst.read_addr[2] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance c_inst.read_addr[3] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance c_inst.read_addr[4] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance c_inst.read_addr[5] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance b_inst.read_addr[0] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance b_inst.read_addr[1] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance b_inst.read_addr[2] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance b_inst.read_addr[3] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance b_inst.read_addr[4] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance b_inst.read_addr[5] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance a_inst.read_addr[0] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance a_inst.read_addr[1] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance a_inst.read_addr[2] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance a_inst.read_addr[3] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance a_inst.read_addr[4] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Removing sequential instance a_inst.read_addr[5] (in view: work.matmul_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MF794 |RAM c_inst.mem[31:0] required 102 registers during mapping 
+@N: MF794 |RAM c_inst.mem[31:0] required 102 registers during mapping 
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage.

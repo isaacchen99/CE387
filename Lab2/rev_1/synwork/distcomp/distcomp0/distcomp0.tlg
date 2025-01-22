@@ -1,0 +1,42 @@
+@N:: Applying property .distcompmodetop with value 1 on module matmul_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module matmul_top in library work
+@N:: Applying property .noprune with value 1 on module matmul_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module bram in library work
+@N:: Applying property .noprune with value 1 on module bram in library work
+@N:: Applying property .distcompnoprune with value 1 on module matmul in library work
+@N:: Applying property .noprune with value 1 on module matmul in library work
+Selecting top level module matmul_top
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab2/matmul.sv":1:7:1:12|Synthesizing module matmul in library work.
+
+	N=32'b00000000000000000000000000001000
+	LOG2_N=32'b00000000000000000000000000000011
+	DATA_WIDTH=32'b00000000000000000000000000100000
+	ADDR_WIDTH=32'b00000000000000000000000000000110
+   Generated name = matmul_8s_3s_32s_6s
+Running optimization stage 1 on matmul_8s_3s_32s_6s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":1:7:1:10|Synthesizing module bram in library work.
+
+	BRAM_ADDR_WIDTH=32'b00000000000000000000000000000110
+	BRAM_DATA_WIDTH=32'b00000000000000000000000000100000
+   Generated name = bram_6s_32s
+Running optimization stage 1 on bram_6s_32s .......
+@N: CL134 :"/home/icl5712/GitHub/CE387/Lab2/bram.sv":16:2:16:10|Found RAM mem, depth=64, width=32
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab2/matmul_top.sv":1:7:1:16|Synthesizing module matmul_top in library work.
+Running optimization stage 1 on matmul_top .......
+Running optimization stage 2 on matmul_top .......
+Running optimization stage 2 on bram_6s_32s .......
+Running optimization stage 2 on matmul_8s_3s_32s_6s .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab2/matmul.sv":35:2:35:10|Trying to extract state machine for register curr_state.
+Extracted state machine for register curr_state
+State machine has 6 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/icl5712/GitHub/CE387/Lab2/rev_1/synwork//distcomp/distcomp0/distcomp0.rt.csv
+

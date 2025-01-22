@@ -1,0 +1,2 @@
+@W: FA406 |Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.
+@W: MT420 |Found inferred clock matmul_top|clock with period 11.26ns. Please declare a user-defined clock on port clock.

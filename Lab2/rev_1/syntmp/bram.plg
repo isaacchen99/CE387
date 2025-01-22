@@ -1,0 +1,14 @@
+@P:  Part : ep4ce6ea22-7
+@P:  Worst Slack : -1.987
+@P:  matmul_top|clock - Estimated Frequency : 75.5 MHz
+@P:  matmul_top|clock - Requested Frequency : 88.8 MHz
+@P:  matmul_top|clock - Estimated Period : 13.244
+@P:  matmul_top|clock - Requested Period : 11.258
+@P:  matmul_top|clock - Slack : -1.987
+@P: matmul_top Part : ep4ce6ea22-7
+@P: matmul_top I/O ATOMs : 87
+@P: matmul_top Total LUTs : 198 
+@P: matmul_top Register bits : 150
+@P: matmul_top .Simple_Multipliers_18_bit : 3
+@P: matmul_top DSP Blocks : 3 (6 nine-bit DSP elements)
+@P:  CPU Time : 0h:00m:02s

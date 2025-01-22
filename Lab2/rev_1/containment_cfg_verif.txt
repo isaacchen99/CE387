@@ -1,0 +1,4 @@
+matmul_top.c_inst work bram 0 1
+matmul_top.b_inst work bram 0 1
+matmul_top.a_inst work bram 0 1
+matmul_top.matmul_inst work matmul 0 1

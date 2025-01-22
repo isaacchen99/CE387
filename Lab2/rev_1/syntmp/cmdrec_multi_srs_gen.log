@@ -1,0 +1,8 @@
+/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter  -link  -multisrs  /home/icl5712/GitHub/CE387/Lab2/rev_1/synwork/bram_comp.srs  -osyn  /home/icl5712/GitHub/CE387/Lab2/rev_1/synwork/bram_mult.srs  -log  /home/icl5712/GitHub/CE387/Lab2/rev_1/synlog/bram_multi_srs_gen.srr 
+relcom:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter -link -multisrs ../synwork/bram_comp.srs -osyn ../synwork/bram_mult.srs -log ../synlog/bram_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:../synwork/bram_comp.srs|io:i|time:1737518629|size:6648|exec:0|csum:120A9DC6B673DA9E7C921015F6B9B642
+file:../synwork/bram_mult.srs|io:o|time:1737518630|size:3221|exec:0|csum:
+file:../synlog/bram_multi_srs_gen.srr|io:o|time:1737518630|size:1422|exec:0|csum:
+file:/vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/syn_nfilter|io:i|time:1543382463|size:12202632|exec:1|csum:2CF5CA82A12C53A85C3E36D57C2461DC
+file:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter|io:i|time:1543382354|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

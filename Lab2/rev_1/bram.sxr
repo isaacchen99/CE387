@@ -1,0 +1,646 @@
+
+BeginView matmul_top matmul_top
+Inst: c_rd_addr_in[5]   c_rd_addr_in_5_ cycloneive_io_ibuf 
+Inst: c_rd_addr_in[4]   c_rd_addr_in_4_ cycloneive_io_ibuf 
+Inst: c_rd_addr_in[3]   c_rd_addr_in_3_ cycloneive_io_ibuf 
+Inst: c_rd_addr_in[2]   c_rd_addr_in_2_ cycloneive_io_ibuf 
+Inst: c_rd_addr_in[1]   c_rd_addr_in_1_ cycloneive_io_ibuf 
+Inst: c_rd_addr_in[0]   c_rd_addr_in_0_ cycloneive_io_ibuf 
+Inst: b_din_in[31]   b_din_in_31_ cycloneive_io_ibuf 
+Inst: b_din_in[30]   b_din_in_30_ cycloneive_io_ibuf 
+Inst: b_din_in[29]   b_din_in_29_ cycloneive_io_ibuf 
+Inst: b_din_in[28]   b_din_in_28_ cycloneive_io_ibuf 
+Inst: b_din_in[27]   b_din_in_27_ cycloneive_io_ibuf 
+Inst: b_din_in[26]   b_din_in_26_ cycloneive_io_ibuf 
+Inst: b_din_in[25]   b_din_in_25_ cycloneive_io_ibuf 
+Inst: b_din_in[24]   b_din_in_24_ cycloneive_io_ibuf 
+Inst: b_din_in[23]   b_din_in_23_ cycloneive_io_ibuf 
+Inst: b_din_in[22]   b_din_in_22_ cycloneive_io_ibuf 
+Inst: b_din_in[21]   b_din_in_21_ cycloneive_io_ibuf 
+Inst: b_din_in[20]   b_din_in_20_ cycloneive_io_ibuf 
+Inst: b_din_in[19]   b_din_in_19_ cycloneive_io_ibuf 
+Inst: b_din_in[18]   b_din_in_18_ cycloneive_io_ibuf 
+Inst: b_din_in[17]   b_din_in_17_ cycloneive_io_ibuf 
+Inst: b_din_in[16]   b_din_in_16_ cycloneive_io_ibuf 
+Inst: b_din_in[15]   b_din_in_15_ cycloneive_io_ibuf 
+Inst: b_din_in[14]   b_din_in_14_ cycloneive_io_ibuf 
+Inst: b_din_in[13]   b_din_in_13_ cycloneive_io_ibuf 
+Inst: b_din_in[12]   b_din_in_12_ cycloneive_io_ibuf 
+Inst: b_din_in[11]   b_din_in_11_ cycloneive_io_ibuf 
+Inst: b_din_in[10]   b_din_in_10_ cycloneive_io_ibuf 
+Inst: b_din_in[9]   b_din_in_9_ cycloneive_io_ibuf 
+Inst: b_din_in[8]   b_din_in_8_ cycloneive_io_ibuf 
+Inst: b_din_in[7]   b_din_in_7_ cycloneive_io_ibuf 
+Inst: b_din_in[6]   b_din_in_6_ cycloneive_io_ibuf 
+Inst: b_din_in[5]   b_din_in_5_ cycloneive_io_ibuf 
+Inst: b_din_in[4]   b_din_in_4_ cycloneive_io_ibuf 
+Inst: b_din_in[3]   b_din_in_3_ cycloneive_io_ibuf 
+Inst: b_din_in[2]   b_din_in_2_ cycloneive_io_ibuf 
+Inst: b_din_in[1]   b_din_in_1_ cycloneive_io_ibuf 
+Inst: b_din_in[0]   b_din_in_0_ cycloneive_io_ibuf 
+Inst: b_wr_addr_in[5]   b_wr_addr_in_5_ cycloneive_io_ibuf 
+Inst: b_wr_addr_in[4]   b_wr_addr_in_4_ cycloneive_io_ibuf 
+Inst: b_wr_addr_in[3]   b_wr_addr_in_3_ cycloneive_io_ibuf 
+Inst: b_wr_addr_in[2]   b_wr_addr_in_2_ cycloneive_io_ibuf 
+Inst: b_wr_addr_in[1]   b_wr_addr_in_1_ cycloneive_io_ibuf 
+Inst: b_wr_addr_in[0]   b_wr_addr_in_0_ cycloneive_io_ibuf 
+Inst: a_din_in[31]   a_din_in_31_ cycloneive_io_ibuf 
+Inst: a_din_in[30]   a_din_in_30_ cycloneive_io_ibuf 
+Inst: a_din_in[29]   a_din_in_29_ cycloneive_io_ibuf 
+Inst: a_din_in[28]   a_din_in_28_ cycloneive_io_ibuf 
+Inst: a_din_in[27]   a_din_in_27_ cycloneive_io_ibuf 
+Inst: a_din_in[26]   a_din_in_26_ cycloneive_io_ibuf 
+Inst: a_din_in[25]   a_din_in_25_ cycloneive_io_ibuf 
+Inst: a_din_in[24]   a_din_in_24_ cycloneive_io_ibuf 
+Inst: a_din_in[23]   a_din_in_23_ cycloneive_io_ibuf 
+Inst: a_din_in[22]   a_din_in_22_ cycloneive_io_ibuf 
+Inst: a_din_in[21]   a_din_in_21_ cycloneive_io_ibuf 
+Inst: a_din_in[20]   a_din_in_20_ cycloneive_io_ibuf 
+Inst: a_din_in[19]   a_din_in_19_ cycloneive_io_ibuf 
+Inst: a_din_in[18]   a_din_in_18_ cycloneive_io_ibuf 
+Inst: a_din_in[17]   a_din_in_17_ cycloneive_io_ibuf 
+Inst: a_din_in[16]   a_din_in_16_ cycloneive_io_ibuf 
+Inst: a_din_in[15]   a_din_in_15_ cycloneive_io_ibuf 
+Inst: a_din_in[14]   a_din_in_14_ cycloneive_io_ibuf 
+Inst: a_din_in[13]   a_din_in_13_ cycloneive_io_ibuf 
+Inst: a_din_in[12]   a_din_in_12_ cycloneive_io_ibuf 
+Inst: a_din_in[11]   a_din_in_11_ cycloneive_io_ibuf 
+Inst: a_din_in[10]   a_din_in_10_ cycloneive_io_ibuf 
+Inst: a_din_in[9]   a_din_in_9_ cycloneive_io_ibuf 
+Inst: a_din_in[8]   a_din_in_8_ cycloneive_io_ibuf 
+Inst: a_din_in[7]   a_din_in_7_ cycloneive_io_ibuf 
+Inst: a_din_in[6]   a_din_in_6_ cycloneive_io_ibuf 
+Inst: a_din_in[5]   a_din_in_5_ cycloneive_io_ibuf 
+Inst: a_din_in[4]   a_din_in_4_ cycloneive_io_ibuf 
+Inst: a_din_in[3]   a_din_in_3_ cycloneive_io_ibuf 
+Inst: a_din_in[2]   a_din_in_2_ cycloneive_io_ibuf 
+Inst: a_din_in[1]   a_din_in_1_ cycloneive_io_ibuf 
+Inst: a_din_in[0]   a_din_in_0_ cycloneive_io_ibuf 
+Inst: a_wr_addr_in[5]   a_wr_addr_in_5_ cycloneive_io_ibuf 
+Inst: a_wr_addr_in[4]   a_wr_addr_in_4_ cycloneive_io_ibuf 
+Inst: a_wr_addr_in[3]   a_wr_addr_in_3_ cycloneive_io_ibuf 
+Inst: a_wr_addr_in[2]   a_wr_addr_in_2_ cycloneive_io_ibuf 
+Inst: a_wr_addr_in[1]   a_wr_addr_in_1_ cycloneive_io_ibuf 
+Inst: a_wr_addr_in[0]   a_wr_addr_in_0_ cycloneive_io_ibuf 
+Inst: c_dout_out[31]   c_dout_out_31_ cycloneive_io_obuf 
+Inst: c_dout_out[30]   c_dout_out_30_ cycloneive_io_obuf 
+Inst: c_dout_out[29]   c_dout_out_29_ cycloneive_io_obuf 
+Inst: c_dout_out[28]   c_dout_out_28_ cycloneive_io_obuf 
+Inst: c_dout_out[27]   c_dout_out_27_ cycloneive_io_obuf 
+Inst: c_dout_out[26]   c_dout_out_26_ cycloneive_io_obuf 
+Inst: c_dout_out[25]   c_dout_out_25_ cycloneive_io_obuf 
+Inst: c_dout_out[24]   c_dout_out_24_ cycloneive_io_obuf 
+Inst: c_dout_out[23]   c_dout_out_23_ cycloneive_io_obuf 
+Inst: c_dout_out[22]   c_dout_out_22_ cycloneive_io_obuf 
+Inst: c_dout_out[21]   c_dout_out_21_ cycloneive_io_obuf 
+Inst: c_dout_out[20]   c_dout_out_20_ cycloneive_io_obuf 
+Inst: c_dout_out[19]   c_dout_out_19_ cycloneive_io_obuf 
+Inst: c_dout_out[18]   c_dout_out_18_ cycloneive_io_obuf 
+Inst: c_dout_out[17]   c_dout_out_17_ cycloneive_io_obuf 
+Inst: c_dout_out[16]   c_dout_out_16_ cycloneive_io_obuf 
+Inst: c_dout_out[15]   c_dout_out_15_ cycloneive_io_obuf 
+Inst: c_dout_out[14]   c_dout_out_14_ cycloneive_io_obuf 
+Inst: c_dout_out[13]   c_dout_out_13_ cycloneive_io_obuf 
+Inst: c_dout_out[12]   c_dout_out_12_ cycloneive_io_obuf 
+Inst: c_dout_out[11]   c_dout_out_11_ cycloneive_io_obuf 
+Inst: c_dout_out[10]   c_dout_out_10_ cycloneive_io_obuf 
+Inst: c_dout_out[9]   c_dout_out_9_ cycloneive_io_obuf 
+Inst: c_dout_out[8]   c_dout_out_8_ cycloneive_io_obuf 
+Inst: c_dout_out[7]   c_dout_out_7_ cycloneive_io_obuf 
+Inst: c_dout_out[6]   c_dout_out_6_ cycloneive_io_obuf 
+Inst: c_dout_out[5]   c_dout_out_5_ cycloneive_io_obuf 
+Inst: c_dout_out[4]   c_dout_out_4_ cycloneive_io_obuf 
+Inst: c_dout_out[3]   c_dout_out_3_ cycloneive_io_obuf 
+Inst: c_dout_out[2]   c_dout_out_2_ cycloneive_io_obuf 
+Inst: c_dout_out[1]   c_dout_out_1_ cycloneive_io_obuf 
+Inst: c_dout_out[0]   c_dout_out_0_ cycloneive_io_obuf 
+Net:  a_inst.mem.dataout_13   a_inst_mem_dataout_13 
+Net:  a_inst.mem.dataout_14   a_inst_mem_dataout_14 
+Net:  a_inst.mem.dataout_15   a_inst_mem_dataout_15 
+Net:  a_inst.mem.dataout_16   a_inst_mem_dataout_16 
+Net:  matmul_inst.un1_k_1[0]   matmul_inst_un1_k_1[0] 
+Net:  matmul_inst.un1_k_1[1]   matmul_inst_un1_k_1[1] 
+Net:  matmul_inst.un1_k_1[2]   matmul_inst_un1_k_1[2] 
+Net:  matmul_inst.i[0]   matmul_inst_i[0] 
+Net:  matmul_inst.i[1]   matmul_inst_i[1] 
+Net:  matmul_inst.i[2]   matmul_inst_i[2] 
+Net:  matmul_inst.accum[0]   matmul_inst_accum[0] 
+Net:  matmul_inst.accum[1]   matmul_inst_accum[1] 
+Net:  matmul_inst.accum[2]   matmul_inst_accum[2] 
+Net:  matmul_inst.accum[3]   matmul_inst_accum[3] 
+Net:  matmul_inst.accum[4]   matmul_inst_accum[4] 
+Net:  matmul_inst.accum[5]   matmul_inst_accum[5] 
+Net:  matmul_inst.accum[6]   matmul_inst_accum[6] 
+Net:  matmul_inst.accum[7]   matmul_inst_accum[7] 
+Net:  matmul_inst.accum[8]   matmul_inst_accum[8] 
+Net:  matmul_inst.accum[9]   matmul_inst_accum[9] 
+Net:  matmul_inst.accum[10]   matmul_inst_accum[10] 
+Net:  matmul_inst.accum[11]   matmul_inst_accum[11] 
+Net:  matmul_inst.accum[12]   matmul_inst_accum[12] 
+Net:  matmul_inst.accum[13]   matmul_inst_accum[13] 
+Net:  matmul_inst.accum[14]   matmul_inst_accum[14] 
+Net:  matmul_inst.accum[15]   matmul_inst_accum[15] 
+Net:  matmul_inst.accum[16]   matmul_inst_accum[16] 
+Net:  matmul_inst.accum[17]   matmul_inst_accum[17] 
+Net:  matmul_inst.accum[18]   matmul_inst_accum[18] 
+Net:  matmul_inst.accum[19]   matmul_inst_accum[19] 
+Net:  matmul_inst.accum[20]   matmul_inst_accum[20] 
+Net:  matmul_inst.accum[21]   matmul_inst_accum[21] 
+Net:  matmul_inst.accum[22]   matmul_inst_accum[22] 
+Net:  matmul_inst.accum[23]   matmul_inst_accum[23] 
+Net:  matmul_inst.accum[24]   matmul_inst_accum[24] 
+Net:  matmul_inst.accum[25]   matmul_inst_accum[25] 
+Net:  matmul_inst.accum[26]   matmul_inst_accum[26] 
+Net:  matmul_inst.accum[27]   matmul_inst_accum[27] 
+Net:  matmul_inst.accum[28]   matmul_inst_accum[28] 
+Net:  matmul_inst.accum[29]   matmul_inst_accum[29] 
+Net:  matmul_inst.accum[30]   matmul_inst_accum[30] 
+Net:  matmul_inst.accum[31]   matmul_inst_accum[31] 
+Net:  matmul_inst.c_wr_addr[0]   matmul_inst_c_wr_addr[0] 
+Net:  matmul_inst.c_wr_addr[1]   matmul_inst_c_wr_addr[1] 
+Net:  matmul_inst.c_wr_addr[2]   matmul_inst_c_wr_addr[2] 
+Net:  matmul_inst.c_wr_addr[3]   matmul_inst_c_wr_addr[3] 
+Net:  matmul_inst.c_wr_addr[4]   matmul_inst_c_wr_addr[4] 
+Net:  matmul_inst.c_wr_addr[5]   matmul_inst_c_wr_addr[5] 
+Net:  matmul_inst.curr_state[3]   matmul_inst_curr_state[3] 
+Net:  matmul_inst.j[0]   matmul_inst_j[0] 
+Net:  matmul_inst.j[1]   matmul_inst_j[1] 
+Net:  matmul_inst.j[2]   matmul_inst_j[2] 
+Net:  b_inst.mem.datareg[0]   b_inst_mem_datareg[0] 
+Net:  b_inst.mem.datareg[1]   b_inst_mem_datareg[1] 
+Net:  b_inst.mem.datareg[2]   b_inst_mem_datareg[2] 
+Net:  b_inst.mem.datareg[3]   b_inst_mem_datareg[3] 
+Net:  b_inst.mem.datareg[4]   b_inst_mem_datareg[4] 
+Net:  b_inst.mem.datareg[5]   b_inst_mem_datareg[5] 
+Net:  b_inst.mem.datareg[6]   b_inst_mem_datareg[6] 
+Net:  b_inst.mem.datareg[7]   b_inst_mem_datareg[7] 
+Net:  b_inst.mem.datareg[8]   b_inst_mem_datareg[8] 
+Net:  b_inst.mem.datareg[9]   b_inst_mem_datareg[9] 
+Net:  b_inst.mem.datareg[10]   b_inst_mem_datareg[10] 
+Net:  b_inst.mem.datareg[11]   b_inst_mem_datareg[11] 
+Net:  b_inst.mem.datareg[12]   b_inst_mem_datareg[12] 
+Net:  b_inst.mem.datareg[13]   b_inst_mem_datareg[13] 
+Net:  b_inst.mem.datareg[14]   b_inst_mem_datareg[14] 
+Net:  b_inst.mem.datareg[15]   b_inst_mem_datareg[15] 
+Net:  b_inst.mem.datareg[16]   b_inst_mem_datareg[16] 
+Net:  b_inst.mem.datareg[17]   b_inst_mem_datareg[17] 
+Net:  b_inst.mem.datareg[18]   b_inst_mem_datareg[18] 
+Net:  b_inst.mem.datareg[19]   b_inst_mem_datareg[19] 
+Net:  b_inst.mem.datareg[20]   b_inst_mem_datareg[20] 
+Net:  b_inst.mem.datareg[21]   b_inst_mem_datareg[21] 
+Net:  b_inst.mem.datareg[22]   b_inst_mem_datareg[22] 
+Net:  b_inst.mem.datareg[23]   b_inst_mem_datareg[23] 
+Net:  b_inst.mem.datareg[24]   b_inst_mem_datareg[24] 
+Net:  b_inst.mem.datareg[25]   b_inst_mem_datareg[25] 
+Net:  b_inst.mem.datareg[26]   b_inst_mem_datareg[26] 
+Net:  b_inst.mem.datareg[27]   b_inst_mem_datareg[27] 
+Net:  b_inst.mem.datareg[28]   b_inst_mem_datareg[28] 
+Net:  b_inst.mem.datareg[29]   b_inst_mem_datareg[29] 
+Net:  b_inst.mem.datareg[30]   b_inst_mem_datareg[30] 
+Net:  b_inst.mem.datareg[31]   b_inst_mem_datareg[31] 
+Net:  b_inst.mem.wereg[0]   b_inst_mem_wereg[0] 
+Net:  b_inst.mem.eq_reg[0]   b_inst_mem_eq_reg[0] 
+Net:  a_inst.mem.datareg[0]   a_inst_mem_datareg[0] 
+Net:  a_inst.mem.datareg[1]   a_inst_mem_datareg[1] 
+Net:  a_inst.mem.datareg[2]   a_inst_mem_datareg[2] 
+Net:  a_inst.mem.datareg[3]   a_inst_mem_datareg[3] 
+Net:  a_inst.mem.datareg[4]   a_inst_mem_datareg[4] 
+Net:  a_inst.mem.datareg[5]   a_inst_mem_datareg[5] 
+Net:  a_inst.mem.datareg[6]   a_inst_mem_datareg[6] 
+Net:  a_inst.mem.datareg[7]   a_inst_mem_datareg[7] 
+Net:  a_inst.mem.datareg[8]   a_inst_mem_datareg[8] 
+Net:  a_inst.mem.datareg[9]   a_inst_mem_datareg[9] 
+Net:  a_inst.mem.datareg[10]   a_inst_mem_datareg[10] 
+Net:  a_inst.mem.datareg[11]   a_inst_mem_datareg[11] 
+Net:  a_inst.mem.datareg[12]   a_inst_mem_datareg[12] 
+Net:  a_inst.mem.datareg[13]   a_inst_mem_datareg[13] 
+Net:  a_inst.mem.datareg[18]   a_inst_mem_datareg[18] 
+Net:  a_inst.mem.datareg[19]   a_inst_mem_datareg[19] 
+Net:  a_inst.mem.datareg[20]   a_inst_mem_datareg[20] 
+Net:  a_inst.mem.datareg[21]   a_inst_mem_datareg[21] 
+Net:  a_inst.mem.datareg[22]   a_inst_mem_datareg[22] 
+Net:  a_inst.mem.datareg[23]   a_inst_mem_datareg[23] 
+Net:  a_inst.mem.datareg[24]   a_inst_mem_datareg[24] 
+Net:  a_inst.mem.datareg[25]   a_inst_mem_datareg[25] 
+Net:  a_inst.mem.datareg[26]   a_inst_mem_datareg[26] 
+Net:  a_inst.mem.datareg[27]   a_inst_mem_datareg[27] 
+Net:  a_inst.mem.datareg[28]   a_inst_mem_datareg[28] 
+Net:  a_inst.mem.datareg[29]   a_inst_mem_datareg[29] 
+Net:  a_inst.mem.datareg[30]   a_inst_mem_datareg[30] 
+Net:  a_inst.mem.datareg[31]   a_inst_mem_datareg[31] 
+Net:  a_inst.mem.wereg[0]   a_inst_mem_wereg[0] 
+Net:  a_inst.mem.eq_reg[0]   a_inst_mem_eq_reg[0] 
+Net:  matmul_inst.done   matmul_inst_done 
+Net:  c_inst.mem.dataout   c_inst_mem_dataout 
+Net:  c_inst.mem.dataout_0   c_inst_mem_dataout_0 
+Net:  c_inst.mem.dataout_1   c_inst_mem_dataout_1 
+Net:  c_inst.mem.dataout_2   c_inst_mem_dataout_2 
+Net:  c_inst.mem.dataout_3   c_inst_mem_dataout_3 
+Net:  c_inst.mem.dataout_4   c_inst_mem_dataout_4 
+Net:  c_inst.mem.dataout_5   c_inst_mem_dataout_5 
+Net:  c_inst.mem.dataout_6   c_inst_mem_dataout_6 
+Net:  c_inst.mem.dataout_7   c_inst_mem_dataout_7 
+Net:  c_inst.mem.dataout_8   c_inst_mem_dataout_8 
+Net:  c_inst.mem.dataout_9   c_inst_mem_dataout_9 
+Net:  c_inst.mem.dataout_10   c_inst_mem_dataout_10 
+Net:  c_inst.mem.dataout_11   c_inst_mem_dataout_11 
+Net:  c_inst.mem.dataout_12   c_inst_mem_dataout_12 
+Net:  c_inst.mem.dataout_13   c_inst_mem_dataout_13 
+Net:  c_inst.mem.dataout_14   c_inst_mem_dataout_14 
+Net:  c_inst.mem.dataout_15   c_inst_mem_dataout_15 
+Net:  c_inst.mem.dataout_16   c_inst_mem_dataout_16 
+Net:  c_inst.mem.dataout_17   c_inst_mem_dataout_17 
+Net:  c_inst.mem.dataout_18   c_inst_mem_dataout_18 
+Net:  c_inst.mem.dataout_19   c_inst_mem_dataout_19 
+Net:  c_inst.mem.dataout_20   c_inst_mem_dataout_20 
+Net:  c_inst.mem.dataout_21   c_inst_mem_dataout_21 
+Net:  c_inst.mem.dataout_22   c_inst_mem_dataout_22 
+Net:  c_inst.mem.dataout_23   c_inst_mem_dataout_23 
+Net:  c_inst.mem.dataout_24   c_inst_mem_dataout_24 
+Net:  c_inst.mem.dataout_25   c_inst_mem_dataout_25 
+Net:  c_inst.mem.dataout_26   c_inst_mem_dataout_26 
+Net:  c_inst.mem.dataout_27   c_inst_mem_dataout_27 
+Net:  c_inst.mem.dataout_28   c_inst_mem_dataout_28 
+Net:  c_inst.mem.dataout_29   c_inst_mem_dataout_29 
+Net:  c_inst.mem.dataout_30   c_inst_mem_dataout_30 
+EndView matmul_top matmul_top
+
+BeginView matmul_8s_3s_32s_6s matmul_8s_3s_32s_6s
+Inst: j[2]   j_2_ dffeas 
+Inst: j[1]   j_1_ dffeas 
+Inst: j[0]   j_0_ dffeas 
+Inst: curr_state[5]   curr_state_5_ dffeas 
+Inst: curr_state[4]   curr_state_4_ dffeas 
+Inst: curr_state[3]   curr_state_3_ dffeas 
+Inst: curr_state[2]   curr_state_2_ dffeas 
+Inst: curr_state[1]   curr_state_1_ dffeas 
+Inst: curr_state[0]   curr_state_0_ dffeas 
+Inst: i[2]   i_2_ dffeas 
+Inst: i[1]   i_1_ dffeas 
+Inst: i[0]   i_0_ dffeas 
+Inst: k[2]   k_2_ dffeas 
+Inst: k[1]   k_1_ dffeas 
+Inst: k[0]   k_0_ dffeas 
+Inst: accum[10]   accum_10_ dffeas 
+Inst: accum[12]   accum_12_ dffeas 
+Inst: accum[14]   accum_14_ dffeas 
+Inst: accum[16]   accum_16_ dffeas 
+Inst: accum[18]   accum_18_ dffeas 
+Inst: accum[20]   accum_20_ dffeas 
+Inst: accum[22]   accum_22_ dffeas 
+Inst: accum[24]   accum_24_ dffeas 
+Inst: accum[26]   accum_26_ dffeas 
+Inst: accum[28]   accum_28_ dffeas 
+Inst: accum[30]   accum_30_ dffeas 
+Inst: accum[31]   accum_31_ dffeas 
+Inst: accum[29]   accum_29_ dffeas 
+Inst: accum[27]   accum_27_ dffeas 
+Inst: accum[25]   accum_25_ dffeas 
+Inst: accum[23]   accum_23_ dffeas 
+Inst: accum[21]   accum_21_ dffeas 
+Inst: accum[19]   accum_19_ dffeas 
+Inst: accum[17]   accum_17_ dffeas 
+Inst: accum[15]   accum_15_ dffeas 
+Inst: accum[13]   accum_13_ dffeas 
+Inst: accum[11]   accum_11_ dffeas 
+Inst: accum[9]   accum_9_ dffeas 
+Inst: accum[8]   accum_8_ dffeas 
+Inst: accum[7]   accum_7_ dffeas 
+Inst: accum[6]   accum_6_ dffeas 
+Inst: accum[5]   accum_5_ dffeas 
+Inst: accum[4]   accum_4_ dffeas 
+Inst: accum[3]   accum_3_ dffeas 
+Inst: accum[2]   accum_2_ dffeas 
+Inst: accum[1]   accum_1_ dffeas 
+Inst: accum[0]   accum_0_ dffeas 
+Inst: un5_accum_add0   un5_accum_add0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add1   un5_accum_add1_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add2   un5_accum_add2_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add3   un5_accum_add3_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add4   un5_accum_add4_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add5   un5_accum_add5_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add6   un5_accum_add6_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add7   un5_accum_add7_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add8   un5_accum_add8_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add9   un5_accum_add9_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add10   un5_accum_add10_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add11   un5_accum_add11_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add12   un5_accum_add12_cZ cycloneive_lcell_comb 
+Inst: un5_accum_add13   un5_accum_add13_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add0   un5_accum_0_add0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add1   un5_accum_0_add1_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add2   un5_accum_0_add2_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add3   un5_accum_0_add3_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add4   un5_accum_0_add4_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add5   un5_accum_0_add5_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add6   un5_accum_0_add6_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add7   un5_accum_0_add7_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add8   un5_accum_0_add8_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add9   un5_accum_0_add9_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add10   un5_accum_0_add10_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add11   un5_accum_0_add11_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add12   un5_accum_0_add12_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add13   un5_accum_0_add13_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add0_0   un5_accum_0_add0_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add1_0   un5_accum_0_add1_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add2_0   un5_accum_0_add2_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add3_0   un5_accum_0_add3_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add4_0   un5_accum_0_add4_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add5_0   un5_accum_0_add5_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add6_0   un5_accum_0_add6_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add7_0   un5_accum_0_add7_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add8_0   un5_accum_0_add8_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add9_0   un5_accum_0_add9_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add10_0   un5_accum_0_add10_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add11_0   un5_accum_0_add11_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add12_0   un5_accum_0_add12_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add13_0   un5_accum_0_add13_0_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add14   un5_accum_0_add14_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add15   un5_accum_0_add15_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add16   un5_accum_0_add16_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add17   un5_accum_0_add17_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add18   un5_accum_0_add18_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add19   un5_accum_0_add19_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add20   un5_accum_0_add20_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add21   un5_accum_0_add21_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add22   un5_accum_0_add22_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add23   un5_accum_0_add23_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add24   un5_accum_0_add24_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add25   un5_accum_0_add25_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add26   un5_accum_0_add26_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add27   un5_accum_0_add27_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add28   un5_accum_0_add28_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add29   un5_accum_0_add29_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add30   un5_accum_0_add30_cZ cycloneive_lcell_comb 
+Inst: un5_accum_0_add31   un5_accum_0_add31_cZ cycloneive_lcell_comb 
+Inst: un13_i_a2   un13_i_a2_cZ cycloneive_lcell_comb 
+Inst: k_RNITF1K[1]   k_RNITF1K_1_ cycloneive_lcell_comb 
+Inst: j_RNO[0]   j_RNO_0_ cycloneive_lcell_comb 
+Inst: c_wr_addr[0]   c_wr_addr_0_ cycloneive_lcell_comb 
+Inst: c_wr_addr[1]   c_wr_addr_1_ cycloneive_lcell_comb 
+Inst: c_wr_addr[2]   c_wr_addr_2_ cycloneive_lcell_comb 
+Inst: c_wr_addr[3]   c_wr_addr_3_ cycloneive_lcell_comb 
+Inst: c_wr_addr[4]   c_wr_addr_4_ cycloneive_lcell_comb 
+Inst: c_wr_addr[5]   c_wr_addr_5_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[0]   un6_accum_mu_m_0_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[1]   un6_accum_mu_m_1_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[2]   un6_accum_mu_m_2_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[3]   un6_accum_mu_m_3_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[4]   un6_accum_mu_m_4_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[5]   un6_accum_mu_m_5_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[6]   un6_accum_mu_m_6_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[7]   un6_accum_mu_m_7_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[8]   un6_accum_mu_m_8_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[9]   un6_accum_mu_m_9_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[10]   un6_accum_mu_m_10_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[11]   un6_accum_mu_m_11_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[12]   un6_accum_mu_m_12_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_m[13]   un6_accum_mu_m_13_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[0]   un6_accum_ml_ml_m_0_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[1]   un6_accum_ml_ml_m_1_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[2]   un6_accum_ml_ml_m_2_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[3]   un6_accum_ml_ml_m_3_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[4]   un6_accum_ml_ml_m_4_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[5]   un6_accum_ml_ml_m_5_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[6]   un6_accum_ml_ml_m_6_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[7]   un6_accum_ml_ml_m_7_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[8]   un6_accum_ml_ml_m_8_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[9]   un6_accum_ml_ml_m_9_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[10]   un6_accum_ml_ml_m_10_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[11]   un6_accum_ml_ml_m_11_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[12]   un6_accum_ml_ml_m_12_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[13]   un6_accum_ml_ml_m_13_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[14]   un6_accum_ml_ml_m_14_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[15]   un6_accum_ml_ml_m_15_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[16]   un6_accum_ml_ml_m_16_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_ml_m[17]   un6_accum_ml_ml_m_17_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[0]   un6_accum_ml_mu_m_0_0_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[1]   un6_accum_ml_mu_m_0_1_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[2]   un6_accum_ml_mu_m_0_2_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[3]   un6_accum_ml_mu_m_0_3_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[4]   un6_accum_ml_mu_m_0_4_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[5]   un6_accum_ml_mu_m_0_5_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[6]   un6_accum_ml_mu_m_0_6_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[7]   un6_accum_ml_mu_m_0_7_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[8]   un6_accum_ml_mu_m_0_8_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[9]   un6_accum_ml_mu_m_0_9_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[10]   un6_accum_ml_mu_m_0_10_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[11]   un6_accum_ml_mu_m_0_11_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[12]   un6_accum_ml_mu_m_0_12_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m_0[13]   un6_accum_ml_mu_m_0_13_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[0]   un6_accum_ml_mu_m_0_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[1]   un6_accum_ml_mu_m_1_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[2]   un6_accum_ml_mu_m_2_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[3]   un6_accum_ml_mu_m_3_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[4]   un6_accum_ml_mu_m_4_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[5]   un6_accum_ml_mu_m_5_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[6]   un6_accum_ml_mu_m_6_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[7]   un6_accum_ml_mu_m_7_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[8]   un6_accum_ml_mu_m_8_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[9]   un6_accum_ml_mu_m_9_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[10]   un6_accum_ml_mu_m_10_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[11]   un6_accum_ml_mu_m_11_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[12]   un6_accum_ml_mu_m_12_ cycloneive_lcell_comb 
+Inst: un6_accum_ml_mu_m[13]   un6_accum_ml_mu_m_13_ cycloneive_lcell_comb 
+Inst: k_RNO_0[2]   k_RNO_0_2_ cycloneive_lcell_comb 
+Inst: un1_k_1[0]   un1_k_1_0_ cycloneive_lcell_comb 
+Inst: k_RNO[0]   k_RNO_0_ cycloneive_lcell_comb 
+Inst: j_RNO[1]   j_RNO_1_ cycloneive_lcell_comb 
+Inst: j_RNID6QV[2]   j_RNID6QV_2_ cycloneive_lcell_comb 
+Inst: next_state15_1   next_state15_1_cZ cycloneive_lcell_comb 
+Inst: un1_k_1[1]   un1_k_1_1_ cycloneive_lcell_comb 
+Inst: k_RNO[1]   k_RNO_1_ cycloneive_lcell_comb 
+Inst: curr_state_RNO[3]   curr_state_RNO_3_ cycloneive_lcell_comb 
+Inst: i_RNO[0]   i_RNO_0_ cycloneive_lcell_comb 
+Inst: j_RNO[2]   j_RNO_2_ cycloneive_lcell_comb 
+Inst: un1_curr_state_2_0_o2   un1_curr_state_2_0_o2_cZ cycloneive_lcell_comb 
+Inst: un1_k_1[2]   un1_k_1_2_ cycloneive_lcell_comb 
+Inst: k_RNO[2]   k_RNO_2_ cycloneive_lcell_comb 
+Inst: i_RNO[1]   i_RNO_1_ cycloneive_lcell_comb 
+Inst: i_RNO[2]   i_RNO_2_ cycloneive_lcell_comb 
+Inst: curr_state_RNO[5]   curr_state_RNO_5_ cycloneive_lcell_comb 
+Inst: curr_state_RNO[1]   curr_state_RNO_1_ cycloneive_lcell_comb 
+Inst: curr_state_RNO[0]   curr_state_RNO_0_ cycloneive_lcell_comb 
+Inst: un6_accum_mu_muladd_0[13:0]   un6_accum_mu_muladd_0_13_0_ matmul_top_SYN_MULT_ADD_1_14_14_28_0_2 
+Inst: un6_accum_ml_mu_muladd_0[13:0]   un6_accum_ml_mu_muladd_0_13_0_ matmul_top_SYN_MULT_ADD_1_14_14_28_0_1 
+Inst: un6_accum_ml_ml_muladd_0[31:0]   un6_accum_ml_ml_muladd_0_31_0_ matmul_top_SYN_MULT_ADD_1_18_18_36_0_3 
+Inst: curr_state[5:0]   curr_state_5_0_ ghost 
+Inst: reset_c_i   reset_c_i_cZ inv 
+EndView matmul_8s_3s_32s_6s matmul_8s_3s_32s_6s
+
+BeginView bram_6s_32s bram_6s_32s
+Inst: mem.datareg[13]   mem_datareg_13_ dffeas 
+Inst: mem.datareg[12]   mem_datareg_12_ dffeas 
+Inst: mem.datareg[11]   mem_datareg_11_ dffeas 
+Inst: mem.datareg[10]   mem_datareg_10_ dffeas 
+Inst: mem.datareg[9]   mem_datareg_9_ dffeas 
+Inst: mem.datareg[8]   mem_datareg_8_ dffeas 
+Inst: mem.datareg[7]   mem_datareg_7_ dffeas 
+Inst: mem.datareg[6]   mem_datareg_6_ dffeas 
+Inst: mem.datareg[5]   mem_datareg_5_ dffeas 
+Inst: mem.datareg[4]   mem_datareg_4_ dffeas 
+Inst: mem.datareg[3]   mem_datareg_3_ dffeas 
+Inst: mem.datareg[2]   mem_datareg_2_ dffeas 
+Inst: mem.datareg[1]   mem_datareg_1_ dffeas 
+Inst: mem.datareg[0]   mem_datareg_0_ dffeas 
+Inst: mem.datareg[31]   mem_datareg_31_ dffeas 
+Inst: mem.datareg[30]   mem_datareg_30_ dffeas 
+Inst: mem.datareg[29]   mem_datareg_29_ dffeas 
+Inst: mem.datareg[28]   mem_datareg_28_ dffeas 
+Inst: mem.datareg[27]   mem_datareg_27_ dffeas 
+Inst: mem.datareg[26]   mem_datareg_26_ dffeas 
+Inst: mem.datareg[25]   mem_datareg_25_ dffeas 
+Inst: mem.datareg[24]   mem_datareg_24_ dffeas 
+Inst: mem.datareg[23]   mem_datareg_23_ dffeas 
+Inst: mem.datareg[22]   mem_datareg_22_ dffeas 
+Inst: mem.datareg[21]   mem_datareg_21_ dffeas 
+Inst: mem.datareg[20]   mem_datareg_20_ dffeas 
+Inst: mem.datareg[19]   mem_datareg_19_ dffeas 
+Inst: mem.datareg[18]   mem_datareg_18_ dffeas 
+Inst: mem.datareg[14]   mem_datareg_14_ dffeas 
+Inst: mem.datareg[15]   mem_datareg_15_ dffeas 
+Inst: mem.datareg[16]   mem_datareg_16_ dffeas 
+Inst: mem.datareg[17]   mem_datareg_17_ dffeas 
+Inst: mem.wereg[0]   mem_wereg_0_ dffeas 
+Inst: mem.eq_reg[0]   mem_eq_reg_0_ dffeas 
+Inst: mem.datareg_RNI8BVA1[14]   mem_datareg_RNI8BVA1_14_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNI9CVA1[15]   mem_datareg_RNI9CVA1_15_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIADVA1[16]   mem_datareg_RNIADVA1_16_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIBEVA1[17]   mem_datareg_RNIBEVA1_17_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_2[0]   mem_eq_reg_RNO_2_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_1[0]   mem_eq_reg_RNO_1_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO[0]   mem_eq_reg_RNO_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_0[0]   mem_eq_reg_RNO_0_0_ cycloneive_lcell_comb 
+Inst: read_addr[5]   read_addr_5_ ghost 
+Inst: read_addr[4]   read_addr_4_ ghost 
+Inst: read_addr[3]   read_addr_3_ ghost 
+Inst: read_addr[2]   read_addr_2_ ghost 
+Inst: read_addr[1]   read_addr_1_ ghost 
+Inst: read_addr[0]   read_addr_0_ ghost 
+EndView bram_6s_32s bram_6s_32s
+
+BeginView bram_6s_32s_0 bram_6s_32s_0
+Inst: mem.datareg[31]   mem_datareg_31_ dffeas 
+Inst: mem.datareg[30]   mem_datareg_30_ dffeas 
+Inst: mem.datareg[29]   mem_datareg_29_ dffeas 
+Inst: mem.datareg[28]   mem_datareg_28_ dffeas 
+Inst: mem.datareg[27]   mem_datareg_27_ dffeas 
+Inst: mem.datareg[26]   mem_datareg_26_ dffeas 
+Inst: mem.datareg[25]   mem_datareg_25_ dffeas 
+Inst: mem.datareg[24]   mem_datareg_24_ dffeas 
+Inst: mem.datareg[23]   mem_datareg_23_ dffeas 
+Inst: mem.datareg[22]   mem_datareg_22_ dffeas 
+Inst: mem.datareg[21]   mem_datareg_21_ dffeas 
+Inst: mem.datareg[20]   mem_datareg_20_ dffeas 
+Inst: mem.datareg[19]   mem_datareg_19_ dffeas 
+Inst: mem.datareg[18]   mem_datareg_18_ dffeas 
+Inst: mem.datareg[17]   mem_datareg_17_ dffeas 
+Inst: mem.datareg[16]   mem_datareg_16_ dffeas 
+Inst: mem.datareg[15]   mem_datareg_15_ dffeas 
+Inst: mem.datareg[14]   mem_datareg_14_ dffeas 
+Inst: mem.datareg[13]   mem_datareg_13_ dffeas 
+Inst: mem.datareg[12]   mem_datareg_12_ dffeas 
+Inst: mem.datareg[11]   mem_datareg_11_ dffeas 
+Inst: mem.datareg[10]   mem_datareg_10_ dffeas 
+Inst: mem.datareg[9]   mem_datareg_9_ dffeas 
+Inst: mem.datareg[8]   mem_datareg_8_ dffeas 
+Inst: mem.datareg[7]   mem_datareg_7_ dffeas 
+Inst: mem.datareg[6]   mem_datareg_6_ dffeas 
+Inst: mem.datareg[5]   mem_datareg_5_ dffeas 
+Inst: mem.datareg[4]   mem_datareg_4_ dffeas 
+Inst: mem.datareg[3]   mem_datareg_3_ dffeas 
+Inst: mem.datareg[2]   mem_datareg_2_ dffeas 
+Inst: mem.datareg[1]   mem_datareg_1_ dffeas 
+Inst: mem.datareg[0]   mem_datareg_0_ dffeas 
+Inst: mem.wereg[0]   mem_wereg_0_ dffeas 
+Inst: mem.eq_reg[0]   mem_eq_reg_0_ dffeas 
+Inst: mem.eq_reg_RNO_2[0]   mem_eq_reg_RNO_2_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_1[0]   mem_eq_reg_RNO_1_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO[0]   mem_eq_reg_RNO_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_0[0]   mem_eq_reg_RNO_0_0_ cycloneive_lcell_comb 
+Inst: read_addr[5]   read_addr_5_ ghost 
+Inst: read_addr[4]   read_addr_4_ ghost 
+Inst: read_addr[3]   read_addr_3_ ghost 
+Inst: read_addr[2]   read_addr_2_ ghost 
+Inst: read_addr[1]   read_addr_1_ ghost 
+Inst: read_addr[0]   read_addr_0_ ghost 
+EndView bram_6s_32s_0 bram_6s_32s_0
+
+BeginView bram_6s_32s_1 bram_6s_32s_1
+Inst: mem.datareg[0]   mem_datareg_0_ dffeas 
+Inst: mem.datareg[1]   mem_datareg_1_ dffeas 
+Inst: mem.datareg[2]   mem_datareg_2_ dffeas 
+Inst: mem.datareg[3]   mem_datareg_3_ dffeas 
+Inst: mem.datareg[4]   mem_datareg_4_ dffeas 
+Inst: mem.datareg[5]   mem_datareg_5_ dffeas 
+Inst: mem.datareg[6]   mem_datareg_6_ dffeas 
+Inst: mem.datareg[7]   mem_datareg_7_ dffeas 
+Inst: mem.datareg[8]   mem_datareg_8_ dffeas 
+Inst: mem.datareg[9]   mem_datareg_9_ dffeas 
+Inst: mem.datareg[10]   mem_datareg_10_ dffeas 
+Inst: mem.datareg[11]   mem_datareg_11_ dffeas 
+Inst: mem.datareg[12]   mem_datareg_12_ dffeas 
+Inst: mem.datareg[13]   mem_datareg_13_ dffeas 
+Inst: mem.datareg[14]   mem_datareg_14_ dffeas 
+Inst: mem.datareg[15]   mem_datareg_15_ dffeas 
+Inst: mem.datareg[16]   mem_datareg_16_ dffeas 
+Inst: mem.datareg[17]   mem_datareg_17_ dffeas 
+Inst: mem.datareg[18]   mem_datareg_18_ dffeas 
+Inst: mem.datareg[19]   mem_datareg_19_ dffeas 
+Inst: mem.datareg[20]   mem_datareg_20_ dffeas 
+Inst: mem.datareg[21]   mem_datareg_21_ dffeas 
+Inst: mem.datareg[22]   mem_datareg_22_ dffeas 
+Inst: mem.datareg[23]   mem_datareg_23_ dffeas 
+Inst: mem.datareg[24]   mem_datareg_24_ dffeas 
+Inst: mem.datareg[25]   mem_datareg_25_ dffeas 
+Inst: mem.datareg[26]   mem_datareg_26_ dffeas 
+Inst: mem.datareg[27]   mem_datareg_27_ dffeas 
+Inst: mem.datareg[28]   mem_datareg_28_ dffeas 
+Inst: mem.datareg[29]   mem_datareg_29_ dffeas 
+Inst: mem.datareg[30]   mem_datareg_30_ dffeas 
+Inst: mem.datareg[31]   mem_datareg_31_ dffeas 
+Inst: mem.wereg[0]   mem_wereg_0_ dffeas 
+Inst: mem.eq_reg[0]   mem_eq_reg_0_ dffeas 
+Inst: mem.datareg_RNIRROT[0]   mem_datareg_RNIRROT_0_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNISSOT[1]   mem_datareg_RNISSOT_1_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNITTOT[2]   mem_datareg_RNITTOT_2_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIUUOT[3]   mem_datareg_RNIUUOT_3_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIVVOT[4]   mem_datareg_RNIVVOT_4_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNI01PT[5]   mem_datareg_RNI01PT_5_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNI12PT[6]   mem_datareg_RNI12PT_6_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNI23PT[7]   mem_datareg_RNI23PT_7_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNI34PT[8]   mem_datareg_RNI34PT_8_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNI45PT[9]   mem_datareg_RNI45PT_9_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNICDNS[10]   mem_datareg_RNICDNS_10_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIDENS[11]   mem_datareg_RNIDENS_11_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIEFNS[12]   mem_datareg_RNIEFNS_12_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIFGNS[13]   mem_datareg_RNIFGNS_13_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIGHNS[14]   mem_datareg_RNIGHNS_14_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIHINS[15]   mem_datareg_RNIHINS_15_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIIJNS[16]   mem_datareg_RNIIJNS_16_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIJKNS[17]   mem_datareg_RNIJKNS_17_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIKLNS[18]   mem_datareg_RNIKLNS_18_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNILMNS[19]   mem_datareg_RNILMNS_19_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIDFOS[20]   mem_datareg_RNIDFOS_20_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIEGOS[21]   mem_datareg_RNIEGOS_21_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIFHOS[22]   mem_datareg_RNIFHOS_22_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIGIOS[23]   mem_datareg_RNIGIOS_23_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIHJOS[24]   mem_datareg_RNIHJOS_24_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIIKOS[25]   mem_datareg_RNIIKOS_25_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIJLOS[26]   mem_datareg_RNIJLOS_26_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIKMOS[27]   mem_datareg_RNIKMOS_27_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNILNOS[28]   mem_datareg_RNILNOS_28_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIMOOS[29]   mem_datareg_RNIMOOS_29_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIEHPS[30]   mem_datareg_RNIEHPS_30_ cycloneive_lcell_comb 
+Inst: mem.datareg_RNIFIPS[31]   mem_datareg_RNIFIPS_31_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_0[0]   mem_eq_reg_RNO_0_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_1[0]   mem_eq_reg_RNO_1_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO_2[0]   mem_eq_reg_RNO_2_0_ cycloneive_lcell_comb 
+Inst: mem.eq_reg_RNO[0]   mem_eq_reg_RNO_0_ cycloneive_lcell_comb 
+Inst: read_addr[5]   read_addr_5_ ghost 
+Inst: read_addr[4]   read_addr_4_ ghost 
+Inst: read_addr[3]   read_addr_3_ ghost 
+Inst: read_addr[2]   read_addr_2_ ghost 
+Inst: read_addr[1]   read_addr_1_ ghost 
+Inst: read_addr[0]   read_addr_0_ ghost 
+EndView bram_6s_32s_1 bram_6s_32s_1
