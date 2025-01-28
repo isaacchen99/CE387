@@ -3,6 +3,7 @@ module motion_detect_top (
   input logic reset
 );
 
+  // Base (background) image FIFO
   logic bg_fifo_full, bg_fifo_empty;
   logic bg_fifo_wr_en;
   logic [31:0] bg_fifo_din;
@@ -24,6 +25,7 @@ module motion_detect_top (
     .empty(bg_fifo_empty)
   );
 
+  // Grayscale pipeline for base image
   logic gray_bg_read_en, gray_bg_write_en;
   logic [7:0] gray_bg_data_out;
   logic bg_gray_fifo_full;
@@ -59,6 +61,7 @@ module motion_detect_top (
 
   assign bg_fifo_rd_en = gray_bg_read_en;
 
+  // Frame (pedestrian) image FIFO
   logic fr_fifo_full, fr_fifo_empty;
   logic fr_fifo_wr_en;
   logic [31:0] fr_fifo_din;
@@ -80,6 +83,7 @@ module motion_detect_top (
     .empty(fr_fifo_empty)
   );
 
+  // Grayscale pipeline for frame image
   logic gray_fr_read_en, gray_fr_write_en;
   logic [7:0] gray_fr_data_out;
   logic fr_gray_fifo_full;
@@ -115,6 +119,7 @@ module motion_detect_top (
 
   assign fr_fifo_rd_en = gray_fr_read_en;
 
+  // Background subtract
   logic subtract_wr_en;
   logic [7:0] subtract_data_out;
   logic subtract_fifo_full;
@@ -151,6 +156,7 @@ module motion_detect_top (
     .empty(sub_fifo_empty)
   );
 
+  // Additional FIFO for highlight (original color)
   logic fr_hl_fifo_full, fr_hl_fifo_empty;
   logic fr_hl_fifo_wr_en;
   logic [31:0] fr_hl_fifo_din;
@@ -172,6 +178,11 @@ module motion_detect_top (
     .empty(fr_hl_fifo_empty)
   );
 
+  // Feed the same "pedestrians" data (fr_fifo_din) to the highlight FIFO
+  assign fr_hl_fifo_wr_en = fr_fifo_wr_en;
+  assign fr_hl_fifo_din    = fr_fifo_din;
+
+  // Highlight module
   logic highlight_wr_en;
   logic [31:0] highlight_data_out;
   logic highlight_fifo_full;
