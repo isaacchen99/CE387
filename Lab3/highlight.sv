@@ -51,11 +51,6 @@ module highlight (
           end
         end
         PROCESS: begin
-          // Extract B, G, R for clarity
-          logic [7:0] b = base_pixel[31:24];
-          logic [7:0] g = base_pixel[23:16];
-          logic [7:0] r = base_pixel[15:8];
-
           if (subt_mask == 8'hFF) begin
             // Highlight in red
             out_pixel <= {8'h00, 8'h00, 8'hFF, base_pixel[7:0]};
