@@ -80,7 +80,9 @@ module motion_detect_tb;
 
     // 7) Read final 32-bit highlighted pixels
     output_bmp_size = BMP_HEADER_SIZE;
-    output_bmp_size += read_highlight_output_fifo(output_bmp_mem, BMP_HEADER_SIZE);
+    int bytes_read;
+    read_highlight_output_fifo(output_bmp_mem, BMP_HEADER_SIZE, bytes_read);
+    output_bmp_size += bytes_read;
 
     // 8) Copy BMP header into output memory
     for (int i = 0; i < BMP_HEADER_SIZE; i++) begin
@@ -197,12 +199,13 @@ module motion_detect_tb;
     end
   endtask
 
-  //--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
 // read_highlight_output_fifo
 //--------------------------------------------------------------------------
 task automatic read_highlight_output_fifo(
     output byte bmp_mem[],
-    input  int  start_index
+    input  int  start_index,
+    output int  bytes_read
 );
   int idx;
   logic [31:0] out_word;
@@ -235,7 +238,8 @@ task automatic read_highlight_output_fifo(
     end
     done_read: 
 
-    $display("TB: read_highlight_output_fifo read %0d bytes total", idx - start_index);
+    bytes_read = idx - start_index;
+    $display("TB: read_highlight_output_fifo read %0d bytes total", bytes_read);
   end
 endtask
 
