@@ -198,47 +198,46 @@ module motion_detect_tb;
   endtask
 
   //--------------------------------------------------------------------------
-  // read_highlight_output_fifo
-  //--------------------------------------------------------------------------
-  function automatic int read_highlight_output_fifo(
-      output byte bmp_mem[],
-      input  int  start_index
-  );
-    int idx;
-    logic [31:0] out_word;
-    begin
-      idx = start_index;
+// read_highlight_output_fifo
+//--------------------------------------------------------------------------
+task automatic read_highlight_output_fifo(
+    output byte bmp_mem[],
+    input  int  start_index
+);
+  int idx;
+  logic [31:0] out_word;
+  begin
+    idx = start_index;
 
-      forever begin
-        @(posedge clk);
+    forever begin
+      @(posedge clk);
 
-        // If empty and no further writes, we assume done
-        if (dut.highlight_fifo_empty) begin
-          if (!dut.highlight_wr_en)
-            // break from forever
-            disable done_read;
-        end
-        else begin
-          // Pop one word
-          dut.highlight_fifo_rd_en <= 1'b1;
-          @(posedge clk);
-          dut.highlight_fifo_rd_en <= 1'b0;
-
-          out_word = dut.highlight_fifo_dout;
-
-          bmp_mem[idx + 0] = out_word[ 7: 0];
-          bmp_mem[idx + 1] = out_word[15: 8];
-          bmp_mem[idx + 2] = out_word[23:16];
-          bmp_mem[idx + 3] = out_word[31:24];
-          idx += 4;
-        end
+      // If FIFO is empty and no further writes are anticipated, we assume done
+      if (dut.highlight_fifo_empty) begin
+        if (!dut.highlight_wr_en)
+          // break from forever
+          disable done_read;
       end
-      done_read: 
+      else begin
+        // Pop one word from FIFO
+        dut.highlight_fifo_rd_en <= 1'b1;
+        @(posedge clk);
+        dut.highlight_fifo_rd_en <= 1'b0;
 
-      $display("TB: read_highlight_output_fifo read %0d bytes total", idx - start_index);
-      return (idx - start_index);
+        out_word = dut.highlight_fifo_dout;
+
+        bmp_mem[idx + 0] = out_word[ 7: 0];
+        bmp_mem[idx + 1] = out_word[15: 8];
+        bmp_mem[idx + 2] = out_word[23:16];
+        bmp_mem[idx + 3] = out_word[31:24];
+        idx += 4;
+      end
     end
-  endfunction
+    done_read: 
+
+    $display("TB: read_highlight_output_fifo read %0d bytes total", idx - start_index);
+  end
+endtask
 
   //--------------------------------------------------------------------------
   // compare_files
