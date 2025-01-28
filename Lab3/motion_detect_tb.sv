@@ -1,243 +1,163 @@
-`timescale 1ns/1ps
+`timescale 1 ns / 1 ns
 
 module motion_detect_tb;
 
-  localparam int BMP_HEADER_SIZE = 54;
-  string base_bmp_file       = "base.bmp";
-  string pedestrian_bmp_file = "pedestrians.bmp";
-  string output_bmp_file     = "output_detect.bmp";
-  string golden_bmp_file     = "img_out.bmp";
+localparam string BG_IMG_IN_NAME  = "base.bmp";
+localparam string FR_IMG_IN_NAME  = "pedestrians.bmp";
+localparam string IMG_OUT_NAME    = "output_hw.bmp";
+localparam string IMG_CMP_NAME    = "img_out.bmp";
+localparam CLOCK_PERIOD           = 10;
+localparam WIDTH                  = 720;
+localparam HEIGHT                 = 540;
+localparam BYTES_PER_PIXEL        = 3;
+localparam BMP_HEADER_SIZE        = 54;
+localparam BMP_DATA_SIZE          = WIDTH * HEIGHT * BYTES_PER_PIXEL;
 
-  logic clk;
-  logic reset;
+logic clock = 1'b0;
+logic reset = 1'b0;
+logic start = 1'b0;
+logic done  = 1'b0;
 
-  motion_detect_top dut (
-    .clk   (clk),
-    .reset (reset)
-  );
+integer out_errors = 0;
+logic out_read_done = 0;
 
-  initial begin
-    clk = 0;
-    forever #5 clk = ~clk;
-  end
+// DUT
+motion_detect_top motion_detect_top_inst (
+  .clk(clock),
+  .reset(reset)
+);
 
-  initial begin
-    reset = 1;
-    #100;
-    reset = 0;
-  end
+// Clock
+always begin
+  #(CLOCK_PERIOD/2) clock = ~clock;
+end
 
-  initial begin
-    byte base_hdr[BMP_HEADER_SIZE];
-    byte ped_hdr[BMP_HEADER_SIZE];
-    byte base_data[];
-    byte ped_data[];
-    byte highlight_data[];
+// Reset
+initial begin
+  reset = 1'b1;
+  #(5*CLOCK_PERIOD);
+  reset = 1'b0;
+end
 
-    wait (reset == 0);
-    #10;
+// Main control
+initial begin : tb_process
+  longint unsigned start_time, end_time;
+  @(negedge reset);
+  @(posedge clock);
+  start_time = $time;
+  $display("@ %0t: Starting simulation...", start_time);
+  start = 1'b1;
+  @(posedge clock);
+  start = 1'b0;
+  wait(out_read_done);
+  end_time = $time;
+  $display("@ %0t: Simulation done.", end_time);
+  $display("Cycles: %0d", (end_time - start_time) / CLOCK_PERIOD);
+  $display("Errors: %0d", out_errors);
+  $finish;
+end
 
-    read_bmp_file(base_bmp_file, base_hdr, base_data);
-    read_bmp_file(pedestrian_bmp_file, ped_hdr, ped_data);
-
-    push_image_data_to_fifo(
-      base_data,
-      dut.background_fifo_inst.full,
-      dut.background_fifo_inst.empty,
-      dut.bg_fifo_wr_en,
-      dut.bg_fifo_din
-    );
-
-    push_image_data_to_fifo(
-      ped_data,
-      dut.frame_fifo_inst.full,
-      dut.frame_fifo_inst.empty,
-      dut.fr_fifo_wr_en,
-      dut.fr_fifo_din
-    );
-
-    wait_for_pipeline_flush();
-
-    highlight_data = new[ped_data.size()];
-    pull_image_data_from_fifo(
-      highlight_data,
-      dut.highlight_fifo_inst.empty,
-      dut.highlight_fifo_rd_en,
-      dut.highlight_fifo_dout
-    );
-
-    write_bmp_file(output_bmp_file, base_hdr, highlight_data);
-    compare_against_golden(output_bmp_file, golden_bmp_file);
-
-    $display("Done.");
-    $finish;
-  end
-
-  task read_bmp_file(
-    input  string filename,
-    output byte   header[],
-    output byte   image_data[]
-  );
-    int  fd;
-    int  i;
-    int  c;
-    int  old_size;
-
-    fd = $fopen(filename, "rb");
-    if (fd == 0) begin
-      $display("Cannot open %s", filename);
-      $finish;
+// Read base image
+initial begin : bg_read_process
+  int file, r, i;
+  logic [7:0] tmp [0:BMP_HEADER_SIZE-1];
+  logic [7:0] b1, b2, b3;
+  @(negedge reset);
+  file = $fopen(BG_IMG_IN_NAME, "rb");
+  r = $fread(tmp, file, 0, BMP_HEADER_SIZE);
+  i = 0;
+  while (i < BMP_DATA_SIZE) begin
+    @(negedge clock);
+    if (!motion_detect_top_inst.bg_fifo_full) begin
+      r = $fread(b1, file);
+      r = $fread(b2, file);
+      r = $fread(b3, file);
+      motion_detect_top_inst.bg_fifo_din = {8'h00, b3, b2, b1};
+      motion_detect_top_inst.bg_fifo_wr_en = 1'b1;
+      i += 3;
+    end else begin
+      motion_detect_top_inst.bg_fifo_wr_en = 1'b0;
     end
+  end
+  @(negedge clock);
+  motion_detect_top_inst.bg_fifo_wr_en = 1'b0;
+  $fclose(file);
+end
 
-    for (i = 0; i < BMP_HEADER_SIZE; i++) begin
-      if (!$feof(fd))
-        header[i] = $fgetc(fd);
+// Read pedestrian image
+initial begin : fr_read_process
+  int file, r, i;
+  logic [7:0] tmp [0:BMP_HEADER_SIZE-1];
+  logic [7:0] b1, b2, b3;
+  @(negedge reset);
+  file = $fopen(FR_IMG_IN_NAME, "rb");
+  r = $fread(tmp, file, 0, BMP_HEADER_SIZE);
+  i = 0;
+  while (i < BMP_DATA_SIZE) begin
+    @(negedge clock);
+    if (!motion_detect_top_inst.fr_fifo_full) begin
+      r = $fread(b1, file);
+      r = $fread(b2, file);
+      r = $fread(b3, file);
+      motion_detect_top_inst.fr_fifo_din = {8'h00, b3, b2, b1};
+      motion_detect_top_inst.fr_fifo_wr_en = 1'b1;
+      i += 3;
+    end else begin
+      motion_detect_top_inst.fr_fifo_wr_en = 1'b0;
     end
+  end
+  @(negedge clock);
+  motion_detect_top_inst.fr_fifo_wr_en = 1'b0;
+  $fclose(file);
+end
 
-    image_data = new[0];
-    while (!$feof(fd)) begin
-      c = $fgetc(fd);
-      if (c < 0) break;
-      old_size = image_data.size();
-      image_data = new[old_size + 1](image_data);
-      image_data[old_size] = byte'(c);
-    end
+// Write output and compare
+initial begin : img_write_process
+  int out_file, cmp_file, r, i;
+  logic [7:0] tmp [0:BMP_HEADER_SIZE-1];
+  logic [31:0] pix32;
+  logic [23:0] pix24;
+  logic [7:0] cb1, cb2, cb3;
 
-    $fclose(fd);
-  endtask
+  @(negedge reset);
+  @(negedge clock);
 
-  task push_image_data_to_fifo(
-    input  byte         in_data[],
-    input  logic        fifo_full,
-    input  logic        fifo_empty,
-    output logic        wr_en,
-    output logic [31:0] data_out
-  );
-    int   idx;
-    int   words;
-    int   w;
-    int   b;
-    logic [31:0] tmp;
+  out_file = $fopen(IMG_OUT_NAME, "wb");
+  cmp_file = $fopen(IMG_CMP_NAME, "rb");
+  r = $fread(tmp, cmp_file, 0, BMP_HEADER_SIZE);
+  for (i = 0; i < BMP_HEADER_SIZE; i++)
+    $fwrite(out_file, "%c", tmp[i]);
 
-    idx   = 0;
-    words = (in_data.size() + 3) / 4;
-    wr_en = 0;
-    @(posedge clk);
-
-    for (w = 0; w < words; w++) begin
-      while (fifo_full) @(posedge clk);
-
-      tmp = 32'h0;
-      for (b = 0; b < 4; b++) begin
-        if (idx < in_data.size()) begin
-          tmp[8*b +: 8] = in_data[idx];
-          idx++;
-        end
+  i = 0;
+  while (i < BMP_DATA_SIZE) begin
+    @(negedge clock);
+    if (!motion_detect_top_inst.highlight_fifo_empty) begin
+      r = $fread(cb1, cmp_file);
+      r = $fread(cb2, cmp_file);
+      r = $fread(cb3, cmp_file);
+      pix32 = motion_detect_top_inst.highlight_fifo_dout;
+      motion_detect_top_inst.highlight_fifo_rd_en = 1'b1;
+      pix24 = pix32[23:0];
+      $fwrite(out_file, "%c%c%c", pix24[7:0], pix24[15:8], pix24[23:16]);
+      if ((pix24[7:0]   !== cb1) ||
+          (pix24[15:8]  !== cb2) ||
+          (pix24[23:16] !== cb3)) begin
+        out_errors++;
+        $display("ERROR @ %0d: got=%02h%02h%02h ref=%02h%02h%02h",
+                 i/3,
+                 pix24[23:16], pix24[15:8], pix24[7:0],
+                 cb3, cb2, cb1);
       end
-      data_out = tmp;
-      wr_en    = 1;
-      @(posedge clk);
-      wr_en    = 0;
+      i += 3;
+    end else begin
+      motion_detect_top_inst.highlight_fifo_rd_en = 1'b0;
     end
-  endtask
-
-  task wait_for_pipeline_flush();
-    int i;
-    for (i = 0; i < 10000; i++) @(posedge clk);
-  endtask
-
-  task pull_image_data_from_fifo(
-    output byte        out_data[],
-    input  logic       fifo_empty,
-    output logic       rd_en,
-    input  logic [31:0] data_in
-  );
-    int total;
-    int words;
-    int w;
-    int b;
-    int idx;
-
-    total = out_data.size();
-    words = (total + 3) / 4;
-    idx   = 0;
-    rd_en = 0;
-    @(posedge clk);
-
-    for (w = 0; w < words; w++) begin
-      while (fifo_empty) @(posedge clk);
-      rd_en = 1;
-      @(posedge clk);
-      rd_en = 0;
-      for (b = 0; b < 4; b++) begin
-        if (idx < total) begin
-          out_data[idx] = data_in[8*b +: 8];
-          idx++;
-        end
-      end
-    end
-  endtask
-
-  task write_bmp_file(
-    input string filename,
-    input byte   header[],
-    input byte   image_data[]
-  );
-    int fd;
-    int i;
-
-    fd = $fopen(filename, "wb");
-    if (fd == 0) begin
-      $display("Cannot write %s", filename);
-      return;
-    end
-
-    for (i = 0; i < BMP_HEADER_SIZE; i++) begin
-      $fwrite(fd, "%c", header[i]);
-    end
-    for (i = 0; i < image_data.size(); i++) begin
-      $fwrite(fd, "%c", image_data[i]);
-    end
-
-    $fclose(fd);
-  endtask
-
-  task compare_against_golden(
-    input string test_file,
-    input string golden_file
-  );
-    int  fd;
-    byte thdr[BMP_HEADER_SIZE];
-    byte ghdr[BMP_HEADER_SIZE];
-    byte tdata[];
-    byte gdata[];
-    int  mismatches;
-    int  i;
-
-    fd = $fopen(golden_file, "rb");
-    if (fd == 0) begin
-      $display("No golden file '%s'", golden_file);
-      return;
-    end
-    $fclose(fd);
-
-    read_bmp_file(test_file,   thdr, tdata);
-    read_bmp_file(golden_file, ghdr, gdata);
-
-    if (tdata.size() != gdata.size()) begin
-      $display("Size mismatch: %0d vs %0d", tdata.size(), gdata.size());
-      return;
-    end
-
-    mismatches = 0;
-    for (i = 0; i < tdata.size(); i++) begin
-      if (tdata[i] != gdata[i]) mismatches++;
-    end
-
-    if (mismatches == 0)
-      $display("PASS: Matches golden file!");
-    else
-      $display("FAIL: %0d mismatches.", mismatches);
-  endtask
+  end
+  @(negedge clock);
+  motion_detect_top_inst.highlight_fifo_rd_en = 1'b0;
+  $fclose(out_file);
+  $fclose(cmp_file);
+  out_read_done = 1'b1;
+end
 
 endmodule
