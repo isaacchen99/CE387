@@ -80,7 +80,6 @@ module motion_detect_tb;
 
     // 7) Read final 32-bit highlighted pixels
     output_bmp_size = BMP_HEADER_SIZE;
-    int bytes_read;
     read_highlight_output_fifo(output_bmp_mem, BMP_HEADER_SIZE, bytes_read);
     output_bmp_size += bytes_read;
 
