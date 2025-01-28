@@ -2,291 +2,338 @@
 
 module motion_detect_tb;
 
-  // Change these paths/filenames as needed
-  parameter string BASE_BMP_FILE       = "base.bmp";
-  parameter string PEDESTRIAN_BMP_FILE = "pedestrians.bmp";
-  parameter string OUTPUT_BMP_FILE     = "output.bmp";
-  parameter string GOLDEN_BMP_FILE     = "golden_output.bmp"; // optional reference
-  parameter int    BMP_HEADER_SIZE     = 54;
+  // -------------------------------------
+  // Parameters
+  // -------------------------------------
+  localparam int BMP_HEADER_SIZE = 54;  // Standard BMP header size (in bytes)
 
-  // Clock/reset
-  logic clk   = 0;
-  logic reset = 1;
+  // Filenames for input and output
+  string base_bmp_file       = "base.bmp";
+  string pedestrian_bmp_file = "pedestrians.bmp";
+  string output_bmp_file     = "output_detect.bmp";
+  string golden_bmp_file     = "img_out.bmp";  // <-- GOLDEN FILE (renamed here)
 
-  // Instantiate your top-level DUT (motion_detect_top)
+  // -------------------------------------
+  // DUT I/O
+  // -------------------------------------
+  logic clk;
+  logic reset;
+
+  // Wires to drive the background fifo
+  wire bg_fifo_full;
+  wire bg_fifo_empty;
+  logic bg_fifo_wr_en;
+  logic [31:0] bg_fifo_din;
+  wire [31:0] bg_fifo_dout;
+  wire bg_fifo_rd_en;
+
+  // Wires to drive the frame fifo
+  wire fr_fifo_full;
+  wire fr_fifo_empty;
+  logic fr_fifo_wr_en;
+  logic [31:0] fr_fifo_din;
+  wire [31:0] fr_fifo_dout;
+  wire fr_fifo_rd_en;
+
+  // Similarly, the highlight output FIFO
+  wire highlight_fifo_full;
+  wire highlight_fifo_empty;
+  wire highlight_fifo_rd_en;
+  wire [31:0] highlight_fifo_dout;
+
+  // Instantiate the DUT
   motion_detect_top dut (
     .clk   (clk),
     .reset (reset)
+    // All internal connections are done inside the DUT
   );
 
-  // Clock generation (e.g. 100 MHz => 10 ns period)
-  always #5 clk = ~clk;
-
-  // Deassert reset after some cycles
+  // -------------------------------------
+  // Clock generation
+  // -------------------------------------
   initial begin
-    reset = 1;
-    repeat (10) @(posedge clk);
-    reset = 0;
-    $display("TB: Deasserted reset at time %0t", $time);
+    clk = 0;
+    forever #5 clk = ~clk;  // 100MHz -> period 10ns
   end
 
-  // Memory for BMP files
-  byte base_bmp_mem       [0 : 5_000_000];
-  byte pedestrian_bmp_mem [0 : 5_000_000];
-  byte output_bmp_mem     [0 : 5_000_000];
-
-  integer fd_base, fd_ped, fd_out;
-  integer base_bmp_size, pedestrian_bmp_size;
-  integer bytes_read, bytes_written, output_bmp_size;
-
-  // Main test sequence
+  // -------------------------------------
+  // Reset logic
+  // -------------------------------------
   initial begin
-    @(negedge reset);
-    $display("TB: Starting at time %0t", $time);
+    reset = 1;
+    #100;
+    reset = 0;
+  end
 
-    // 1) Read base.bmp
-    fd_base = $fopen(BASE_BMP_FILE, "rb");
-    if (fd_base == 0) begin
-      $error("Cannot open %0s", BASE_BMP_FILE);
-      $finish;
-    end
-    bytes_read     = $fread(base_bmp_mem, fd_base);
-    base_bmp_size  = bytes_read;
-    $fclose(fd_base);
-    $display("TB: Read %0d bytes from %0s", base_bmp_size, BASE_BMP_FILE);
+  // -------------------------------------
+  // Stimulus: read BMP files, push data
+  // -------------------------------------
+  initial begin
+    // Wait for reset deassert
+    wait(reset == 0);
+    // small delay to ensure everything is stable
+    #10;
 
-    // 2) Read pedestrians.bmp
-    fd_ped = $fopen(PEDESTRIAN_BMP_FILE, "rb");
-    if (fd_ped == 0) begin
-      $error("Cannot open %0s", PEDESTRIAN_BMP_FILE);
-      $finish;
-    end
-    bytes_read         = $fread(pedestrian_bmp_mem, fd_ped);
-    pedestrian_bmp_size= bytes_read;
-    $fclose(fd_ped);
-    $display("TB: Read %0d bytes from %0s", pedestrian_bmp_size, PEDESTRIAN_BMP_FILE);
+    // We’ll store the header and pixel data in arrays
+    byte   base_bmp_header    [0:BMP_HEADER_SIZE-1];
+    byte   pedestrian_bmp_hdr [0:BMP_HEADER_SIZE-1];
 
-    // 3) Push base image data into background FIFO
-    push_bmp_to_fifo_bg(base_bmp_mem, base_bmp_size);
+    byte   base_image_data      [];
+    byte   pedestrian_image_data[];
 
-    // 4) Push pedestrian data into frame FIFO (for subtract)
-    push_bmp_to_fifo_fr(pedestrian_bmp_mem, pedestrian_bmp_size);
+    // 1. Read the base.bmp file
+    read_bmp_file(base_bmp_file, base_bmp_header, base_image_data);
 
-    // 5) Push pedestrian data into highlight frame FIFO
-    push_bmp_to_fifo_for_highlight(pedestrian_bmp_mem, pedestrian_bmp_size);
+    // 2. Read the pedestrians.bmp file
+    read_bmp_file(pedestrian_bmp_file, pedestrian_bmp_hdr, pedestrian_image_data);
 
-    // 6) Wait for pipeline to process
-    repeat (10000) @(posedge clk);
+    // (Optional) You could check that the headers have consistent width/height 
+    // if you want a strict check. We'll assume they're the same dimension.
 
-    // 7) Read final 32-bit highlighted pixels
-    output_bmp_size = BMP_HEADER_SIZE;
-    read_highlight_output_fifo(output_bmp_mem, BMP_HEADER_SIZE, bytes_read);
-    output_bmp_size += bytes_read;
+    // 3. Push the base image data into the DUT’s background FIFO
+    automatic int num_base_pixels = base_image_data.size();
+    push_image_data_to_fifo(
+      base_image_data,
+      dut.background_fifo_inst.full,
+      dut.background_fifo_inst.empty,
+      bg_fifo_wr_en,
+      bg_fifo_din
+    );
 
-    // 8) Copy BMP header into output memory
-    for (int i = 0; i < BMP_HEADER_SIZE; i++) begin
-      // Typically use the same header from one of the inputs
-      output_bmp_mem[i] = pedestrian_bmp_mem[i];
-    end
+    // 4. Push the pedestrian (frame) image data into the DUT’s frame FIFO
+    automatic int num_fr_pixels = pedestrian_image_data.size();
+    push_image_data_to_fifo(
+      pedestrian_image_data,
+      dut.frame_fifo_inst.full,
+      dut.frame_fifo_inst.empty,
+      fr_fifo_wr_en,
+      fr_fifo_din
+    );
 
-    // 9) Write the final BMP
-    fd_out = $fopen(OUTPUT_BMP_FILE, "wb");
-    if (fd_out == 0) begin
-      $error("Cannot open %0s for writing", OUTPUT_BMP_FILE);
-      $finish;
-    end
-    bytes_written = $fwrite(fd_out, output_bmp_mem, output_bmp_size);
-    $fclose(fd_out);
-    $display("TB: Wrote %0d bytes to %0s", bytes_written, OUTPUT_BMP_FILE);
+    // 5. Wait long enough for pipeline to process everything
+    wait_for_pipeline_flush();
 
-    // 10) Compare with golden if needed
-    compare_files(OUTPUT_BMP_FILE, GOLDEN_BMP_FILE);
+    // 6. Now read the processed (highlighted) data from the highlight FIFO
+    byte highlight_data[];
+    highlight_data = new[ num_fr_pixels ]; // same size as input frames
 
-    $display("TB: Test completed at time %0t", $time);
+    pull_image_data_from_fifo(
+      highlight_data,
+      dut.highlight_fifo_inst.empty,
+      highlight_fifo_rd_en,
+      highlight_fifo_dout
+    );
+
+    // 7. Write out the resulting image with the same header (or the base header)
+    write_bmp_file(output_bmp_file, base_bmp_header, highlight_data);
+
+    // 8. Compare against the golden file (renamed to "img_out.bmp")
+    compare_against_golden(output_bmp_file, golden_bmp_file);
+
+    // 9. Finish
+    $display("Simulation complete");
     $finish;
   end
 
-  //--------------------------------------------------------------------------
-  // push_bmp_to_fifo_bg
-  //--------------------------------------------------------------------------
-  task automatic push_bmp_to_fifo_bg(
-      input byte bmp_mem[],
-      input int  bmp_size
+  // -------------------------------------
+  // Task: Read BMP File
+  // -------------------------------------
+  task read_bmp_file(
+    input  string filename,
+    output byte   header   [ ],
+    output byte   image_data[]
   );
-    int idx;
-    logic [31:0] word;
-    begin
-      idx = BMP_HEADER_SIZE;
-      while ((idx + 3) < bmp_size) begin
-        word[ 7: 0]  = bmp_mem[idx + 0];
-        word[15: 8]  = bmp_mem[idx + 1];
-        word[23:16]  = bmp_mem[idx + 2];
-        word[31:24]  = bmp_mem[idx + 3];
-        idx += 4;
+    int fd;
+    int ret;
+    byte file_byte;
 
-        // Wait one clock
-        @(posedge clk);
-        // Stall if full
-        while (dut.bg_fifo_full) @(posedge clk);
-
-        dut.bg_fifo_wr_en <= 1'b1;
-        dut.bg_fifo_din   <= word;
-        @(posedge clk);
-        dut.bg_fifo_wr_en <= 1'b0;
-      end
-      $display("TB: push_bmp_to_fifo_bg done, %0d bytes pushed.", idx - BMP_HEADER_SIZE);
+    // open the file in read-binary mode
+    fd = $fopen(filename, "rb");
+    if (fd == 0) begin
+      $error("ERROR: Could not open file %0s", filename);
+      $finish;
     end
+
+    // Read header (54 bytes) 
+    for (int i = 0; i < BMP_HEADER_SIZE; i++) begin
+      ret = $fread(file_byte, fd);
+      header[i] = file_byte;
+    end
+
+    // Read remainder of file
+    image_data = new[0]; // Clear existing data
+    while (!$feof(fd)) begin
+      ret = $fread(file_byte, fd);
+      if (ret == 0) break;
+      image_data.push_back(file_byte);
+    end
+
+    $fclose(fd);
+    $display("Read BMP file %s, header + %0d bytes data", filename, image_data.size());
   endtask
 
-  //--------------------------------------------------------------------------
-  // push_bmp_to_fifo_fr
-  //--------------------------------------------------------------------------
-  task automatic push_bmp_to_fifo_fr(
-      input byte bmp_mem[],
-      input int  bmp_size
+  // -------------------------------------
+  // Task: Push image data into a 32-bit wide FIFO
+  // -------------------------------------
+  task push_image_data_to_fifo(
+    input byte image_data[],
+    input wire fifo_full,
+    input wire fifo_empty, // not necessarily used here
+    output logic wr_en,
+    output logic [31:0] data_out
   );
-    int idx;
-    logic [31:0] word;
-    begin
-      idx = BMP_HEADER_SIZE;
-      while ((idx + 3) < bmp_size) begin
-        word[ 7: 0]  = bmp_mem[idx + 0];
-        word[15: 8]  = bmp_mem[idx + 1];
-        word[23:16]  = bmp_mem[idx + 2];
-        word[31:24]  = bmp_mem[idx + 3];
-        idx += 4;
+    int n_bytes = image_data.size();
+    int words   = (n_bytes+3)/4; // round up
+    int idx     = 0;
 
-        @(posedge clk);
-        while (dut.fr_fifo_full) @(posedge clk);
+    // Reset the write enable
+    wr_en = 0;
+    @(posedge clk);
 
-        dut.fr_fifo_wr_en <= 1'b1;
-        dut.fr_fifo_din   <= word;
-        @(posedge clk);
-        dut.fr_fifo_wr_en <= 1'b0;
-      end
-      $display("TB: push_bmp_to_fifo_fr done, %0d bytes pushed.", idx - BMP_HEADER_SIZE);
-    end
-  endtask
+    for (int i = 0; i < words; i++) begin
+      logic [31:0] word_val = 32'h0;
 
-  //--------------------------------------------------------------------------
-  // push_bmp_to_fifo_for_highlight
-  //--------------------------------------------------------------------------
-  task automatic push_bmp_to_fifo_for_highlight(
-      input byte bmp_mem[],
-      input int  bmp_size
-  );
-    int idx;
-    logic [31:0] word;
-    begin
-      idx = BMP_HEADER_SIZE;
-      while ((idx + 3) < bmp_size) begin
-        word[ 7: 0]  = bmp_mem[idx + 0];
-        word[15: 8]  = bmp_mem[idx + 1];
-        word[23:16]  = bmp_mem[idx + 2];
-        word[31:24]  = bmp_mem[idx + 3];
-        idx += 4;
-
-        @(posedge clk);
-        while (dut.fr_hl_fifo_full) @(posedge clk);
-
-        dut.fr_hl_fifo_wr_en <= 1'b1;
-        dut.fr_hl_fifo_din   <= word;
-        @(posedge clk);
-        dut.fr_hl_fifo_wr_en <= 1'b0;
-      end
-      $display("TB: push_bmp_to_fifo_for_highlight done, %0d bytes pushed.", idx - BMP_HEADER_SIZE);
-    end
-  endtask
-
-//--------------------------------------------------------------------------
-// read_highlight_output_fifo
-//--------------------------------------------------------------------------
-task automatic read_highlight_output_fifo(
-    output byte bmp_mem[],
-    input  int  start_index,
-    output int  bytes_read
-);
-  int idx;
-  logic [31:0] out_word;
-  begin
-    idx = start_index;
-
-    forever begin
-      @(posedge clk);
-
-      // If FIFO is empty and no further writes are anticipated, we assume done
-      if (dut.highlight_fifo_empty) begin
-        if (!dut.highlight_wr_en)
-          // break from forever
-          disable done_read;
-      end
-      else begin
-        // Pop one word from FIFO
-        dut.highlight_fifo_rd_en <= 1'b1;
-        @(posedge clk);
-        dut.highlight_fifo_rd_en <= 1'b0;
-
-        out_word = dut.highlight_fifo_dout;
-
-        bmp_mem[idx + 0] = out_word[ 7: 0];
-        bmp_mem[idx + 1] = out_word[15: 8];
-        bmp_mem[idx + 2] = out_word[23:16];
-        bmp_mem[idx + 3] = out_word[31:24];
-        idx += 4;
-      end
-    end
-    done_read: 
-
-    bytes_read = idx - start_index;
-    $display("TB: read_highlight_output_fifo read %0d bytes total", bytes_read);
-  end
-endtask
-
-  //--------------------------------------------------------------------------
-  // compare_files
-  //--------------------------------------------------------------------------
-  task automatic compare_files(
-      input string new_file,
-      input string ref_file
-  );
-    integer fd_new, fd_ref;
-    integer size_new, size_ref;
-    byte new_mem [0:5_000_000];
-    byte ref_mem [0:5_000_000];
-    int i;
-    begin
-      if (ref_file == "") begin
-        $display("No golden file specified, skipping compare.");
-        return;
-      end
-
-      fd_new = $fopen(new_file, "rb");
-      if (fd_new == 0) begin
-        $display("Cannot open %0s for compare", new_file);
-        return;
-      end
-      size_new = $fread(new_mem, fd_new);
-      $fclose(fd_new);
-
-      fd_ref = $fopen(ref_file, "rb");
-      if (fd_ref == 0) begin
-        $display("Cannot open %0s for compare", ref_file);
-        return;
-      end
-      size_ref = $fread(ref_mem, fd_ref);
-      $fclose(fd_ref);
-
-      if (size_new != size_ref) begin
-        $display("COMPARE: Size mismatch new=%0d, ref=%0d", size_new, size_ref);
-        return;
-      end
-
-      for (i = 0; i < size_new; i++) begin
-        if (new_mem[i] != ref_mem[i]) begin
-          $display("COMPARE ERROR at byte[%0d]: new=%0x, ref=%0x", i, new_mem[i], ref_mem[i]);
+      for (int b = 0; b < 4; b++) begin
+        if (idx < n_bytes) begin
+          word_val[8*b +:8] = image_data[idx];
+          idx++;
+        end 
+        else begin
+          word_val[8*b +:8] = 8'h00; // pad if not enough bytes
         end
       end
-      $display("COMPARE DONE: %0s vs %0s (checked %0d bytes)", new_file, ref_file, size_new);
+
+      // Wait until FIFO is not full
+      while (fifo_full) begin
+        @(posedge clk);
+      end
+
+      data_out = word_val;
+      wr_en    = 1;
+      @(posedge clk);
+      wr_en    = 0;
+    end
+
+    $display("Pushed %0d bytes (%0d words) into FIFO", n_bytes, words);
+  endtask
+
+  // -------------------------------------
+  // Task: Wait for pipeline flush
+  // -------------------------------------
+  task wait_for_pipeline_flush();
+    // This is just a placeholder. Adjust for your pipeline length.
+    repeat (10000) @(posedge clk);
+  endtask
+
+  // -------------------------------------
+  // Task: Pull image data from a 32-bit wide FIFO
+  // -------------------------------------
+  task pull_image_data_from_fifo(
+    output byte highlight_data[],
+    input  wire fifo_empty,
+    output logic rd_en,
+    input  wire [31:0] data_in
+  );
+    int total_bytes = highlight_data.size();
+    int words   = (total_bytes+3)/4;
+    int idx     = 0;
+
+    rd_en = 0;
+    @(posedge clk);
+
+    for (int i = 0; i < words; i++) begin
+      // Wait until FIFO is not empty
+      while (fifo_empty) @(posedge clk);
+
+      rd_en = 1;
+      @(posedge clk);
+      rd_en = 0;
+
+      for (int b = 0; b < 4; b++) begin
+        if (idx < total_bytes) begin
+          highlight_data[idx] = data_in[8*b +:8];
+          idx++;
+        end
+      end
+    end
+
+    $display("Pulled %0d bytes (%0d words) from highlight FIFO", total_bytes, words);
+  endtask
+
+  // -------------------------------------
+  // Task: Write BMP File
+  // -------------------------------------
+  task write_bmp_file(
+    input string filename,
+    input byte   header[],
+    input byte   image_data[]
+  );
+    int fd;
+    fd = $fopen(filename, "wb");
+    if (fd == 0) begin
+      $error("ERROR: Could not open output file %0s", filename);
+      return;
+    end
+
+    // Write header (54 bytes)
+    for (int i = 0; i < BMP_HEADER_SIZE; i++) begin
+      $fwrite(fd, "%c", header[i]);
+    end
+
+    // Write image data
+    for (int i = 0; i < image_data.size(); i++) begin
+      $fwrite(fd, "%c", image_data[i]);
+    end
+
+    $fclose(fd);
+    $display("Wrote output BMP file %s", filename);
+  endtask
+
+  // -------------------------------------
+  // Task: Compare against golden file
+  // -------------------------------------
+  task compare_against_golden(input string test_file, golden_file);
+    byte test_header   [0:BMP_HEADER_SIZE-1];
+    byte golden_header [0:BMP_HEADER_SIZE-1];
+    byte test_data     [];
+    byte golden_data   [];
+
+    // First, check if golden file can be opened
+    int check_fd = $fopen(golden_file, "rb");
+    if (check_fd == 0) begin
+      $display("No golden file '%s' found to compare, skipping...", golden_file);
+      return;
+    end
+    else begin
+      $fclose(check_fd);
+    end
+
+    read_bmp_file(test_file,    test_header,   test_data);
+    read_bmp_file(golden_file,  golden_header, golden_data);
+
+    if (test_data.size() != golden_data.size()) begin
+      $display("ERROR: Output size %0d != Golden size %0d", 
+               test_data.size(), golden_data.size());
+      return;
+    end
+
+    // Compare pixel data
+    int mismatches = 0;
+    for (int i = 0; i < test_data.size(); i++) begin
+      if (test_data[i] != golden_data[i]) begin
+        mismatches++;
+        if (mismatches < 10) begin
+          $display("Mismatch at byte %0d: got 0x%02h, expected 0x%02h",
+                   i, test_data[i], golden_data[i]);
+        end
+      end
+    end
+
+    if (mismatches == 0) begin
+      $display("PASS: Output matches golden file '%s'!", golden_file);
+    end else begin
+      $display("FAIL: Found %0d mismatches vs golden file '%s'.", 
+               mismatches, golden_file);
     end
   endtask
 
