@@ -233,7 +233,7 @@ module motion_detect_tb;
           idx += 4;
         end
       end
-      done_read: ;
+      done_read: 
 
       $display("TB: read_highlight_output_fifo read %0d bytes total", idx - start_index);
       return (idx - start_index);
