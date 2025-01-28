@@ -2,52 +2,36 @@
 
 module motion_detect_tb;
 
-  //-------------------------------------------------------------------------
-  // Parameters & file names
-  //-------------------------------------------------------------------------
   localparam int BMP_HEADER_SIZE = 54;
   string base_bmp_file       = "base.bmp";
   string pedestrian_bmp_file = "pedestrians.bmp";
   string output_bmp_file     = "output_detect.bmp";
   string golden_bmp_file     = "img_out.bmp";
 
-  //-------------------------------------------------------------------------
-  // DUT signals
-  //-------------------------------------------------------------------------
   logic clk;
   logic reset;
 
-  // Instantiate DUT
   motion_detect_top dut (
     .clk   (clk),
     .reset (reset)
   );
 
-  //-------------------------------------------------------------------------
-  // Clock
-  //-------------------------------------------------------------------------
   initial begin
     clk = 0;
     forever #5 clk = ~clk;
   end
 
-  //-------------------------------------------------------------------------
-  // Reset
-  //-------------------------------------------------------------------------
   initial begin
     reset = 1;
     #100;
     reset = 0;
   end
 
-  //-------------------------------------------------------------------------
-  // Main Test
-  //-------------------------------------------------------------------------
   initial begin
     byte base_hdr[BMP_HEADER_SIZE];
     byte ped_hdr[BMP_HEADER_SIZE];
-    byte base_data[];       // dynamic array
-    byte ped_data[];        // dynamic array
+    byte base_data[];
+    byte ped_data[];
     byte highlight_data[];
 
     wait (reset == 0);
@@ -89,9 +73,6 @@ module motion_detect_tb;
     $finish;
   end
 
-  //-------------------------------------------------------------------------
-  // Task: Read BMP file
-  //-------------------------------------------------------------------------
   task read_bmp_file(
     input  string filename,
     output byte   header[],
@@ -108,28 +89,23 @@ module motion_detect_tb;
       $finish;
     end
 
-    // Read header (54 bytes)
     for (i = 0; i < BMP_HEADER_SIZE; i++) begin
       if (!$feof(fd))
         header[i] = $fgetc(fd);
     end
 
-    // Read remainder into a dynamic array
     image_data = new[0];
     while (!$feof(fd)) begin
       c = $fgetc(fd);
       if (c < 0) break;
       old_size = image_data.size();
-      image_data = new[old_size + 1](image_data); // resize & copy old contents
-      image_data[old_size] = byte'(c);           // append new byte
+      image_data = new[old_size + 1](image_data);
+      image_data[old_size] = byte'(c);
     end
 
     $fclose(fd);
   endtask
 
-  //-------------------------------------------------------------------------
-  // Task: Push data into 32-bit FIFO
-  //-------------------------------------------------------------------------
   task push_image_data_to_fifo(
     input  byte         in_data[],
     input  logic        fifo_full,
@@ -165,17 +141,11 @@ module motion_detect_tb;
     end
   endtask
 
-  //-------------------------------------------------------------------------
-  // Task: Wait for pipeline flush (dummy)
-  //-------------------------------------------------------------------------
   task wait_for_pipeline_flush();
     int i;
     for (i = 0; i < 10000; i++) @(posedge clk);
   endtask
 
-  //-------------------------------------------------------------------------
-  // Task: Pull data from 32-bit FIFO
-  //-------------------------------------------------------------------------
   task pull_image_data_from_fifo(
     output byte        out_data[],
     input  logic       fifo_empty,
@@ -208,9 +178,6 @@ module motion_detect_tb;
     end
   endtask
 
-  //-------------------------------------------------------------------------
-  // Task: Write BMP file
-  //-------------------------------------------------------------------------
   task write_bmp_file(
     input string filename,
     input byte   header[],
@@ -235,9 +202,6 @@ module motion_detect_tb;
     $fclose(fd);
   endtask
 
-  //-------------------------------------------------------------------------
-  // Task: Compare output with golden
-  //-------------------------------------------------------------------------
   task compare_against_golden(
     input string test_file,
     input string golden_file
