@@ -2,19 +2,18 @@
 
 module motion_detect_tb;
 
-  //-----------------------------------------------------------------------------
-  // Parameters and file names
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Parameters & file names
+  //-------------------------------------------------------------------------
   localparam int BMP_HEADER_SIZE = 54;
-
   string base_bmp_file       = "base.bmp";
   string pedestrian_bmp_file = "pedestrians.bmp";
   string output_bmp_file     = "output_detect.bmp";
   string golden_bmp_file     = "img_out.bmp";
 
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
   // DUT signals
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
   logic clk;
   logic reset;
 
@@ -24,31 +23,31 @@ module motion_detect_tb;
     .reset (reset)
   );
 
-  //-----------------------------------------------------------------------------
-  // Clock Generation
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Clock
+  //-------------------------------------------------------------------------
   initial begin
     clk = 0;
     forever #5 clk = ~clk;
   end
 
-  //-----------------------------------------------------------------------------
-  // Reset Generation
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Reset
+  //-------------------------------------------------------------------------
   initial begin
     reset = 1;
     #100;
     reset = 0;
   end
 
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
   // Main Test
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
   initial begin
-    byte base_hdr    [BMP_HEADER_SIZE];
-    byte ped_hdr     [BMP_HEADER_SIZE];
-    byte base_data   [];
-    byte ped_data    [];
+    byte base_hdr[BMP_HEADER_SIZE];
+    byte ped_hdr[BMP_HEADER_SIZE];
+    byte base_data[];
+    byte ped_data[];
     byte highlight_data[];
 
     wait (reset == 0);
@@ -90,19 +89,19 @@ module motion_detect_tb;
     $finish;
   end
 
-  //-----------------------------------------------------------------------------
-  // Task: Read BMP File
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Task: Read BMP file
+  //-------------------------------------------------------------------------
   task read_bmp_file(
     input  string filename,
     output byte   header[],
     output byte   image_data[]
   );
-    int   fd;
-    int   i;
-    int   c;
-    image_data = new[0];
+    int  fd;
+    int  i;
+    int  c;
 
+    image_data = new[0];
     fd = $fopen(filename, "rb");
     if (fd == 0) begin
       $display("Cannot open %s", filename);
@@ -122,14 +121,14 @@ module motion_detect_tb;
     $fclose(fd);
   endtask
 
-  //-----------------------------------------------------------------------------
-  // Task: Push image data into FIFO (32-bit wide)
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Task: Push data into 32-bit FIFO
+  //-------------------------------------------------------------------------
   task push_image_data_to_fifo(
-    input  byte    in_data[],
-    input  wire    fifo_full,
-    input  wire    fifo_empty,
-    output logic   wr_en,
+    input  byte         in_data[],
+    input  logic        fifo_full,
+    input  logic        fifo_empty,
+    output logic        wr_en,
     output logic [31:0] data_out
   );
     int   idx;
@@ -161,22 +160,22 @@ module motion_detect_tb;
     end
   endtask
 
-  //-----------------------------------------------------------------------------
-  // Task: Wait for pipeline flush (placeholder)
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Task: Wait for pipeline flush (dummy)
+  //-------------------------------------------------------------------------
   task wait_for_pipeline_flush();
     int i;
     for (i = 0; i < 10000; i++) @(posedge clk);
   endtask
 
-  //-----------------------------------------------------------------------------
-  // Task: Pull image data from FIFO (32-bit wide)
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Task: Pull data from 32-bit FIFO
+  //-------------------------------------------------------------------------
   task pull_image_data_from_fifo(
-    output byte    out_data[],
-    input  wire    fifo_empty,
-    output logic   rd_en,
-    input  wire [31:0] data_in
+    output byte        out_data[],
+    input  logic       fifo_empty,
+    output logic       rd_en,
+    input  logic [31:0] data_in
   );
     int total;
     int words;
@@ -193,6 +192,7 @@ module motion_detect_tb;
 
     for (w = 0; w < words; w++) begin
       while (fifo_empty) @(posedge clk);
+
       rd_en = 1;
       @(posedge clk);
       rd_en = 0;
@@ -206,9 +206,9 @@ module motion_detect_tb;
     end
   endtask
 
-  //-----------------------------------------------------------------------------
-  // Task: Write BMP File
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Task: Write BMP file
+  //-------------------------------------------------------------------------
   task write_bmp_file(
     input string filename,
     input byte   header[],
@@ -223,25 +223,31 @@ module motion_detect_tb;
       return;
     end
 
-    for (i = 0; i < BMP_HEADER_SIZE; i++) $fwrite(fd, "%c", header[i]);
-    for (i = 0; i < image_data.size(); i++) $fwrite(fd, "%c", image_data[i]);
+    for (i = 0; i < BMP_HEADER_SIZE; i++) begin
+      $fwrite(fd, "%c", header[i]);
+    end
+
+    for (i = 0; i < image_data.size(); i++) begin
+      $fwrite(fd, "%c", image_data[i]);
+    end
+
     $fclose(fd);
   endtask
 
-  //-----------------------------------------------------------------------------
-  // Task: Compare output with golden
-  //-----------------------------------------------------------------------------
+  //-------------------------------------------------------------------------
+  // Task: Compare against golden
+  //-------------------------------------------------------------------------
   task compare_against_golden(
     input string test_file,
     input string golden_file
   );
-    int fd;
-    byte thdr[BMP_HEADER_SIZE];
-    byte ghdr[BMP_HEADER_SIZE];
+    int  fd;
+    byte thdr [BMP_HEADER_SIZE];
+    byte ghdr [BMP_HEADER_SIZE];
     byte tdata[];
     byte gdata[];
-    int mismatches;
-    int i;
+    int  mismatches;
+    int  i;
 
     fd = $fopen(golden_file, "rb");
     if (fd == 0) begin
@@ -250,7 +256,7 @@ module motion_detect_tb;
     end
     $fclose(fd);
 
-    read_bmp_file(test_file,  thdr, tdata);
+    read_bmp_file(test_file,   thdr, tdata);
     read_bmp_file(golden_file, ghdr, gdata);
 
     if (tdata.size() != gdata.size()) begin
