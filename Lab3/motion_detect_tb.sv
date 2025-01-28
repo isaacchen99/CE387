@@ -46,8 +46,8 @@ module motion_detect_tb;
   initial begin
     byte base_hdr[BMP_HEADER_SIZE];
     byte ped_hdr[BMP_HEADER_SIZE];
-    byte base_data[];
-    byte ped_data[];
+    byte base_data[];       // dynamic array
+    byte ped_data[];        // dynamic array
     byte highlight_data[];
 
     wait (reset == 0);
@@ -100,22 +100,28 @@ module motion_detect_tb;
     int  fd;
     int  i;
     int  c;
+    int  old_size;
 
-    image_data = new[0];
     fd = $fopen(filename, "rb");
     if (fd == 0) begin
       $display("Cannot open %s", filename);
       $finish;
     end
 
+    // Read header (54 bytes)
     for (i = 0; i < BMP_HEADER_SIZE; i++) begin
-      if (!$feof(fd)) header[i] = $fgetc(fd);
+      if (!$feof(fd))
+        header[i] = $fgetc(fd);
     end
 
+    // Read remainder into a dynamic array
+    image_data = new[0];
     while (!$feof(fd)) begin
       c = $fgetc(fd);
       if (c < 0) break;
-      image_data.push_back(byte'(c));
+      old_size = image_data.size();
+      image_data = new[old_size + 1](image_data); // resize & copy old contents
+      image_data[old_size] = byte'(c);           // append new byte
     end
 
     $fclose(fd);
@@ -152,7 +158,6 @@ module motion_detect_tb;
           idx++;
         end
       end
-
       data_out = tmp;
       wr_en    = 1;
       @(posedge clk);
@@ -186,17 +191,14 @@ module motion_detect_tb;
     total = out_data.size();
     words = (total + 3) / 4;
     idx   = 0;
-
     rd_en = 0;
     @(posedge clk);
 
     for (w = 0; w < words; w++) begin
       while (fifo_empty) @(posedge clk);
-
       rd_en = 1;
       @(posedge clk);
       rd_en = 0;
-
       for (b = 0; b < 4; b++) begin
         if (idx < total) begin
           out_data[idx] = data_in[8*b +: 8];
@@ -226,7 +228,6 @@ module motion_detect_tb;
     for (i = 0; i < BMP_HEADER_SIZE; i++) begin
       $fwrite(fd, "%c", header[i]);
     end
-
     for (i = 0; i < image_data.size(); i++) begin
       $fwrite(fd, "%c", image_data[i]);
     end
@@ -235,15 +236,15 @@ module motion_detect_tb;
   endtask
 
   //-------------------------------------------------------------------------
-  // Task: Compare against golden
+  // Task: Compare output with golden
   //-------------------------------------------------------------------------
   task compare_against_golden(
     input string test_file,
     input string golden_file
   );
     int  fd;
-    byte thdr [BMP_HEADER_SIZE];
-    byte ghdr [BMP_HEADER_SIZE];
+    byte thdr[BMP_HEADER_SIZE];
+    byte ghdr[BMP_HEADER_SIZE];
     byte tdata[];
     byte gdata[];
     int  mismatches;
