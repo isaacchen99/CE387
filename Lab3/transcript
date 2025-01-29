@@ -1,0 +1,188 @@
+# //  ModelSim SE-64 2020.1 Jan 28 2020 Linux 4.18.0-553.33.1.el8_10.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do motion_detect_sim.do
+# -9
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vmap 2020.1 Lib Mapping Utility 2020.01 Jan 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 23:23:42 on Jan 28,2025
+# vlog -reportprogress 300 -work work fifo.sv 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 23:23:42 on Jan 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 23:23:42 on Jan 28,2025
+# vlog -reportprogress 300 -work work grayscale.sv 
+# -- Compiling module grayscale
+# 
+# Top level modules:
+# 	grayscale
+# End time: 23:23:42 on Jan 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 23:23:42 on Jan 28,2025
+# vlog -reportprogress 300 -work work background_subtract.sv 
+# -- Compiling module background_subtract
+# 
+# Top level modules:
+# 	background_subtract
+# End time: 23:23:43 on Jan 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 23:23:43 on Jan 28,2025
+# vlog -reportprogress 300 -work work highlight.sv 
+# -- Compiling module highlight
+# 
+# Top level modules:
+# 	highlight
+# End time: 23:23:43 on Jan 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 23:23:43 on Jan 28,2025
+# vlog -reportprogress 300 -work work motion_detect_top.sv 
+# -- Compiling module motion_detect_top
+# 
+# Top level modules:
+# 	motion_detect_top
+# End time: 23:23:43 on Jan 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 23:23:43 on Jan 28,2025
+# vlog -reportprogress 300 -work work motion_detect_tb.sv 
+# -- Compiling module motion_detect_tb
+# 
+# Top level modules:
+# 	motion_detect_tb
+# End time: 23:23:43 on Jan 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -classdebug -voptargs="+acc" "+notimingchecks" -L work work.motion_detect_tb -wlf motion_detect_tb.wlf 
+# Start time: 23:23:43 on Jan 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.motion_detect_tb(fast)
+# Loading work.motion_detect_top(fast)
+# Loading work.fifo(fast)
+# Loading work.grayscale(fast)
+# Loading work.fifo(fast__1)
+# Loading work.background_subtract(fast)
+# Loading work.highlight(fast)
+# [TB] @55: Starting simulation...
+# [TB] @60: Reading background file: base.bmp
+# [TB] @60: Reading frame file: pedestrians.bmp
+# [TB] @60: Comparing DUT output to reference: img_out.bmp
+# [TB] @3888150: Pixel 0 mismatch. Reference=000000, DUT=001608
+# [TB] @3888190: Pixel 1 mismatch. Reference=000000, DUT=00180a
+# [TB] @3888230: Pixel 2 mismatch. Reference=000000, DUT=011b0d
+# [TB] @3888270: Pixel 3 mismatch. Reference=000000, DUT=011b0d
+# [TB] @3888310: Pixel 4 mismatch. Reference=000000, DUT=011b0d
+# [TB] @3888350: Pixel 5 mismatch. Reference=000000, DUT=011b0d
+# [TB] @3888390: Pixel 6 mismatch. Reference=000000, DUT=001a0c
+# [TB] @3888430: Pixel 7 mismatch. Reference=000000, DUT=011a0c
+# [TB] @3888470: Pixel 8 mismatch. Reference=000000, DUT=031b09
+# [TB] @3888510: Pixel 9 mismatch. Reference=000000, DUT=001705
+# [TB] @3888550: Pixel 10 mismatch. Reference=000000, DUT=001503
+# [TB] @3888590: Pixel 11 mismatch. Reference=000000, DUT=021806
+# [TB] @3888630: Pixel 12 mismatch. Reference=000000, DUT=011607
+# [TB] @3888670: Pixel 13 mismatch. Reference=000000, DUT=011607
+# [TB] @3888710: Pixel 14 mismatch. Reference=000000, DUT=001507
+# [TB] @3888750: Pixel 15 mismatch. Reference=000000, DUT=001608
+# [TB] @3888790: Pixel 16 mismatch. Reference=000000, DUT=001506
+# [TB] @3888830: Pixel 17 mismatch. Reference=000000, DUT=001604
+# [TB] @3888870: Pixel 18 mismatch. Reference=000000, DUT=001503
+# [TB] @3888910: Pixel 19 mismatch. Reference=000000, DUT=001402
+# [TB] @3888950: Pixel 20 mismatch. Reference=000000, DUT=001604
+# [TB] @3888990: Pixel 21 mismatch. Reference=000000, DUT=021806
+# [TB] @3889030: Pixel 22 mismatch. Reference=000000, DUT=031b09
+# [TB] @3889070: Pixel 23 mismatch. Reference=000000, DUT=041c0a
+# [TB] @3889110: Pixel 24 mismatch. Reference=000000, DUT=00210d
+# [TB] @3889150: Pixel 25 mismatch. Reference=000000, DUT=001d0a
+# [TB] @3889190: Pixel 26 mismatch. Reference=000000, DUT=001705
+# [TB] @3889230: Pixel 27 mismatch. Reference=000000, DUT=001302
+# [TB] @3889270: Pixel 28 mismatch. Reference=000000, DUT=011403
+# [TB] @3889310: Pixel 29 mismatch. Reference=000000, DUT=011b09
+# [TB] @3889350: Pixel 30 mismatch. Reference=000000, DUT=002410
+# [TB] @3889390: Pixel 31 mismatch. Reference=000000, DUT=002a15
+# [TB] @3889430: Pixel 32 mismatch. Reference=000000, DUT=033622
+# [TB] @3889470: Pixel 33 mismatch. Reference=000000, DUT=00341f
+# [TB] @3889510: Pixel 34 mismatch. Reference=000000, DUT=003722
+# [TB] @3889550: Pixel 35 mismatch. Reference=000000, DUT=04311e
+# [TB] @3889590: Pixel 36 mismatch. Reference=000000, DUT=03311b
+# [TB] @3889630: Pixel 37 mismatch. Reference=000000, DUT=00351e
+# [TB] @3889670: Pixel 38 mismatch. Reference=000000, DUT=00321b
+# [TB] @3889710: Pixel 39 mismatch. Reference=000000, DUT=062f1a
+# [TB] @3889750: Pixel 40 mismatch. Reference=000000, DUT=012c17
+# [TB] @3889790: Pixel 41 mismatch. Reference=000000, DUT=022b16
+# [TB] @3889830: Pixel 42 mismatch. Reference=000000, DUT=022713
+# [TB] @3889870: Pixel 43 mismatch. Reference=000000, DUT=032310
+# [TB] @3889910: Pixel 44 mismatch. Reference=000000, DUT=04220f
+# [TB] @3889950: Pixel 45 mismatch. Reference=000000, DUT=032010
+# [TB] @3889990: Pixel 46 mismatch. Reference=000000, DUT=021f0f
+# [TB] @3890030: Pixel 47 mismatch. Reference=000000, DUT=001e0d
+# [TB] @3890070: Pixel 48 mismatch. Reference=000000, DUT=022112
+# [TB] @3890110: Pixel 49 mismatch. Reference=000000, DUT=002315
+# [TB] @3890150: Pixel 50 mismatch. Reference=000000, DUT=002718
+# [TB] @3890190: Pixel 51 mismatch. Reference=000000, DUT=012b1a
+# [TB] @3890230: Pixel 52 mismatch. Reference=000000, DUT=012b19
+# [TB] @3890270: Pixel 53 mismatch. Reference=000000, DUT=002c16
+# [TB] @3890310: Pixel 54 mismatch. Reference=000000, DUT=002d1a
+# [TB] @3890350: Pixel 55 mismatch. Reference=000000, DUT=00301e
+# [TB] @3890390: Pixel 56 mismatch. Reference=000000, DUT=003522
+# [TB] @3890430: Pixel 57 mismatch. Reference=000000, DUT=003020
+# [TB] @3890470: Pixel 58 mismatch. Reference=000000, DUT=002b1c
+# [TB] @3890510: Pixel 59 mismatch. Reference=000000, DUT=012c1f
+# [TB] @3890550: Pixel 60 mismatch. Reference=000000, DUT=043023
+# [TB] @3890590: Pixel 61 mismatch. Reference=000000, DUT=013222
+# [TB] @3890630: Pixel 62 mismatch. Reference=000000, DUT=013222
+# [TB] @3890670: Pixel 63 mismatch. Reference=000000, DUT=023422
+# [TB] @3890710: Pixel 64 mismatch. Reference=000000, DUT=003522
+# [TB] @3890750: Pixel 65 mismatch. Reference=000000, DUT=023624
+# [TB] @3890790: Pixel 66 mismatch. Reference=000000, DUT=023422
+# [TB] @3890830: Pixel 67 mismatch. Reference=000000, DUT=053221
+# [TB] @3890870: Pixel 68 mismatch. Reference=000000, DUT=03301f
+# [TB] @3890910: Pixel 69 mismatch. Reference=000000, DUT=002d1c
+# [TB] @3890950: Pixel 70 mismatch. Reference=000000, DUT=00301e
+# [TB] @3890990: Pixel 71 mismatch. Reference=000000, DUT=023422
+# [TB] @3891030: Pixel 72 mismatch. Reference=000000, DUT=003423
+# [TB] @3891070: Pixel 73 mismatch. Reference=000000, DUT=003322
+# [TB] @3891110: Pixel 74 mismatch. Reference=000000, DUT=003121
+# [TB] @3891150: Pixel 75 mismatch. Reference=000000, DUT=003121
+# [TB] @3891190: Pixel 76 mismatch. Reference=000000, DUT=003524
+# [TB] @3891230: Pixel 77 mismatch. Reference=000000, DUT=003726
+# [TB] @3891270: Pixel 78 mismatch. Reference=000000, DUT=003625
+# [TB] @3891310: Pixel 79 mismatch. Reference=000000, DUT=003422
+# [TB] @3891350: Pixel 80 mismatch. Reference=000000, DUT=032f1e
+# [TB] @3891390: Pixel 81 mismatch. Reference=000000, DUT=002c1b
+# [TB] @3891430: Pixel 82 mismatch. Reference=000000, DUT=00291a
+# [TB] @3891470: Pixel 83 mismatch. Reference=000000, DUT=002b1c
+# [TB] @3891510: Pixel 84 mismatch. Reference=000000, DUT=032c1d
+# [TB] @3891550: Pixel 85 mismatch. Reference=000000, DUT=012b1a
+# [TB] @3891590: Pixel 86 mismatch. Reference=000000, DUT=012818
+# [TB] @3891630: Pixel 87 mismatch. Reference=000000, DUT=012917
+# [TB] @3891670: Pixel 88 mismatch. Reference=000000, DUT=002e1b
+# [TB] @3891710: Pixel 89 mismatch. Reference=000000, DUT=00311d
+# [TB] @3891750: Pixel 90 mismatch. Reference=000000, DUT=013321
+# [TB] @3891790: Pixel 91 mismatch. Reference=000000, DUT=013523
+# [TB] @3891830: Pixel 92 mismatch. Reference=000000, DUT=003522
+# [TB] @3891870: Pixel 93 mismatch. Reference=000000, DUT=013827
+# [TB] @3891910: Pixel 94 mismatch. Reference=000000, DUT=043f30
+# [TB] @3891950: Pixel 95 mismatch. Reference=000000, DUT=094838
+# [TB] @3891990: Pixel 96 mismatch. Reference=000000, DUT=013f31
+# [TB] @3892030: Pixel 97 mismatch. Reference=000000, DUT=013e30
+# End time: 23:24:19 on Jan 28,2025, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 0
