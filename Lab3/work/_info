@@ -10,180 +10,180 @@ z2
 cModel Technology
 Z0 d/home/icl5712/GitHub/CE387/Lab3
 T_opt
-Z1 !s110 1738128223
-V2?o0o@<Pm@_`V3YzWzHCa0
+Z1 !s110 1738134186
+VP78VPVIXP]UP?@TU:kgPS2
 04 16 4 work motion_detect_tb fast 0
-=1-b49691574b56-6799bb5f-8fa10-309a4b
+=1-b49691574b56-6799d2aa-7b1a4-169bd7
 o-quiet -auto_acc_if_foreign -work work -L work +acc
 Z2 tCvgOpt 0
 n@_opt
 OL;O;2020.1;71
 vbackground_subtract
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R1
+Z4 !s110 1738134185
 !i10b 1
 !s100 3dZmhVJCcHSj[zoZRCSEc1
-Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IHUJ6g[ec6;`_RFCL7zMzU2
-Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z6 w1738047809
+Z7 w1738047809
 8background_subtract.sv
 Fbackground_subtract.sv
-!i122 318
+!i122 467
 L0 1 94
-Z7 OL;L;2020.1;71
+Z8 OL;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1738128222.000000
+Z9 !s108 1738134185.000000
 !s107 background_subtract.sv|
 !s90 -reportprogress|300|-work|work|background_subtract.sv|
 !i113 0
-Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 vfifo
 R3
-Z10 !s110 1738128222
+R4
 !i10b 1
 !s100 hVQjZDTP_6I<?[9gTife[0
-R4
-IFfE>cg`RgP0T_lkod[TOi1
 R5
+IFfE>cg`RgP0T_lkod[TOi1
+R6
 S1
 R0
 w1738123611
 8fifo.sv
 Ffifo.sv
-!i122 316
+!i122 465
 L0 1 77
-R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 fifo.sv|
 !s90 -reportprogress|300|-work|work|fifo.sv|
 !i113 0
-R9
+R10
 R2
 vgrayscale
 R3
-R10
+R4
 !i10b 1
 !s100 VW;cE8935jgRUooIB5=z80
-R4
-IhNzOXGYYM[4oj=ViHekCI0
 R5
+IhNzOXGYYM[4oj=ViHekCI0
+R6
 S1
 R0
-R6
+R7
 8grayscale.sv
 Fgrayscale.sv
-!i122 317
+!i122 466
 L0 1 113
-R7
+R8
 r1
 !s85 0
 31
-R8
+R9
 !s107 grayscale.sv|
 !s90 -reportprogress|300|-work|work|grayscale.sv|
 !i113 0
-R9
+R10
 R2
 vhighlight
 R3
 R1
 !i10b 1
-!s100 G;g:Z?FEfH_Q@=gho8KYI1
-R4
-IHf_HjlG9AL]bnbFK0XZ@V0
+!s100 @eEdl;W<W3WJ?D`UTH?SK1
 R5
+I?gBP^OoMQIeDTM@;RaWh[3
+R6
 S1
 R0
-w1738047899
+w1738129171
 8highlight.sv
 Fhighlight.sv
-!i122 319
-L0 1 107
-R7
+!i122 468
+L0 1 104
+R8
 r1
 !s85 0
 31
-Z11 !s108 1738128223.000000
+R9
 !s107 highlight.sv|
 !s90 -reportprogress|300|-work|work|highlight.sv|
 !i113 0
-R9
+R10
 R2
 vmotion_detect_tb
 R3
 R1
 !i10b 1
-!s100 lU8>36_Z`Nd`h572KYzB;2
-R4
-IB:EZ8M`ci8CHoiai<5DzR1
+!s100 T6dY;baY[=VO_]UMFF;_A0
 R5
+IJjeWV5KYX>ZBF;>VmBR:E0
+R6
 S1
 R0
-w1738128208
-Z12 8motion_detect_tb.sv
-Z13 Fmotion_detect_tb.sv
-!i122 321
+w1738134177
+Z11 8motion_detect_tb.sv
+Z12 Fmotion_detect_tb.sv
+!i122 470
 L0 3 358
-R7
+R8
 r1
 !s85 0
 31
-R11
+Z13 !s108 1738134186.000000
 Z14 !s107 motion_detect_tb.sv|
 Z15 !s90 -reportprogress|300|-work|work|motion_detect_tb.sv|
 !i113 0
-R9
+R10
 R2
 vmotion_detect_top
 R3
 R1
 !i10b 1
 !s100 bLE`[Alcco^=Pe55V[HBC2
-R4
-IVVo[3z8NWDMKzi:^4EAAB2
 R5
+IVVo[3z8NWDMKzi:^4EAAB2
+R6
 S1
 R0
-w1738127021
+w1738129220
 8motion_detect_top.sv
 Fmotion_detect_top.sv
-!i122 320
+!i122 469
 L0 1 244
-R7
+R8
 r1
 !s85 0
 31
-R11
+R13
 !s107 motion_detect_top.sv|
 !s90 -reportprogress|300|-work|work|motion_detect_top.sv|
 !i113 0
-R9
+R10
 R2
 vvideo_pipeline_tb
 R3
 !s110 1738124471
 !i10b 1
 !s100 S4NG0dC699YQmm>zKVf<E1
-R4
-Ia1J8PEg^zAS:L9`T?aDmX0
 R5
+Ia1J8PEg^zAS:L9`T?aDmX0
+R6
 S1
 R0
 w1738124421
+R11
 R12
-R13
 !i122 262
 L0 3 295
-R7
+R8
 r1
 !s85 0
 31
@@ -191,5 +191,5 @@ r1
 R14
 R15
 !i113 0
-R9
+R10
 R2

@@ -93,12 +93,9 @@ module highlight (
       end
 
       WRITE: begin
-        if (!fifo_out_full) begin
-          data_out     = out_pixel;
-          write_enable = 1'b1;
-          next_state   = IDLE;
-        end
-        // If fifo_out is full, stay in WRITE until it's not full
+        data_out     = out_pixel;
+        write_enable = 1'b1;
+        next_state   = IDLE;
       end
 
     endcase
