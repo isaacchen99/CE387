@@ -1,0 +1,141 @@
+@N:: Applying property .distcompmodetop with value 1 on module motion_detect_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module motion_detect_top in library work
+@N:: Applying property .noprune with value 1 on module motion_detect_top in library work
+Selecting top level module motion_detect_top
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":29:6:29:15|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":46:14:46:25|Reference to undefined module grayscale
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":65:6:65:21|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":86:6:86:21|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":107:6:107:18|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":125:14:125:28|Reference to undefined module grayscale
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":145:6:145:24|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":167:6:167:11|Reference to undefined module background_subtract
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":191:6:191:23|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":209:14:209:15|Reference to undefined module highlight
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":230:6:230:23|Reference to undefined module fifo
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":1:7:1:23|Synthesizing module motion_detect_top in library work.
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":29:6:29:15|Creating black box for fifo
+Making port reset a bidir
+Making port rd_clk a bidir
+Making port wr_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":46:14:46:25|Creating black box for grayscale
+Making port clk a bidir
+Making port reset a bidir
+Making port read_enable a bidir
+Making port data_in a bidir
+Making port fifo_in_empty a bidir
+Making port write_enable a bidir
+Making port data_out a bidir
+Making port fifo_out_full a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":65:6:65:21|Creating black box for fifo
+Making port reset a bidir
+Making port wr_clk a bidir
+Making port rd_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":86:6:86:21|Creating black box for fifo
+Making port reset a bidir
+Making port wr_clk a bidir
+Making port rd_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":107:6:107:18|Creating black box for fifo
+Making port reset a bidir
+Making port wr_clk a bidir
+Making port rd_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":125:14:125:28|Creating black box for grayscale
+Making port clk a bidir
+Making port reset a bidir
+Making port read_enable a bidir
+Making port data_in a bidir
+Making port fifo_in_empty a bidir
+Making port write_enable a bidir
+Making port data_out a bidir
+Making port fifo_out_full a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":145:6:145:24|Creating black box for fifo
+Making port reset a bidir
+Making port wr_clk a bidir
+Making port rd_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":167:6:167:11|Creating black box for background_subtract
+Making port clk a bidir
+Making port reset a bidir
+Making port base_read_enable a bidir
+Making port base_din a bidir
+Making port base_fifo_empty a bidir
+Making port gray_read_enable a bidir
+Making port gray_din a bidir
+Making port gray_fifo_empty a bidir
+Making port write_enable a bidir
+Making port data_out a bidir
+Making port fifo_out_full a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":191:6:191:23|Creating black box for fifo
+Making port reset a bidir
+Making port wr_clk a bidir
+Making port rd_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":209:14:209:15|Creating black box for highlight
+Making port clk a bidir
+Making port reset a bidir
+Making port base_read_enable a bidir
+Making port base_din a bidir
+Making port base_fifo_empty a bidir
+Making port subt_read_enable a bidir
+Making port subt_din a bidir
+Making port subt_fifo_empty a bidir
+Making port write_enable a bidir
+Making port data_out a bidir
+Making port fifo_out_full a bidir
+@W: CG141 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":230:6:230:23|Creating black box for fifo
+Making port reset a bidir
+Making port wr_clk a bidir
+Making port rd_clk a bidir
+Making port wr_en a bidir
+Making port din a bidir
+Making port full a bidir
+Making port rd_en a bidir
+Making port dout a bidir
+Making port empty a bidir
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":160:22:160:40|Object bg_sub_base_read_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":160:43:160:61|Object bg_sub_gray_read_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":161:22:161:36|Object bg_sub_base_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":161:39:161:53|Object bg_sub_gray_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":162:22:162:43|Object bg_sub_base_fifo_empty is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":162:46:162:67|Object bg_sub_gray_fifo_empty is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on motion_detect_top .......
+Running optimization stage 2 on motion_detect_top .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/icl5712/GitHub/CE387/Lab3/rev_1/synwork//distcomp/distcomp0/distcomp0.rt.csv
+

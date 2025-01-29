@@ -1,0 +1,9 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: BN115 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":63:22:63:24|Removing instance dut (in view: work.motion_detect_tb(verilog)) of type view:work.motion_detect_top(verilog) because it does not drive other instances.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: BN225 |Writing default property annotation file /home/icl5712/GitHub/CE387/Lab3/rev_2/background_subtract.sap.

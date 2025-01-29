@@ -1,0 +1,80 @@
+@N:: Applying property .distcompmodetop with value 1 on module motion_detect_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module motion_detect_top in library work
+@N:: Applying property .noprune with value 1 on module motion_detect_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module fifo in library work
+@N:: Applying property .noprune with value 1 on module fifo in library work
+@N:: Applying property .distcompnoprune with value 1 on module highlight in library work
+@N:: Applying property .noprune with value 1 on module highlight in library work
+@N:: Applying property .distcompnoprune with value 1 on module background_subtract in library work
+@N:: Applying property .noprune with value 1 on module background_subtract in library work
+@N:: Applying property .distcompnoprune with value 1 on module grayscale in library work
+@N:: Applying property .noprune with value 1 on module grayscale in library work
+Selecting top level module motion_detect_top
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000100000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000100000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000110
+   Generated name = fifo_32s_32s_6s
+Running optimization stage 1 on fifo_32s_32s_6s .......
+@N: CL134 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":34:4:34:12|Found RAM fifo_buf, depth=32, width=32
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":1:7:1:15|Synthesizing module grayscale in library work.
+Running optimization stage 1 on grayscale .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000001000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000100000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000110
+   Generated name = fifo_8s_32s_6s
+Running optimization stage 1 on fifo_8s_32s_6s .......
+@N: CL134 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":34:4:34:12|Found RAM fifo_buf, depth=32, width=8
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":1:7:1:25|Synthesizing module background_subtract in library work.
+
+	THRESHOLD=32'b00000000000000000000000000110010
+   Generated name = background_subtract_50s
+Running optimization stage 1 on background_subtract_50s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":1:7:1:15|Synthesizing module highlight in library work.
+Running optimization stage 1 on highlight .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":1:7:1:23|Synthesizing module motion_detect_top in library work.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":160:22:160:40|Object bg_sub_base_read_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":160:43:160:61|Object bg_sub_gray_read_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":161:22:161:36|Object bg_sub_base_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":161:39:161:53|Object bg_sub_gray_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":162:22:162:43|Object bg_sub_base_fifo_empty is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":162:46:162:67|Object bg_sub_gray_fifo_empty is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on motion_detect_top .......
+Running optimization stage 2 on motion_detect_top .......
+Running optimization stage 2 on highlight .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":37:2:37:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL159 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":18:25:18:37|Input fifo_out_full is unused.
+Running optimization stage 2 on background_subtract_50s .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":29:2:29:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL279 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":29:2:29:10|Pruning register bits 7 to 1 of result_pix[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Running optimization stage 2 on fifo_8s_32s_6s .......
+Running optimization stage 2 on grayscale .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":30:2:30:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL246 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":7:23:7:29|Input port bits 7 to 0 of data_in[31:0] are unused. Assign logic for all port bits or change the input port size.
+Running optimization stage 2 on fifo_32s_32s_6s .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/icl5712/GitHub/CE387/Lab3/rev_3/synwork//distcomp/distcomp0/distcomp0.rt.csv
+

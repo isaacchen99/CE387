@@ -1,0 +1,13 @@
+@P:  Part : ep4ce6ea22-7
+@P:  Worst Slack : -1.588
+@P:  motion_detect_top|clk - Estimated Frequency : 94.5 MHz
+@P:  motion_detect_top|clk - Requested Frequency : 111.1 MHz
+@P:  motion_detect_top|clk - Estimated Period : 10.587
+@P:  motion_detect_top|clk - Requested Period : 8.999
+@P:  motion_detect_top|clk - Slack : -1.588
+@P: motion_detect_top Part : ep4ce6ea22-7
+@P: motion_detect_top I/O ATOMs : 86
+@P: motion_detect_top Total LUTs : 395 
+@P: motion_detect_top Register bits : 260
+@P: motion_detect_top DSP Blocks : 0 (0 nine-bit DSP elements)
+@P:  CPU Time : 0h:00m:05s

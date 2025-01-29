@@ -1,0 +1,12 @@
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":29:6:29:15|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":46:14:46:25|Reference to undefined module grayscale
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":65:6:65:21|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":86:6:86:21|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":107:6:107:18|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":125:14:125:28|Reference to undefined module grayscale
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":145:6:145:24|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":167:6:167:11|Reference to undefined module background_subtract
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":191:6:191:23|Reference to undefined module fifo
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":209:14:209:15|Reference to undefined module highlight
+@E: CG389 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":230:6:230:23|Reference to undefined module fifo
+

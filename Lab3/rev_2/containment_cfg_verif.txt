@@ -1,0 +1,12 @@
+motion_detect_tb.dut.highlight_out_fifo work fifo 0 1
+motion_detect_tb.dut.hl work highlight 0 1
+motion_detect_tb.dut.subtract_mask_fifo work fifo 0 1
+motion_detect_tb.dut.bg_sub work background_subtract 0 1
+motion_detect_tb.dut.frame_gray_out_fifo work fifo 0 1
+motion_detect_tb.dut.frame_grayscale work grayscale 0 1
+motion_detect_tb.dut.frame_in_fifo work fifo 0 1
+motion_detect_tb.dut.frame_color_fifo work fifo 0 1
+motion_detect_tb.dut.bg_gray_out_fifo work fifo 0 1
+motion_detect_tb.dut.bg_grayscale work grayscale 0 1
+motion_detect_tb.dut.bg_in_fifo work fifo 0 1
+motion_detect_tb.dut work motion_detect_top 0 1

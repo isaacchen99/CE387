@@ -1,17 +1,10 @@
 `timescale 1 ns / 1 ns
 
 module motion_detect_tb;
-    // ------------------------------------------------------------------------
-    // File names for input and output
-    // ------------------------------------------------------------------------
     localparam string BASE_IMG   = "base.bmp";         // Background image
     localparam string FRAME_IMG  = "pedestrians.bmp";  // Frame image
     localparam string REF_IMG    = "img_out.bmp";      // Reference (golden) image
-    localparam string OUT_IMG    = "pipeline_out.bmp"; // DUT output image
 
-    // ------------------------------------------------------------------------
-    // Image parameters
-    // ------------------------------------------------------------------------
     localparam int WIDTH  = 720;
     localparam int HEIGHT = 540;
 
@@ -19,16 +12,10 @@ module motion_detect_tb;
     localparam int BYTES_PER_PIXEL  = 3;    // 24‐bit BMP
     localparam int BMP_DATA_SIZE    = WIDTH * HEIGHT * BYTES_PER_PIXEL;
 
-    // ------------------------------------------------------------------------
-    // Clock / Reset signals
-    // ------------------------------------------------------------------------
     localparam CLOCK_PERIOD = 10;
     logic clk   = 1'b0;
     logic reset = 1'b1;  // start in reset
 
-    // ------------------------------------------------------------------------
-    // DUT I/O signals
-    // ------------------------------------------------------------------------
     logic         bg_wr_en;
     logic [31:0]  bg_din;
     logic         bg_full;
@@ -45,22 +32,13 @@ module motion_detect_tb;
     logic [31:0]  final_dout;
     logic         final_empty;
 
-    // ------------------------------------------------------------------------
-    // Control signals for main test processes
-    // ------------------------------------------------------------------------
     logic base_write_done   = 1'b0;
     logic frame_write_done  = 1'b0;
     logic output_read_done  = 1'b0;
     integer error_count     = 0;
 
-    // ------------------------------------------------------------------------
-    // Store BMP header from the base image
-    // ------------------------------------------------------------------------
     logic [7:0] base_header_mem [0:BMP_HEADER_SIZE-1];
 
-    // ------------------------------------------------------------------------
-    // DUT instantiation
-    // ------------------------------------------------------------------------
     motion_detect_top dut (
         .clk           (clk),
         .reset         (reset),
@@ -86,24 +64,15 @@ module motion_detect_tb;
         .final_empty   (final_empty)
     );
 
-    // ------------------------------------------------------------------------
-    // Generate clock
-    // ------------------------------------------------------------------------
     always begin
         #(CLOCK_PERIOD/2) clk = ~clk;
     end
 
-    // ------------------------------------------------------------------------
-    // De‐assert reset after a few clock cycles
-    // ------------------------------------------------------------------------
     initial begin
         # (5 * CLOCK_PERIOD);
         reset = 1'b0;
     end
 
-    // ------------------------------------------------------------------------
-    // Main control: wait for tasks to finish, then end simulation
-    // ------------------------------------------------------------------------
     initial begin : main_control
         integer start_time, end_time;
 
@@ -123,11 +92,6 @@ module motion_detect_tb;
         $finish;
     end
 
-    // ------------------------------------------------------------------------
-    // Process #1: Read background image (base.bmp)
-    //             - Store its header
-    //             - Push pixel data into DUT
-    // ------------------------------------------------------------------------
     initial begin : base_image_process
         int i, r;
         int base_fd;
@@ -165,16 +129,6 @@ module motion_detect_tb;
         $fclose(base_fd);
     end
 
-    // ------------------------------------------------------------------------
-    // Process #2: Read frame image (pedestrians.bmp)
-    //             - Skip its header
-    //             - Push pixel data into 'frame' FIFO
-    //             - Then push the **same** pixel data again for 'frame2' FIFO
-    //
-    //  Explanation:
-    //   "frame_wr_en2" uses the same data as "frame_wr_en" but is processed
-    //   later in the pipeline. We'll feed it again from the same file.
-    // ------------------------------------------------------------------------
     // Process for feeding FIFO 1
 initial begin : frame_image_process1
     int frame_fd;
@@ -194,10 +148,8 @@ initial begin : frame_image_process1
         $finish;
     end
 
-    // Skip BMP header
     r = $fread(discard_header, frame_fd, 0, BMP_HEADER_SIZE);
 
-    // Read and feed data into FIFO 1
     i = 0;
     while (i < BMP_DATA_SIZE) begin
         @(negedge clk);
@@ -210,7 +162,7 @@ initial begin : frame_image_process1
 
             frame_din = pixel_32;
             frame_wr_en = 1'b1;
-            i += 3;  // Increment by bytes per pixel read
+            i += 3; 
         end
     end
 
@@ -219,7 +171,6 @@ initial begin : frame_image_process1
     $fclose(frame_fd);
 end
 
-// Process for feeding FIFO 2
 initial begin : frame_image_process2
     int frame_fd2;
     int i, r2;
@@ -238,10 +189,8 @@ initial begin : frame_image_process2
         $finish;
     end
 
-    // Skip BMP header
     r2 = $fread(discard_header2, frame_fd2, 0, BMP_HEADER_SIZE);
 
-    // Read and feed data into FIFO 2
     i = 0;
     while (i < BMP_DATA_SIZE) begin
         @(negedge clk);
@@ -263,13 +212,6 @@ initial begin : frame_image_process2
     $fclose(frame_fd2);
 end
 
-    // ------------------------------------------------------------------------
-    // Process #3: Read DUT output and compare to reference
-    //   - Open reference image (img_out.bmp)
-    //   - Skip reference header
-    //   - Write stored base header to pipeline_out.bmp
-    //   - Compare each pixel with reference, log errors
-    // ------------------------------------------------------------------------
     initial begin : output_compare_process
         integer ref_fd, out_fd;
         integer i, r;
@@ -278,36 +220,21 @@ end
         logic [23:0] ref_word;
         logic [7:0] ref_header [0:BMP_HEADER_SIZE-1];
 
-        // Defaults
         final_rd_en = 1'b0;
 
-        // Wait for reset
         wait(!reset);
         @(negedge clk);
 
-        // Open reference
         ref_fd = $fopen(REF_IMG, "rb");
         if (ref_fd == 0) begin
             $display("[TB] ERROR: Cannot open reference image %s", REF_IMG);
             $finish;
         end
 
-        // Create output file
-        out_fd = $fopen(OUT_IMG, "wb");
-        if (out_fd == 0) begin
-            $display("[TB] ERROR: Cannot create output file %s", OUT_IMG);
-            $finish;
-        end
-
-        // Write the base (background) header to pipeline_out.bmp
         for (i = 0; i < BMP_HEADER_SIZE; i++) begin
             $fwrite(out_fd, "%c", base_header_mem[i]);
         end
 
-        // Skip the reference header so we can compare pixel data
-        // You can do this by reading 54 bytes or calling $fseek:
-        //   r = $fseek(ref_fd, BMP_HEADER_SIZE, 0);
-        // or equivalently:
         r = $fread(ref_header, ref_fd, 0, BMP_HEADER_SIZE);
 
         $display("[TB] @%0t: Comparing DUT output to reference: %s", $time, REF_IMG);
@@ -319,21 +246,12 @@ end
 
             if (!final_empty) begin
                 final_rd_en = 1'b1;
-                dut_word    = final_dout;  // {B, G, R, 8'h00}
+                dut_word    = final_dout; 
 
-                // Read 3 bytes from reference
                 r = $fread(ref_blue,  ref_fd);
                 r = $fread(ref_green, ref_fd);
                 r = $fread(ref_red,   ref_fd);
                 ref_word = {ref_blue, ref_green, ref_red}; // 24 bits
-
-                // Write DUT output pixel to file
-                // DUT pixel is {Blue, Green, Red, 8'h00}
-                // So we do:
-                $fwrite(out_fd, "%c%c%c",
-                        dut_word[31:24],
-                        dut_word[23:16],
-                        dut_word[15: 8] );
 
                 // Compare
                 if (ref_word !== {dut_word[31:24], dut_word[23:16], dut_word[15:8]}) begin

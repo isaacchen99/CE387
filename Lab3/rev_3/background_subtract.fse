@@ -1,0 +1,48 @@
+
+fsm_encoding {12302303} sequential
+
+fsm_state_encoding {12302303} IDLE {00}
+
+fsm_state_encoding {12302303} READ {01}
+
+fsm_state_encoding {12302303} PROCESS {10}
+
+fsm_state_encoding {12302303} WRITE {11}
+
+fsm_registers {12302303} {current_state[1]}  {current_state[0]} 
+
+fsm_encoding {12302303} sequential
+
+fsm_state_encoding {12302303} IDLE {00}
+
+fsm_state_encoding {12302303} READ {01}
+
+fsm_state_encoding {12302303} PROCESS {10}
+
+fsm_state_encoding {12302303} WRITE {11}
+
+fsm_registers {12302303} {current_state[1]}  {current_state[0]} 
+
+fsm_encoding {14292292} sequential
+
+fsm_state_encoding {14292292} IDLE {00}
+
+fsm_state_encoding {14292292} READ {01}
+
+fsm_state_encoding {14292292} PROCESS {10}
+
+fsm_state_encoding {14292292} WRITE {11}
+
+fsm_registers {14292292} {current_state[1]}  {current_state[0]} 
+
+fsm_encoding {11372371} sequential
+
+fsm_state_encoding {11372371} IDLE {00}
+
+fsm_state_encoding {11372371} READ {01}
+
+fsm_state_encoding {11372371} PROCESS {10}
+
+fsm_state_encoding {11372371} WRITE {11}
+
+fsm_registers {11372371} {current_state[1]}  {current_state[0]} 

@@ -1,0 +1,8 @@
+/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter  -link  -multisrs  /home/icl5712/GitHub/CE387/Lab3/rev_3/synwork/background_subtract_comp.srs  -osyn  /home/icl5712/GitHub/CE387/Lab3/rev_3/synwork/background_subtract_mult.srs  -log  /home/icl5712/GitHub/CE387/Lab3/rev_3/synlog/background_subtract_multi_srs_gen.srr 
+relcom:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter -link -multisrs ../synwork/background_subtract_comp.srs -osyn ../synwork/background_subtract_mult.srs -log ../synlog/background_subtract_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:../synwork/background_subtract_comp.srs|io:i|time:1738134532|size:12856|exec:0|csum:03E5222EBBBCE10C648B87E3C9B702D2
+file:../synwork/background_subtract_mult.srs|io:o|time:1738134533|size:5028|exec:0|csum:
+file:../synlog/background_subtract_multi_srs_gen.srr|io:o|time:1738134533|size:1450|exec:0|csum:
+file:/vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/syn_nfilter|io:i|time:1543382463|size:12202632|exec:1|csum:2CF5CA82A12C53A85C3E36D57C2461DC
+file:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter|io:i|time:1543382354|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

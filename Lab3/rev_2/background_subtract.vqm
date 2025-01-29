@@ -1,0 +1,39 @@
+//
+// Written by Synplify Premier 
+// Product Version "O-2018.09-SP1"
+// Program "Synplify Premier", Mapper "maprc, Build 4745R"
+// Wed Jan 29 01:07:42 2025
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v "
+// file 1 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v "
+// file 2 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v "
+// file 3 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v "
+// file 4 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v "
+// file 5 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v "
+// file 6 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v "
+// file 7 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v "
+// file 8 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v "
+// file 9 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh "
+// file 10 "\/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv "
+// file 11 "\/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv "
+// file 12 "\/home/icl5712/GitHub/CE387/Lab3/highlight.sv "
+// file 13 "\/home/icl5712/GitHub/CE387/Lab3/grayscale.sv "
+// file 14 "\/home/icl5712/GitHub/CE387/Lab3/fifo.sv "
+// file 15 "\/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv "
+// file 16 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/nlconst.dat "
+
+// VQM4.1+ 
+module motion_detect_tb (
+
+)
+;
+wire VCC ;
+wire GND ;
+//@0:1
+  assign VCC = 1'b1;
+//@0:1
+  assign GND = 1'b0;
+endmodule /* motion_detect_tb */
+

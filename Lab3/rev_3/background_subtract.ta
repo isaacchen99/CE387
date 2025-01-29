@@ -1,0 +1,688 @@
+# Wed Jan 29 01:11:17 2025
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_3
+Synopsys Intel FPGA Technology Mapper, Version maprc, Build 4745R, Built Nov 27 2018 21:14:52
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+@W: FA406 |Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.
+Adding property syn_ta_report_clock_domain_crossing, value 0 to view:work.motion_detect_top(verilog)
+Adding property syn_ta_max_display_worst_paths, value 5 to view:work.motion_detect_top(verilog)
+@N: MF284 |Setting synthesis effort to medium for the design
+
+Start Timing Analyst (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 118MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 118MB)
+
+@W: MT420 |Found inferred clock motion_detect_top|clk with period 9.00ns. Please declare a user-defined clock on port clk.
+@N: MT535 |Writing timing correlation to file /home/icl5712/GitHub/CE387/Lab3/rev_3/background_subtract_ctd.txt 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Jan 29 01:11:18 2025
+#
+
+
+Top view:               motion_detect_top
+Requested Frequency:    111.1 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -1.588
+
+                          Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock            Frequency     Frequency     Period        Period        Slack      Type         Group                
+-------------------------------------------------------------------------------------------------------------------------------
+motion_detect_top|clk     111.1 MHz     94.5 MHz      8.999         10.587        -1.588     inferred     Autoconstr_clkgroup_0
+===============================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                        |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------------------------
+Starting               Ending                 |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------------------------
+motion_detect_top|clk  motion_detect_top|clk  |  8.999       -1.588  |  No paths    -      |  No paths    -      |  No paths    -    
+=====================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: motion_detect_top|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                             Starting                                                  Arrival           
+Instance                     Reference                 Type       Pin     Net          Time        Slack 
+                             Clock                                                                       
+---------------------------------------------------------------------------------------------------------
+bg_grayscale.blue[0]         motion_detect_top|clk     dffeas     q       blue[0]      0.845       -1.588
+frame_grayscale.blue[0]      motion_detect_top|clk     dffeas     q       blue[0]      0.845       -1.588
+frame_grayscale.green[0]     motion_detect_top|clk     dffeas     q       green[0]     0.845       -1.577
+bg_grayscale.green[0]        motion_detect_top|clk     dffeas     q       green[0]     0.845       -1.577
+frame_grayscale.blue[1]      motion_detect_top|clk     dffeas     q       blue[1]      0.845       -1.522
+bg_grayscale.blue[1]         motion_detect_top|clk     dffeas     q       blue[1]      0.845       -1.522
+frame_grayscale.green[1]     motion_detect_top|clk     dffeas     q       green[1]     0.845       -1.516
+bg_grayscale.green[1]        motion_detect_top|clk     dffeas     q       green[1]     0.845       -1.516
+bg_grayscale.blue[2]         motion_detect_top|clk     dffeas     q       blue[2]      0.845       -1.456
+frame_grayscale.blue[2]      motion_detect_top|clk     dffeas     q       blue[2]      0.845       -1.456
+=========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                 Starting                                                                  Required           
+Instance                         Reference                 Type       Pin     Net                          Time         Slack 
+                                 Clock                                                                                        
+------------------------------------------------------------------------------------------------------------------------------
+frame_grayscale.grayscale[0]     motion_detect_top|clk     dffeas     d       grayscale_1_0_0__g0_i_x4     9.526        -1.588
+bg_grayscale.grayscale[0]        motion_detect_top|clk     dffeas     d       grayscale_1_0_0__g0_i_x4     9.526        -1.588
+frame_grayscale.grayscale[1]     motion_detect_top|clk     dffeas     d       mult1_un68_sum_add3          9.526        -0.805
+bg_grayscale.grayscale[1]        motion_detect_top|clk     dffeas     d       mult1_un68_sum_add3          9.526        -0.805
+frame_grayscale.grayscale[2]     motion_detect_top|clk     dffeas     d       mult1_un61_sum_add3          9.526        0.190 
+bg_grayscale.grayscale[2]        motion_detect_top|clk     dffeas     d       mult1_un61_sum_add3          9.526        0.190 
+frame_grayscale.grayscale[3]     motion_detect_top|clk     dffeas     d       mult1_un54_sum_add3          9.526        1.219 
+bg_grayscale.grayscale[3]        motion_detect_top|clk     dffeas     d       mult1_un54_sum_add3          9.526        1.219 
+bg_grayscale.grayscale[4]        motion_detect_top|clk     dffeas     d       mult1_un47_sum_carry_2       9.526        2.229 
+frame_grayscale.grayscale[4]     motion_detect_top|clk     dffeas     d       mult1_un47_sum_carry_2       9.526        2.229 
+==============================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      8.999
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.526
+
+    - Propagation time:                      10.501
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.588
+
+    Number of logic level(s):                24
+    Starting point:                          bg_grayscale.blue[0] / q
+    Ending point:                            bg_grayscale.grayscale[0] / d
+    The start point is clocked by            motion_detect_top|clk [rising] on pin clk
+    The end   point is clocked by            motion_detect_top|clk [rising] on pin clk
+
+Instance / Net                                                                                      Pin         Pin               Arrival     No. of    
+Name                                                                      Type                      Name        Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+bg_grayscale.blue[0]                                                      dffeas                    q           Out     0.232     0.845       -         
+blue[0]                                                                   Net                       -           -       0.326     -           1         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     datab       In      -         1.171       -         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     cout        Out     0.509     1.680       -         
+un1_grayscale_0_carry_0                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cin         In      -         1.680       -         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cout        Out     0.066     1.746       -         
+un1_grayscale_0_carry_1                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cin         In      -         1.746       -         
+bg_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cout        Out     0.066     1.812       -         
+un1_grayscale_0_carry_2                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add3                                         cycloneive_lcell_comb     cin         In      -         1.812       -         
+bg_grayscale.un1_grayscale_0_add3                                         cycloneive_lcell_comb     cout        Out     0.066     1.878       -         
+un1_grayscale_0_carry_3                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add4                                         cycloneive_lcell_comb     cin         In      -         1.878       -         
+bg_grayscale.un1_grayscale_0_add4                                         cycloneive_lcell_comb     cout        Out     0.066     1.944       -         
+un1_grayscale_0_carry_4                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add5                                         cycloneive_lcell_comb     cin         In      -         1.944       -         
+bg_grayscale.un1_grayscale_0_add5                                         cycloneive_lcell_comb     cout        Out     0.066     2.010       -         
+un1_grayscale_0_carry_5                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add6                                         cycloneive_lcell_comb     cin         In      -         2.010       -         
+bg_grayscale.un1_grayscale_0_add6                                         cycloneive_lcell_comb     cout        Out     0.066     2.076       -         
+un1_grayscale_0_carry_6                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add7                                         cycloneive_lcell_comb     cin         In      -         2.076       -         
+bg_grayscale.un1_grayscale_0_add7                                         cycloneive_lcell_comb     cout        Out     0.066     2.142       -         
+un1_grayscale_0_add7_cout_0                                               Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add7_term                                    cycloneive_lcell_comb     cin         In      -         2.142       -         
+bg_grayscale.un1_grayscale_0_add7_term                                    cycloneive_lcell_comb     combout     Out     0.000     2.142       -         
+un1_grayscale_0[8]                                                        Net                       -           -       0.652     -           1         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     datab       In      -         2.793       -         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cout        Out     0.509     3.302       -         
+un1_grayscale_add8_cout_0                                                 Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     cin         In      -         3.302       -         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     combout     Out     0.000     3.302       -         
+CO0                                                                       Net                       -           -       0.483     -           7         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     dataa       In      -         3.786       -         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     combout     Out     0.437     4.223       -         
+SUM_2_0_a3[3]                                                             Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     datac       In      -         4.556       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     combout     Out     0.429     4.985       -         
+mult1_un40_sum_0_c1                                                       Net                       -           -       0.326     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     datad       In      -         5.310       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     combout     Out     0.155     5.465       -         
+mult1_un40_sum_0_sum2                                                     Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     datad       In      -         5.798       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     combout     Out     0.155     5.953       -         
+mult1_un40_sum_m[2]                                                       Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     dataa       In      -         6.286       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     6.784       -         
+mult1_un47_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cin         In      -         6.784       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cout        Out     0.066     6.850       -         
+mult1_un47_sum_add2_cout_0                                                Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     cin         In      -         6.850       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     combout     Out     0.000     6.850       -         
+mult1_un47_sum_carry_2                                                    Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     dataa       In      -         7.297       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     7.795       -         
+mult1_un54_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     cin         In      -         7.795       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     combout     Out     0.000     7.795       -         
+mult1_un54_sum_add2                                                       Net                       -           -       0.652     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     datab       In      -         8.447       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     combout     Out     0.443     8.890       -         
+mult1_un61_sum_add3                                                       Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     dataa       In      -         9.336       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     combout     Out     0.437     9.773       -         
+mult1_un68_sum_add1                                                       Net                       -           -       0.432     -           2         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     datac       In      -         10.205      -         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     combout     Out     0.429     10.634      -         
+grayscale_1_0_0__g0_i_x4_a                                                Net                       -           -       0.326     -           1         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     datad       In      -         10.959      -         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     combout     Out     0.155     11.114      -         
+grayscale_1_0_0__g0_i_x4                                                  Net                       -           -       0.000     -           1         
+bg_grayscale.grayscale[0]                                                 dffeas                    d           In      -         11.114      -         
+========================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 10.587 is 5.500(51.9%) logic and 5.087(48.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 2: 
+      Requested Period:                      8.999
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.526
+
+    - Propagation time:                      10.501
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.588
+
+    Number of logic level(s):                24
+    Starting point:                          frame_grayscale.blue[0] / q
+    Ending point:                            frame_grayscale.grayscale[0] / d
+    The start point is clocked by            motion_detect_top|clk [rising] on pin clk
+    The end   point is clocked by            motion_detect_top|clk [rising] on pin clk
+
+Instance / Net                                                                                         Pin         Pin               Arrival     No. of    
+Name                                                                         Type                      Name        Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+frame_grayscale.blue[0]                                                      dffeas                    q           Out     0.232     0.845       -         
+blue[0]                                                                      Net                       -           -       0.326     -           1         
+frame_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     datab       In      -         1.171       -         
+frame_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     cout        Out     0.509     1.680       -         
+un1_grayscale_0_carry_0                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cin         In      -         1.680       -         
+frame_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cout        Out     0.066     1.746       -         
+un1_grayscale_0_carry_1                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cin         In      -         1.746       -         
+frame_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cout        Out     0.066     1.812       -         
+un1_grayscale_0_carry_2                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add3                                         cycloneive_lcell_comb     cin         In      -         1.812       -         
+frame_grayscale.un1_grayscale_0_add3                                         cycloneive_lcell_comb     cout        Out     0.066     1.878       -         
+un1_grayscale_0_carry_3                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add4                                         cycloneive_lcell_comb     cin         In      -         1.878       -         
+frame_grayscale.un1_grayscale_0_add4                                         cycloneive_lcell_comb     cout        Out     0.066     1.944       -         
+un1_grayscale_0_carry_4                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add5                                         cycloneive_lcell_comb     cin         In      -         1.944       -         
+frame_grayscale.un1_grayscale_0_add5                                         cycloneive_lcell_comb     cout        Out     0.066     2.010       -         
+un1_grayscale_0_carry_5                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add6                                         cycloneive_lcell_comb     cin         In      -         2.010       -         
+frame_grayscale.un1_grayscale_0_add6                                         cycloneive_lcell_comb     cout        Out     0.066     2.076       -         
+un1_grayscale_0_carry_6                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add7                                         cycloneive_lcell_comb     cin         In      -         2.076       -         
+frame_grayscale.un1_grayscale_0_add7                                         cycloneive_lcell_comb     cout        Out     0.066     2.142       -         
+un1_grayscale_0_add7_cout                                                    Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_0_add7_term                                    cycloneive_lcell_comb     cin         In      -         2.142       -         
+frame_grayscale.un1_grayscale_0_add7_term                                    cycloneive_lcell_comb     combout     Out     0.000     2.142       -         
+un1_grayscale_0[8]                                                           Net                       -           -       0.652     -           1         
+frame_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     datab       In      -         2.793       -         
+frame_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cout        Out     0.509     3.302       -         
+un1_grayscale_add8_cout                                                      Net                       -           -       0.000     -           1         
+frame_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     cin         In      -         3.302       -         
+frame_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     combout     Out     0.000     3.302       -         
+CO0                                                                          Net                       -           -       0.483     -           7         
+frame_grayscale.un1_grayscale_add6_RNIO5MI                                   cycloneive_lcell_comb     dataa       In      -         3.786       -         
+frame_grayscale.un1_grayscale_add6_RNIO5MI                                   cycloneive_lcell_comb     combout     Out     0.437     4.223       -         
+SUM_2_0_a3[3]                                                                Net                       -           -       0.333     -           2         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     datac       In      -         4.556       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     combout     Out     0.429     4.985       -         
+mult1_un40_sum_0_c1                                                          Net                       -           -       0.326     -           1         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     datad       In      -         5.310       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     combout     Out     0.155     5.465       -         
+mult1_un40_sum_0_sum2                                                        Net                       -           -       0.333     -           2         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     datad       In      -         5.798       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     combout     Out     0.155     5.953       -         
+mult1_un40_sum_m[2]                                                          Net                       -           -       0.333     -           2         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     dataa       In      -         6.286       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     6.784       -         
+mult1_un47_sum_carry_1                                                       Net                       -           -       0.000     -           1         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cin         In      -         6.784       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cout        Out     0.066     6.850       -         
+mult1_un47_sum_add2_cout                                                     Net                       -           -       0.000     -           1         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     cin         In      -         6.850       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     combout     Out     0.000     6.850       -         
+mult1_un47_sum_carry_2                                                       Net                       -           -       0.446     -           4         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     dataa       In      -         7.297       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     7.795       -         
+mult1_un54_sum_carry_1                                                       Net                       -           -       0.000     -           1         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     cin         In      -         7.795       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     combout     Out     0.000     7.795       -         
+mult1_un54_sum_add2                                                          Net                       -           -       0.652     -           1         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     datab       In      -         8.447       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     combout     Out     0.443     8.890       -         
+mult1_un61_sum_add3                                                          Net                       -           -       0.446     -           4         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     dataa       In      -         9.336       -         
+frame_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     combout     Out     0.437     9.773       -         
+mult1_un68_sum_add1                                                          Net                       -           -       0.432     -           2         
+frame_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     datac       In      -         10.205      -         
+frame_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     combout     Out     0.429     10.634      -         
+grayscale_1_0_0__g0_i_x4_a                                                   Net                       -           -       0.326     -           1         
+frame_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     datad       In      -         10.959      -         
+frame_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     combout     Out     0.155     11.114      -         
+grayscale_1_0_0__g0_i_x4                                                     Net                       -           -       0.000     -           1         
+frame_grayscale.grayscale[0]                                                 dffeas                    d           In      -         11.114      -         
+===========================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 10.587 is 5.500(51.9%) logic and 5.087(48.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 3: 
+      Requested Period:                      8.999
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.526
+
+    - Propagation time:                      10.501
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.588
+
+    Number of logic level(s):                24
+    Starting point:                          bg_grayscale.blue[0] / q
+    Ending point:                            bg_grayscale.grayscale[0] / d
+    The start point is clocked by            motion_detect_top|clk [rising] on pin clk
+    The end   point is clocked by            motion_detect_top|clk [rising] on pin clk
+
+Instance / Net                                                                                      Pin         Pin               Arrival     No. of    
+Name                                                                      Type                      Name        Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+bg_grayscale.blue[0]                                                      dffeas                    q           Out     0.232     0.845       -         
+blue[0]                                                                   Net                       -           -       0.326     -           1         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     datab       In      -         1.171       -         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     cout        Out     0.509     1.680       -         
+un1_grayscale_0_carry_0                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cin         In      -         1.680       -         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     combout     Out     0.000     1.680       -         
+un1_grayscale_0_add1                                                      Net                       -           -       0.652     -           1         
+bg_grayscale.un1_grayscale_add1                                           cycloneive_lcell_comb     datab       In      -         2.331       -         
+bg_grayscale.un1_grayscale_add1                                           cycloneive_lcell_comb     cout        Out     0.509     2.840       -         
+un1_grayscale_carry_1                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add2                                           cycloneive_lcell_comb     cin         In      -         2.840       -         
+bg_grayscale.un1_grayscale_add2                                           cycloneive_lcell_comb     cout        Out     0.066     2.906       -         
+un1_grayscale_carry_2                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add3                                           cycloneive_lcell_comb     cin         In      -         2.906       -         
+bg_grayscale.un1_grayscale_add3                                           cycloneive_lcell_comb     cout        Out     0.066     2.972       -         
+un1_grayscale_carry_3                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add4                                           cycloneive_lcell_comb     cin         In      -         2.972       -         
+bg_grayscale.un1_grayscale_add4                                           cycloneive_lcell_comb     cout        Out     0.066     3.038       -         
+un1_grayscale_carry_4                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add5                                           cycloneive_lcell_comb     cin         In      -         3.038       -         
+bg_grayscale.un1_grayscale_add5                                           cycloneive_lcell_comb     cout        Out     0.066     3.104       -         
+un1_grayscale_carry_5                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add6                                           cycloneive_lcell_comb     cin         In      -         3.104       -         
+bg_grayscale.un1_grayscale_add6                                           cycloneive_lcell_comb     cout        Out     0.066     3.170       -         
+un1_grayscale_carry_6                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add7                                           cycloneive_lcell_comb     cin         In      -         3.170       -         
+bg_grayscale.un1_grayscale_add7                                           cycloneive_lcell_comb     cout        Out     0.066     3.236       -         
+un1_grayscale_carry_7                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cin         In      -         3.236       -         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cout        Out     0.066     3.302       -         
+un1_grayscale_add8_cout_0                                                 Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     cin         In      -         3.302       -         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     combout     Out     0.000     3.302       -         
+CO0                                                                       Net                       -           -       0.483     -           7         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     dataa       In      -         3.786       -         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     combout     Out     0.437     4.223       -         
+SUM_2_0_a3[3]                                                             Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     datac       In      -         4.556       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     combout     Out     0.429     4.985       -         
+mult1_un40_sum_0_c1                                                       Net                       -           -       0.326     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     datad       In      -         5.310       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     combout     Out     0.155     5.465       -         
+mult1_un40_sum_0_sum2                                                     Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     datad       In      -         5.798       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     combout     Out     0.155     5.953       -         
+mult1_un40_sum_m[2]                                                       Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     dataa       In      -         6.286       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     6.784       -         
+mult1_un47_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cin         In      -         6.784       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cout        Out     0.066     6.850       -         
+mult1_un47_sum_add2_cout_0                                                Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     cin         In      -         6.850       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     combout     Out     0.000     6.850       -         
+mult1_un47_sum_carry_2                                                    Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     dataa       In      -         7.297       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     7.795       -         
+mult1_un54_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     cin         In      -         7.795       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     combout     Out     0.000     7.795       -         
+mult1_un54_sum_add2                                                       Net                       -           -       0.652     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     datab       In      -         8.447       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     combout     Out     0.443     8.890       -         
+mult1_un61_sum_add3                                                       Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     dataa       In      -         9.336       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     combout     Out     0.437     9.773       -         
+mult1_un68_sum_add1                                                       Net                       -           -       0.432     -           2         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     datac       In      -         10.205      -         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     combout     Out     0.429     10.634      -         
+grayscale_1_0_0__g0_i_x4_a                                                Net                       -           -       0.326     -           1         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     datad       In      -         10.959      -         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     combout     Out     0.155     11.114      -         
+grayscale_1_0_0__g0_i_x4                                                  Net                       -           -       0.000     -           1         
+bg_grayscale.grayscale[0]                                                 dffeas                    d           In      -         11.114      -         
+========================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 10.587 is 5.500(51.9%) logic and 5.087(48.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 4: 
+      Requested Period:                      8.999
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.526
+
+    - Propagation time:                      10.501
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.588
+
+    Number of logic level(s):                24
+    Starting point:                          bg_grayscale.blue[0] / q
+    Ending point:                            bg_grayscale.grayscale[0] / d
+    The start point is clocked by            motion_detect_top|clk [rising] on pin clk
+    The end   point is clocked by            motion_detect_top|clk [rising] on pin clk
+
+Instance / Net                                                                                      Pin         Pin               Arrival     No. of    
+Name                                                                      Type                      Name        Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+bg_grayscale.blue[0]                                                      dffeas                    q           Out     0.232     0.845       -         
+blue[0]                                                                   Net                       -           -       0.326     -           1         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     datab       In      -         1.171       -         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     cout        Out     0.509     1.680       -         
+un1_grayscale_0_carry_0                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cin         In      -         1.680       -         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cout        Out     0.066     1.746       -         
+un1_grayscale_0_carry_1                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cin         In      -         1.746       -         
+bg_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     combout     Out     0.000     1.746       -         
+un1_grayscale_0_add2                                                      Net                       -           -       0.652     -           1         
+bg_grayscale.un1_grayscale_add2                                           cycloneive_lcell_comb     datab       In      -         2.397       -         
+bg_grayscale.un1_grayscale_add2                                           cycloneive_lcell_comb     cout        Out     0.509     2.906       -         
+un1_grayscale_carry_2                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add3                                           cycloneive_lcell_comb     cin         In      -         2.906       -         
+bg_grayscale.un1_grayscale_add3                                           cycloneive_lcell_comb     cout        Out     0.066     2.972       -         
+un1_grayscale_carry_3                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add4                                           cycloneive_lcell_comb     cin         In      -         2.972       -         
+bg_grayscale.un1_grayscale_add4                                           cycloneive_lcell_comb     cout        Out     0.066     3.038       -         
+un1_grayscale_carry_4                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add5                                           cycloneive_lcell_comb     cin         In      -         3.038       -         
+bg_grayscale.un1_grayscale_add5                                           cycloneive_lcell_comb     cout        Out     0.066     3.104       -         
+un1_grayscale_carry_5                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add6                                           cycloneive_lcell_comb     cin         In      -         3.104       -         
+bg_grayscale.un1_grayscale_add6                                           cycloneive_lcell_comb     cout        Out     0.066     3.170       -         
+un1_grayscale_carry_6                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add7                                           cycloneive_lcell_comb     cin         In      -         3.170       -         
+bg_grayscale.un1_grayscale_add7                                           cycloneive_lcell_comb     cout        Out     0.066     3.236       -         
+un1_grayscale_carry_7                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cin         In      -         3.236       -         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cout        Out     0.066     3.302       -         
+un1_grayscale_add8_cout_0                                                 Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     cin         In      -         3.302       -         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     combout     Out     0.000     3.302       -         
+CO0                                                                       Net                       -           -       0.483     -           7         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     dataa       In      -         3.786       -         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     combout     Out     0.437     4.223       -         
+SUM_2_0_a3[3]                                                             Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     datac       In      -         4.556       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     combout     Out     0.429     4.985       -         
+mult1_un40_sum_0_c1                                                       Net                       -           -       0.326     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     datad       In      -         5.310       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     combout     Out     0.155     5.465       -         
+mult1_un40_sum_0_sum2                                                     Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     datad       In      -         5.798       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     combout     Out     0.155     5.953       -         
+mult1_un40_sum_m[2]                                                       Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     dataa       In      -         6.286       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     6.784       -         
+mult1_un47_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cin         In      -         6.784       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cout        Out     0.066     6.850       -         
+mult1_un47_sum_add2_cout_0                                                Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     cin         In      -         6.850       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     combout     Out     0.000     6.850       -         
+mult1_un47_sum_carry_2                                                    Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     dataa       In      -         7.297       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     7.795       -         
+mult1_un54_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     cin         In      -         7.795       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     combout     Out     0.000     7.795       -         
+mult1_un54_sum_add2                                                       Net                       -           -       0.652     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     datab       In      -         8.447       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     combout     Out     0.443     8.890       -         
+mult1_un61_sum_add3                                                       Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     dataa       In      -         9.336       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     combout     Out     0.437     9.773       -         
+mult1_un68_sum_add1                                                       Net                       -           -       0.432     -           2         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     datac       In      -         10.205      -         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     combout     Out     0.429     10.634      -         
+grayscale_1_0_0__g0_i_x4_a                                                Net                       -           -       0.326     -           1         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     datad       In      -         10.959      -         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     combout     Out     0.155     11.114      -         
+grayscale_1_0_0__g0_i_x4                                                  Net                       -           -       0.000     -           1         
+bg_grayscale.grayscale[0]                                                 dffeas                    d           In      -         11.114      -         
+========================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 10.587 is 5.500(51.9%) logic and 5.087(48.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 5: 
+      Requested Period:                      8.999
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.526
+
+    - Propagation time:                      10.501
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.588
+
+    Number of logic level(s):                24
+    Starting point:                          bg_grayscale.blue[0] / q
+    Ending point:                            bg_grayscale.grayscale[0] / d
+    The start point is clocked by            motion_detect_top|clk [rising] on pin clk
+    The end   point is clocked by            motion_detect_top|clk [rising] on pin clk
+
+Instance / Net                                                                                      Pin         Pin               Arrival     No. of    
+Name                                                                      Type                      Name        Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+bg_grayscale.blue[0]                                                      dffeas                    q           Out     0.232     0.845       -         
+blue[0]                                                                   Net                       -           -       0.326     -           1         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     datab       In      -         1.171       -         
+bg_grayscale.un1_grayscale_0_add0                                         cycloneive_lcell_comb     cout        Out     0.509     1.680       -         
+un1_grayscale_0_carry_0                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cin         In      -         1.680       -         
+bg_grayscale.un1_grayscale_0_add1                                         cycloneive_lcell_comb     cout        Out     0.066     1.746       -         
+un1_grayscale_0_carry_1                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cin         In      -         1.746       -         
+bg_grayscale.un1_grayscale_0_add2                                         cycloneive_lcell_comb     cout        Out     0.066     1.812       -         
+un1_grayscale_0_carry_2                                                   Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_0_add3                                         cycloneive_lcell_comb     cin         In      -         1.812       -         
+bg_grayscale.un1_grayscale_0_add3                                         cycloneive_lcell_comb     combout     Out     0.000     1.812       -         
+un1_grayscale_0_add3                                                      Net                       -           -       0.652     -           1         
+bg_grayscale.un1_grayscale_add3                                           cycloneive_lcell_comb     datab       In      -         2.463       -         
+bg_grayscale.un1_grayscale_add3                                           cycloneive_lcell_comb     cout        Out     0.509     2.972       -         
+un1_grayscale_carry_3                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add4                                           cycloneive_lcell_comb     cin         In      -         2.972       -         
+bg_grayscale.un1_grayscale_add4                                           cycloneive_lcell_comb     cout        Out     0.066     3.038       -         
+un1_grayscale_carry_4                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add5                                           cycloneive_lcell_comb     cin         In      -         3.038       -         
+bg_grayscale.un1_grayscale_add5                                           cycloneive_lcell_comb     cout        Out     0.066     3.104       -         
+un1_grayscale_carry_5                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add6                                           cycloneive_lcell_comb     cin         In      -         3.104       -         
+bg_grayscale.un1_grayscale_add6                                           cycloneive_lcell_comb     cout        Out     0.066     3.170       -         
+un1_grayscale_carry_6                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add7                                           cycloneive_lcell_comb     cin         In      -         3.170       -         
+bg_grayscale.un1_grayscale_add7                                           cycloneive_lcell_comb     cout        Out     0.066     3.236       -         
+un1_grayscale_carry_7                                                     Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cin         In      -         3.236       -         
+bg_grayscale.un1_grayscale_add8                                           cycloneive_lcell_comb     cout        Out     0.066     3.302       -         
+un1_grayscale_add8_cout_0                                                 Net                       -           -       0.000     -           1         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     cin         In      -         3.302       -         
+bg_grayscale.un1_grayscale_add8_term                                      cycloneive_lcell_comb     combout     Out     0.000     3.302       -         
+CO0                                                                       Net                       -           -       0.483     -           7         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     dataa       In      -         3.786       -         
+bg_grayscale.un1_grayscale_add6_RNIGV6T                                   cycloneive_lcell_comb     combout     Out     0.437     4.223       -         
+SUM_2_0_a3[3]                                                             Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     datac       In      -         4.556       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_c1          cycloneive_lcell_comb     combout     Out     0.429     4.985       -         
+mult1_un40_sum_0_c1                                                       Net                       -           -       0.326     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     datad       In      -         5.310       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_0_sum2        cycloneive_lcell_comb     combout     Out     0.155     5.465       -         
+mult1_un40_sum_0_sum2                                                     Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     datad       In      -         5.798       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un40_sum_m[2]          cycloneive_lcell_comb     combout     Out     0.155     5.953       -         
+mult1_un40_sum_m[2]                                                       Net                       -           -       0.333     -           2         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     dataa       In      -         6.286       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     6.784       -         
+mult1_un47_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cin         In      -         6.784       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2          cycloneive_lcell_comb     cout        Out     0.066     6.850       -         
+mult1_un47_sum_add2_cout_0                                                Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     cin         In      -         6.850       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un47_sum_add2_term     cycloneive_lcell_comb     combout     Out     0.000     6.850       -         
+mult1_un47_sum_carry_2                                                    Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     dataa       In      -         7.297       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add1          cycloneive_lcell_comb     cout        Out     0.498     7.795       -         
+mult1_un54_sum_carry_1                                                    Net                       -           -       0.000     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     cin         In      -         7.795       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un54_sum_add2          cycloneive_lcell_comb     combout     Out     0.000     7.795       -         
+mult1_un54_sum_add2                                                       Net                       -           -       0.652     -           1         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     datab       In      -         8.447       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un61_sum_add3          cycloneive_lcell_comb     combout     Out     0.443     8.890       -         
+mult1_un61_sum_add3                                                       Net                       -           -       0.446     -           4         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     dataa       In      -         9.336       -         
+bg_grayscale.un8_grayscale.if_generate_plus\.mult1_un68_sum_add1          cycloneive_lcell_comb     combout     Out     0.437     9.773       -         
+mult1_un68_sum_add1                                                       Net                       -           -       0.432     -           2         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     datac       In      -         10.205      -         
+bg_grayscale.grayscale_RNO_0[0]                                           cycloneive_lcell_comb     combout     Out     0.429     10.634      -         
+grayscale_1_0_0__g0_i_x4_a                                                Net                       -           -       0.326     -           1         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     datad       In      -         10.959      -         
+bg_grayscale.grayscale_RNO[0]                                             cycloneive_lcell_comb     combout     Out     0.155     11.114      -         
+grayscale_1_0_0__g0_i_x4                                                  Net                       -           -       0.000     -           1         
+bg_grayscale.grayscale[0]                                                 dffeas                    d           In      -         11.114      -         
+========================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 10.587 is 5.500(51.9%) logic and 5.087(48.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 118MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 118MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 118MB)
+
+Writing Analyst data base /home/icl5712/GitHub/CE387/Lab3/rev_3/background_subtract_ta.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 118MB)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 20MB peak: 118MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 29 01:11:18 2025
+
+###########################################################]

@@ -1,0 +1,1 @@
+-distcompmode -link    -encrypt       -top work.motion_detect_top -osyn /home/icl5712/GitHub/CE387/Lab3/rev_1/synwork/motion_detect_top_comp.srs /home/icl5712/GitHub/CE387/Lab3/rev_1/synwork//distcomp/distcomp0/distcomp0.srs    

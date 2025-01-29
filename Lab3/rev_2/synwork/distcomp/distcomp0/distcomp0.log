@@ -1,0 +1,189 @@
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_2
+Synopsys Verilog Compiler, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v" (library work)
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53001:16:53001:28|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53051:16:53051:27|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53060:16:53060:28|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53074:16:53074:27|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53221:20:53221:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53226:20:53226:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53229:20:53229:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53232:20:53232:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53346:20:53346:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53351:20:53351:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53354:20:53354:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53357:20:53357:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53446:20:53446:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53451:20:53451:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53454:20:53454:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53457:20:53457:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53545:20:53545:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53550:20:53550:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53553:20:53553:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53556:20:53556:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53642:20:53642:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53647:20:53647:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53650:20:53650:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53653:20:53653:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53861:12:53861:24|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53875:12:53875:23|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":54140:12:54140:24|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":54154:12:54154:23|Read directive translate_on.
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab3/highlight.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab3/fifo.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv" (library work)
+Verilog syntax check successful!
+@N:: Applying property .distcompmodetop with value 1 on module motion_detect_tb in library work
+@N:: Applying property .distcompnoprune with value 1 on module motion_detect_tb in library work
+@N:: Applying property .noprune with value 1 on module motion_detect_tb in library work
+@N:: Applying property .distcompnoprune with value 1 on module motion_detect_top in library work
+@N:: Applying property .noprune with value 1 on module motion_detect_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module fifo in library work
+@N:: Applying property .noprune with value 1 on module fifo in library work
+@N:: Applying property .distcompnoprune with value 1 on module highlight in library work
+@N:: Applying property .noprune with value 1 on module highlight in library work
+@N:: Applying property .distcompnoprune with value 1 on module background_subtract in library work
+@N:: Applying property .noprune with value 1 on module background_subtract in library work
+@N:: Applying property .distcompnoprune with value 1 on module grayscale in library work
+@N:: Applying property .noprune with value 1 on module grayscale in library work
+Selecting top level module motion_detect_tb
+@W: CG730 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":3:7:3:22|Top-level module motion_detect_tb has no ports
+
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000100000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000100000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000110
+   Generated name = fifo_32s_32s_6s
+Running optimization stage 1 on fifo_32s_32s_6s .......
+@N: CL134 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":34:4:34:12|Found RAM fifo_buf, depth=32, width=32
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":1:7:1:15|Synthesizing module grayscale in library work.
+Running optimization stage 1 on grayscale .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000001000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000100000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000110
+   Generated name = fifo_8s_32s_6s
+Running optimization stage 1 on fifo_8s_32s_6s .......
+@N: CL134 :"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":34:4:34:12|Found RAM fifo_buf, depth=32, width=8
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":1:7:1:25|Synthesizing module background_subtract in library work.
+
+	THRESHOLD=32'b00000000000000000000000000110010
+   Generated name = background_subtract_50s
+Running optimization stage 1 on background_subtract_50s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":1:7:1:15|Synthesizing module highlight in library work.
+Running optimization stage 1 on highlight .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":1:7:1:23|Synthesizing module motion_detect_top in library work.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":160:22:160:40|Object bg_sub_base_read_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":160:43:160:61|Object bg_sub_gray_read_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":161:22:161:36|Object bg_sub_base_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":161:39:161:53|Object bg_sub_gray_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":162:22:162:43|Object bg_sub_base_fifo_empty is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":162:46:162:67|Object bg_sub_gray_fifo_empty is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on motion_detect_top .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":3:7:3:22|Synthesizing module motion_detect_tb in library work.
+@W: CG294 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":91:4:91:9|always block should contain at least one event control
+@W: CG532 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":98:4:98:10|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG532 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":106:4:106:10|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG532 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":130:4:130:10|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG532 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":178:0:178:6|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG532 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":222:0:222:6|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG532 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":272:4:272:10|Within an initial block, only Verilog force statements and memory $readmemh/$readmemb initialization statements are recognized, and all other content is ignored.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":31:18:31:25|Object bg_wr_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":32:18:32:23|Object bg_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":35:18:35:28|Object frame_wr_en is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":36:18:36:26|Object frame_din is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":39:18:39:29|Object frame_wr_en2 is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":40:18:40:27|Object frame_din2 is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":43:18:43:28|Object final_rd_en is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on motion_detect_tb .......
+Running optimization stage 2 on motion_detect_tb .......
+@W: FX105 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":92:33:92:36|Found combinational loop at clk
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":31:18:31:25|*Unassigned bits of bg_wr_en are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":32:18:32:23|*Unassigned bits of bg_din[31:0] are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":35:18:35:28|*Unassigned bits of frame_wr_en are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":36:18:36:26|*Unassigned bits of frame_din[31:0] are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":39:18:39:29|*Unassigned bits of frame_wr_en2 are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":40:18:40:27|*Unassigned bits of frame_din2[31:0] are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":43:18:43:28|*Unassigned bits of final_rd_en are referenced and tied to 0 -- simulation mismatch possible.
+Running optimization stage 2 on motion_detect_top .......
+Running optimization stage 2 on highlight .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":37:2:37:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL159 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":18:25:18:37|Input fifo_out_full is unused.
+Running optimization stage 2 on background_subtract_50s .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":29:2:29:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL279 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":29:2:29:10|Pruning register bits 7 to 1 of result_pix[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Running optimization stage 2 on fifo_8s_32s_6s .......
+Running optimization stage 2 on grayscale .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":30:2:30:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL246 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":7:23:7:29|Input port bits 7 to 0 of data_in[31:0] are unused. Assign logic for all port bits or change the input port size.
+Running optimization stage 2 on fifo_32s_32s_6s .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/icl5712/GitHub/CE387/Lab3/rev_2/synwork//distcomp/distcomp0/distcomp0.rt.csv
+
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 82MB peak: 89MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Jan 29 01:07:39 2025
+
+###########################################################]

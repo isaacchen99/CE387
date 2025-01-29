@@ -1,0 +1,47 @@
+#OPTIONS:"|-layerid|0|-orig_srs|/home/icl5712/GitHub/CE387/Lab3/rev_2/synwork/background_subtract_comp.srs|-prodtype|synplify_premier|-verification_mode|0|-infer_seqShift|-primux|-fixsmult|-dspmac|-nram|-divnmod|-continue_on_error|-nostructver|-I|/home/icl5712/GitHub/CE387/Lab3/|-I|/vol/synopsys/fpga/O-2018.09-SP1/lib|-sysv|-devicelib|/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v|-devicelib|/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v|-devicelib|/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v|-devicelib|/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v|-devicelib|/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v|-encrypt|-pro|-distcompmode|-noobf|-auto_infer_blackbox|0|-proto|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-fast_synthesis|0|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv|-lib|work|-fsysv"
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/c_ver":1543382462
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v":1543381811
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v":1543381840
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":1543381839
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v":1543381839
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v":1543381839
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v":1543382268
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v":1533714205
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v":1543381931
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v":1543382268
+#CUR:"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh":1543382268
+#CUR:"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv":1738129220
+#CUR:"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv":1738134389
+#CUR:"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":1738129171
+#CUR:"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":1738047809
+#CUR:"/home/icl5712/GitHub/CE387/Lab3/fifo.sv":1738123611
+#CUR:"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":1738047809
+#numinternalfiles:10
+#defaultlanguage:verilog
+0			"/home/icl5712/GitHub/CE387/Lab3/motion_detect_top.sv" verilog
+1			"/home/icl5712/GitHub/CE387/Lab3/motion_detect_tb.sv" verilog
+2			"/home/icl5712/GitHub/CE387/Lab3/highlight.sv" verilog
+3			"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv" verilog
+4			"/home/icl5712/GitHub/CE387/Lab3/fifo.sv" verilog
+5			"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv" verilog
+#Dependency Lists(Uses List)
+0 4 2 5 3
+1 0
+2 -1
+3 -1
+4 -1
+5 -1
+#Dependency Lists(Users Of)
+0 1
+1 -1
+2 0
+3 0
+4 0
+5 0
+#Design Unit to File Association
+module work fifo 4
+module work grayscale 3
+module work background_subtract 5
+module work highlight 2
+module work motion_detect_top 0
+module work motion_detect_tb 1

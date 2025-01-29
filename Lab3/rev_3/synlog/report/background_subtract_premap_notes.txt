@@ -1,0 +1,12 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: BN225 |Writing default property annotation file /home/icl5712/GitHub/CE387/Lab3/rev_3/background_subtract.sap.
+@N: MO225 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":30:2:30:10|There are no possible illegal states for state machine current_state[3:0] (in view: work.grayscale_1(verilog)); safe FSM implementation is not required.
+@N: MO225 :"/home/icl5712/GitHub/CE387/Lab3/grayscale.sv":30:2:30:10|There are no possible illegal states for state machine current_state[3:0] (in view: work.grayscale_0(verilog)); safe FSM implementation is not required.
+@N: MO225 :"/home/icl5712/GitHub/CE387/Lab3/background_subtract.sv":29:2:29:10|There are no possible illegal states for state machine current_state[3:0] (in view: work.background_subtract_50s(verilog)); safe FSM implementation is not required.
+@N: MO225 :"/home/icl5712/GitHub/CE387/Lab3/highlight.sv":37:2:37:10|There are no possible illegal states for state machine current_state[3:0] (in view: work.highlight(verilog)); safe FSM implementation is not required.

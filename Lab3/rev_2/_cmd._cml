@@ -1,0 +1,1 @@
+-distcompmode -link    -encrypt       -top work.motion_detect_tb -osyn /home/icl5712/GitHub/CE387/Lab3/rev_2/synwork/background_subtract_comp.srs /home/icl5712/GitHub/CE387/Lab3/rev_2/synwork//distcomp/distcomp0/distcomp0.srs    
