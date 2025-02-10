@@ -1,0 +1,3 @@
+@E: FA456 |Combinational function usage is 34135, which is much higher than part resource 6272
+@E: FA457 |Register usage is 17385, which is much higher than part resource 6272
+@E: MF871 |Unable to write netlist because of resource overflow.

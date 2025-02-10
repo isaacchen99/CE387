@@ -1,0 +1,146 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/icl5712/GitHub/CE387/Lab4/sv
+T_opt
+!s110 1739087025
+VKeT1lMGbP6_B31mk7BoY>3
+04 8 4 work sobel_tb fast 0
+=1-b49691574b56-67a85cb1-5670f-2dd5c7
+o-quiet -auto_acc_if_foreign -work work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.1;71
+R0
+vfifo
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1739087111
+!i10b 1
+!s100 JJ9WTn?^46FJn6Sib6ECo1
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IeNnBm2WXiG8OAccQ>Bn:?1
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z6 w1739080687
+8fifo.sv
+Ffifo.sv
+!i122 5
+L0 2 77
+Z7 OL;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1739087111.000000
+!s107 fifo.sv|
+!s90 -reportprogress|300|-work|work|fifo.sv|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vgrayscale
+R2
+R3
+!i10b 1
+!s100 8JLUJ9T3UeM43Li4TSPiF1
+R4
+Ihb6:W9L?PikASl70I1JDT1
+R5
+S1
+R0
+R6
+8grayscale.sv
+Fgrayscale.sv
+!i122 6
+L0 2 62
+R7
+r1
+!s85 0
+31
+R8
+!s107 grayscale.sv|
+!s90 -reportprogress|300|-work|work|grayscale.sv|
+!i113 0
+R9
+R1
+vsobel
+R2
+R3
+!i10b 1
+!s100 9VbfR1=4hzRf390Qa1Wi?0
+R4
+ICeDMzUY3M95Va@B1U`R9C3
+R5
+S1
+R0
+w1739081873
+8sobel.sv
+Fsobel.sv
+!i122 7
+L0 1 261
+R7
+r1
+!s85 0
+31
+R8
+!s107 sobel.sv|
+!s90 -reportprogress|300|-work|work|sobel.sv|
+!i113 0
+R9
+R1
+vsobel_tb
+R2
+!s110 1739087112
+!i10b 1
+!s100 2JGHlK@LF2k0gKQ[U1ai31
+R4
+Ia4Gd1g87NL4K7WgNC`MF83
+R5
+S1
+R0
+w1739081439
+8sobel_tb.sv
+Fsobel_tb.sv
+!i122 9
+L0 3 136
+R7
+r1
+!s85 0
+31
+R8
+!s107 sobel_tb.sv|
+!s90 -reportprogress|300|-work|work|sobel_tb.sv|
+!i113 0
+R9
+R1
+vsobel_top
+R2
+R3
+!i10b 1
+!s100 S44fbe:oCeJj3T_AQ;V3n0
+R4
+IXV6DPGYCnz`zOeD8B=14K0
+R5
+S1
+R0
+w1739081868
+8sobel_top.sv
+Fsobel_top.sv
+!i122 8
+L0 1 98
+R7
+r1
+!s85 0
+31
+R8
+!s107 sobel_top.sv|
+!s90 -reportprogress|300|-work|work|sobel_top.sv|
+!i113 0
+R9
+R1

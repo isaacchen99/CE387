@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/time.h>
+#include <time.h>
 
 #define high_threshold 48
 #define low_threshold 12
@@ -272,6 +273,11 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
+	clock_t start, end;
+	double cpu_time_used;
+
+	start = clock();
+
 	FILE * f = fopen(argv[1],"rb");
 	if ( f == NULL ) return 0;
 
@@ -297,6 +303,11 @@ int main(int argc, char *argv[]) {
 	/// Hysteresis
 	//hysteresis_filter(nms_data, height, width, h_data);
 	//write_grayscale_bmp("stage4_hysteresis.bmp", header, h_data);
+
+	end = clock();
+
+	cpu_time_used = ((double) (end - start)) / 3000000000;
+	printf("Time taken: %f seconds\n", cpu_time_used);
 
 	return 0;
 }

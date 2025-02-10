@@ -1,0 +1,5 @@
+sobel_top.fifo_out_inst work fifo 0 1
+sobel_top.sobel_inst work sobel 0 1
+sobel_top.fifo_gray2sobel_inst work fifo 0 1
+sobel_top.grayscale_inst work grayscale 0 1
+sobel_top.fifo_in_inst work fifo 0 1

@@ -21,36 +21,52 @@ class my_uvm_sequence extends uvm_sequence#(my_uvm_transaction);
         super.new(name);
     endfunction: new
 
-    task body();        
+    task body();
         my_uvm_transaction tx;
-        int in_file, n_bytes=0, i=0;
+        int in_file, n_bytes = 0, i = 0;
         logic [7:0] bmp_header [0:BMP_HEADER_SIZE-1];
         logic [23:0] pixel;
 
-        `uvm_info("SEQ_RUN", $sformatf("Loading file %s...", IMG_IN_NAME), UVM_LOW);
-
+        // Stage 1: Opening the file
+        `uvm_info("SEQ_RUN", $sformatf("Starting sequence: Loading file %s...", IMG_IN_NAME), UVM_LOW);
         in_file = $fopen(IMG_IN_NAME, "rb");
-        if ( !in_file ) begin
+        if (!in_file) begin
             `uvm_fatal("SEQ_RUN", $sformatf("Failed to open file %s...", IMG_IN_NAME));
         end
+        `uvm_info("SEQ_RUN", $sformatf("File %s opened successfully.", IMG_IN_NAME), UVM_LOW);
 
-        // read BMP header
+        // Stage 2: Reading the BMP header
+        `uvm_info("SEQ_RUN", "Reading BMP header...", UVM_LOW);
         n_bytes = $fread(bmp_header, in_file, 0, BMP_HEADER_SIZE);
-        if ( !n_bytes ) begin
-            `uvm_fatal("SEQ_RUN", $sformatf("Failed read header data from %s...", IMG_IN_NAME));
+        if (!n_bytes) begin
+            `uvm_fatal("SEQ_RUN", $sformatf("Failed to read header data from %s...", IMG_IN_NAME));
         end
+        `uvm_info("SEQ_RUN", $sformatf("BMP header read successfully (%0d bytes).", n_bytes), UVM_LOW);
 
-        while ( !$feof(in_file) && i < BMP_DATA_SIZE ) begin
+        // Stage 3: Processing pixel data
+        while (!$feof(in_file) && i < BMP_DATA_SIZE) begin
+            `uvm_info("SEQ_RUN", $sformatf("Processing pixel data at file offset %0d...", BMP_HEADER_SIZE + i), UVM_LOW);
             tx = my_uvm_transaction::type_id::create(.name("tx"), .contxt(get_full_name()));
+            
+            `uvm_info("SEQ_RUN", "Starting new transaction item.", UVM_LOW);
             start_item(tx);
-            n_bytes = $fread(pixel, in_file, BMP_HEADER_SIZE+i, BYTES_PER_PIXEL);
+            
+            n_bytes = $fread(pixel, in_file, BMP_HEADER_SIZE + i, BYTES_PER_PIXEL);
+            if (n_bytes != BYTES_PER_PIXEL) begin
+                `uvm_warning("SEQ_RUN", $sformatf("Incomplete pixel data read at offset %0d.", BMP_HEADER_SIZE + i));
+            end
+
             tx.image_pixel = pixel;
-            //`uvm_info("SEQ_RUN", tx.sprint(), UVM_LOW);
+            `uvm_info("SEQ_RUN", $sformatf("Pixel data read: %0h", pixel), UVM_LOW);
+            
             finish_item(tx);
+            `uvm_info("SEQ_RUN", "Finished transaction item.", UVM_LOW);
+            
             i += BYTES_PER_PIXEL;
         end
 
-        `uvm_info("SEQ_RUN", $sformatf("Closing file %s...", IMG_IN_NAME), UVM_LOW);
+        // Stage 4: Closing the file
+        `uvm_info("SEQ_RUN", $sformatf("All pixel data processed. Closing file %s...", IMG_IN_NAME), UVM_LOW);
         $fclose(in_file);
     endtask: body
 endclass: my_uvm_sequence

@@ -1,0 +1,2 @@
+Library, Design Unit ,Compile time , Hardware Gen ,Optimization Stg1 ,Optimization Stg2 , Peak Mem Usage, Incr Mem Usage, Hardware Gen ,Optimization Stg1 ,Optimization Stg2
+work, sobel_720s_540s_10s_10s,0h:02m:33s,0h:00m:00s,0h:00m:02s,0h:02m:30s,   178 MB,    86 MB,    12 MB,    74 MB,     0 MB

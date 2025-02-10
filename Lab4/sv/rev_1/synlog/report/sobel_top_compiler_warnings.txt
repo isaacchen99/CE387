@@ -1,0 +1,12 @@
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":86:4:86:16|Unlinked cross language instance fifo_out_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":72:4:72:13|Unlinked cross language instance sobel_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":57:4:57:23|Unlinked cross language instance fifo_gray2sobel_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":43:12:43:25|Unlinked cross language instance grayscale_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":31:4:31:15|Unlinked cross language instance fifo_in_inst 
+@W:: Distributed compilation : All files are passed to distribution points
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":31:4:31:15|Unlinked cross language instance fifo_in_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":43:12:43:25|Unlinked cross language instance grayscale_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":57:4:57:23|Unlinked cross language instance fifo_gray2sobel_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":72:4:72:13|Unlinked cross language instance sobel_inst 
+@W: BN666 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel_top.sv":86:4:86:16|Unlinked cross language instance fifo_out_inst 
+

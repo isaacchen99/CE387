@@ -1,0 +1,22 @@
+
+fsm_encoding {1116121611} onehot
+
+fsm_state_encoding {1116121611} IDLE {000000000}
+
+fsm_state_encoding {1116121611} READ_BOT {000000011}
+
+fsm_state_encoding {1116121611} READ_MID {000000101}
+
+fsm_state_encoding {1116121611} OUTPUT_BOT {000001001}
+
+fsm_state_encoding {1116121611} READ_TOP {000010001}
+
+fsm_state_encoding {1116121611} PROCESS_ROW {000100001}
+
+fsm_state_encoding {1116121611} SHIFT {001000001}
+
+fsm_state_encoding {1116121611} OUTPUT_TOP {010000001}
+
+fsm_state_encoding {1116121611} DONE {100000001}
+
+fsm_registers {1116121611} {curr_state[8]}  {curr_state[7]}  {curr_state[6]}  {curr_state[5]}  {curr_state[4]}  {curr_state[3]}  {curr_state[2]}  {curr_state[1]}  {curr_state_i[0]} 

@@ -1,0 +1,53 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MT206 |Auto Constrain mode is enabled
+@N: MF236 :"/home/icl5712/GitHub/CE387/Lab4/sv/grayscale.sv":38:61:38:149|Generating a type div divider 
+@N: MO231 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel.sv":161:2:161:10|Found counter in view:work.sobel_720s_540s_10s_10s(verilog) instance proc_index[9:0] 
+@N: MO231 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel.sv":161:2:161:10|Found counter in view:work.sobel_720s_540s_10s_10s(verilog) instance row_count[9:0] 
+@N: MO231 :"/home/icl5712/GitHub/CE387/Lab4/sv/sobel.sv":161:2:161:10|Found counter in view:work.sobel_720s_540s_10s_10s(verilog) instance col_counter[9:0] 
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[0] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[1] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[2] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[3] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[4] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[5] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[6] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[7] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[8] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[9] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[10] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[11] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[12] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[13] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[14] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[15] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[16] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[17] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[18] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[19] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[20] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[21] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[22] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[23] (in view: work.fifo_24s_256s_9s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[0] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[1] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[2] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[3] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[4] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[5] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[6] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[7] (in view: work.fifo_8s_256s_9s_1(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[0] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[1] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[2] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[3] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[4] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[5] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[6] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab4/sv/fifo.sv":50:4:50:12|Removing sequential instance dout[7] (in view: work.fifo_8s_256s_9s_0(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage.

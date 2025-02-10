@@ -1,0 +1,13 @@
+@P:  Part : ep4ce6ea22-7
+@P:  Worst Slack : -2.550
+@P:  sobel_top|clock - Estimated Frequency : 58.8 MHz
+@P:  sobel_top|clock - Requested Frequency : 69.2 MHz
+@P:  sobel_top|clock - Estimated Period : 17.002
+@P:  sobel_top|clock - Requested Period : 14.452
+@P:  sobel_top|clock - Slack : -2.550
+@P: sobel_top Part : ep4ce6ea22-7
+@P: sobel_top I/O ATOMs : 28
+@P: sobel_top Total LUTs : 34135 
+@P: sobel_top Register bits : 17385
+@P: sobel_top DSP Blocks : 0 (0 nine-bit DSP elements)
+@P:  CPU Time : 0h:07m:25s
