@@ -1,0 +1,724 @@
+<html><body><samp><pre>
+<!@TC:0>
+# Tue Jan 21 22:23:48 2025
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+<a name=mapperReport20></a>Synopsys Intel FPGA Technology Mapper, Version maprc, Build 4745R, Built Nov 27 2018 21:14:52</a>
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@N:<a href="@N:MF284:@XP_HELP">MF284</a> : <!@TM:0> | Setting synthesis effort to medium for the design 
+@N:<a href="@N:MF915:@XP_HELP">MF915</a> : <!@TM:0> | Option synthesis_strategy=advanced is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:0> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:0> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+<font color=#A52A2A>@W:<a href="@W:FA406:@XP_HELP">FA406</a> : <!@TM:0> | Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.</font> 
+@N:<a href="@N:MF284:@XP_HELP">MF284</a> : <!@TM:0> | Setting synthesis effort to medium for the design 
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N:<a href="@N:MT206:@XP_HELP">MT206</a> : <!@TM:0> | Auto Constrain mode is enabled 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
+
+Encoding state machine current_state[2:0] (in view: work.fibonacci(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 116MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 116MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 116MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 116MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 118MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 118MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 118MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+<a name=clockReport21></a>#### START OF CLOCK OPTIMIZATION REPORT #####[</a>
+
+1 non-gated/non-generated clock tree(s) driving 36 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+<a href="@|S:clk_in@|E:done_reg@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001  @XP_NAMES_BY_PROP">ClockId0001 </a>       clk_in              cycloneive_io_ibuf     36         done_reg       
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 118MB)
+
+Writing Analyst data base /home/icl5712/GitHub/CE387/Lab1/rev_1/synwork/fibonacci_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 118MB)
+
+Writing Verilog Netlist and constraint files
+Writing .vqm output for Quartus
+
+Writing scf file... (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 118MB)
+
+@N:<a href="@N:BW103:@XP_HELP">BW103</a> : <!@TM:0> | The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns. 
+@N:<a href="@N:BW107:@XP_HELP">BW107</a> : <!@TM:0> | Synopsys Constraint File capacitance units using default value of 1pF  
+Writing FDC file /home/icl5712/GitHub/CE387/Lab1/rev_1/fibonacci_synplify.fdc
+
+Finished Writing Verilog Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 118MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 115MB peak: 118MB)
+
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:0> | Found inferred clock fibonacci|clk with period 3.21ns. Please declare a user-defined clock on port clk.</font> 
+
+
+<a name=timingReport22></a>##### START OF TIMING REPORT #####[</a>
+<a name=23></a># Timing Report written on Tue Jan 21 22:23:49 2025</a>
+#
+
+
+Top view:               fibonacci
+Requested Frequency:    311.8 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:0> | This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report. 
+
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:0> | Clock constraints include only register-to-register paths associated with each individual clock. 
+
+
+
+<a name=performanceSummary24></a>Performance Summary</a>
+*******************
+
+
+Worst slack in design: -0.566
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group                
+------------------------------------------------------------------------------------------------------------------------
+fibonacci|clk      311.8 MHz     265.1 MHz     3.207         3.773         -0.566     inferred     Autoconstr_clkgroup_0
+========================================================================================================================
+
+
+
+
+
+<a name=clockRelationships25></a>Clock Relationships</a>
+*******************
+
+Clocks                        |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------
+Starting       Ending         |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------
+fibonacci|clk  fibonacci|clk  |  3.207       -0.566  |  No paths    -      |  No paths    -      |  No paths    -    
+=====================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo26></a>Interface Information </a>
+*********************
+
+No IO constraint found
+
+
+
+====================================
+<a name=clockReport27></a>Detailed Report for Clock: fibonacci|clk</a>
+====================================
+
+
+
+<a name=startingSlack28></a>Starting Points with Worst Slack</a>
+********************************
+
+                  Starting                                               Arrival           
+Instance          Reference         Type       Pin     Net               Time        Slack 
+                  Clock                                                                    
+-------------------------------------------------------------------------------------------
+prev1[0]          fibonacci|clk     dffeas     q       prev1[0]          0.845       -0.566
+prev2[0]          fibonacci|clk     dffeas     q       prev2[0]          0.845       -0.540
+output_reg[1]     fibonacci|clk     dffeas     q       output_reg[1]     0.845       -0.492
+prev1[1]          fibonacci|clk     dffeas     q       prev1[1]          0.845       -0.486
+output_reg[2]     fibonacci|clk     dffeas     q       output_reg[2]     0.845       -0.426
+prev1[2]          fibonacci|clk     dffeas     q       prev1[2]          0.845       -0.420
+output_reg[3]     fibonacci|clk     dffeas     q       output_reg[3]     0.845       -0.360
+prev1[3]          fibonacci|clk     dffeas     q       prev1[3]          0.845       -0.354
+output_reg[4]     fibonacci|clk     dffeas     q       output_reg[4]     0.845       -0.294
+prev1[4]          fibonacci|clk     dffeas     q       prev1[4]          0.845       -0.288
+===========================================================================================
+
+
+<a name=endingSlack29></a>Ending Points with Worst Slack</a>
+******************************
+
+                     Starting                                                            Required           
+Instance             Reference         Type       Pin     Net                            Time         Slack 
+                     Clock                                                                                  
+------------------------------------------------------------------------------------------------------------
+current_state[0]     fibonacci|clk     dffeas     d       N_126_i_0_g0                   3.734        -0.566
+current_state[1]     fibonacci|clk     dffeas     d       current_state_ns_0_0_1__g0     3.734        0.175 
+prev1[15]            fibonacci|clk     dffeas     d       next_fib_add15                 3.734        0.684 
+prev1[14]            fibonacci|clk     dffeas     d       next_fib_add14                 3.734        0.750 
+prev1[13]            fibonacci|clk     dffeas     d       next_fib_add13                 3.734        0.816 
+prev1[12]            fibonacci|clk     dffeas     d       next_fib_add12                 3.734        0.882 
+prev1[11]            fibonacci|clk     dffeas     d       next_fib_add11                 3.734        0.948 
+prev1[10]            fibonacci|clk     dffeas     d       next_fib_add10                 3.734        1.014 
+prev1[9]             fibonacci|clk     dffeas     d       next_fib_add9                  3.734        1.080 
+prev1[8]             fibonacci|clk     dffeas     d       next_fib_add8                  3.734        1.146 
+============================================================================================================
+
+
+
+<a name=worstPaths30></a>Worst Path Information</a>
+<a href="/home/icl5712/GitHub/CE387/Lab1/rev_1/synlog/fibonacci_fpga_mapper.srr:srsf/home/icl5712/GitHub/CE387/Lab1/rev_1/fibonacci.srs:fp:13047:18975:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      3.207
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         3.734
+
+    - Propagation time:                      3.687
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.566
+
+    Number of logic level(s):                18
+    Starting point:                          prev1[0] / q
+    Ending point:                            current_state[0] / d
+    The start point is clocked by            fibonacci|clk [rising] on pin clk
+    The end   point is clocked by            fibonacci|clk [rising] on pin clk
+
+Instance / Net                                     Pin         Pin               Arrival     No. of    
+Name                     Type                      Name        Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+prev1[0]                 dffeas                    q           Out     0.232     0.845       -         
+prev1[0]                 Net                       -           -       0.340     -           3         
+next_fib_add0            cycloneive_lcell_comb     datab       In      -         1.185       -         
+next_fib_add0            cycloneive_lcell_comb     cout        Out     0.509     1.694       -         
+next_fib_carry_0         Net                       -           -       0.000     -           1         
+next_fib_add1            cycloneive_lcell_comb     cin         In      -         1.694       -         
+next_fib_add1            cycloneive_lcell_comb     cout        Out     0.066     1.760       -         
+next_fib_carry_1         Net                       -           -       0.000     -           1         
+next_fib_add2            cycloneive_lcell_comb     cin         In      -         1.760       -         
+next_fib_add2            cycloneive_lcell_comb     cout        Out     0.066     1.826       -         
+next_fib_carry_2         Net                       -           -       0.000     -           1         
+next_fib_add3            cycloneive_lcell_comb     cin         In      -         1.826       -         
+next_fib_add3            cycloneive_lcell_comb     cout        Out     0.066     1.892       -         
+next_fib_carry_3         Net                       -           -       0.000     -           1         
+next_fib_add4            cycloneive_lcell_comb     cin         In      -         1.892       -         
+next_fib_add4            cycloneive_lcell_comb     cout        Out     0.066     1.958       -         
+next_fib_carry_4         Net                       -           -       0.000     -           1         
+next_fib_add5            cycloneive_lcell_comb     cin         In      -         1.958       -         
+next_fib_add5            cycloneive_lcell_comb     cout        Out     0.066     2.024       -         
+next_fib_carry_5         Net                       -           -       0.000     -           1         
+next_fib_add6            cycloneive_lcell_comb     cin         In      -         2.024       -         
+next_fib_add6            cycloneive_lcell_comb     cout        Out     0.066     2.090       -         
+next_fib_carry_6         Net                       -           -       0.000     -           1         
+next_fib_add7            cycloneive_lcell_comb     cin         In      -         2.090       -         
+next_fib_add7            cycloneive_lcell_comb     cout        Out     0.066     2.156       -         
+next_fib_carry_7         Net                       -           -       0.000     -           1         
+next_fib_add8            cycloneive_lcell_comb     cin         In      -         2.156       -         
+next_fib_add8            cycloneive_lcell_comb     cout        Out     0.066     2.222       -         
+next_fib_carry_8         Net                       -           -       0.000     -           1         
+next_fib_add9            cycloneive_lcell_comb     cin         In      -         2.222       -         
+next_fib_add9            cycloneive_lcell_comb     cout        Out     0.066     2.288       -         
+next_fib_carry_9         Net                       -           -       0.000     -           1         
+next_fib_add10           cycloneive_lcell_comb     cin         In      -         2.288       -         
+next_fib_add10           cycloneive_lcell_comb     cout        Out     0.066     2.354       -         
+next_fib_carry_10        Net                       -           -       0.000     -           1         
+next_fib_add11           cycloneive_lcell_comb     cin         In      -         2.354       -         
+next_fib_add11           cycloneive_lcell_comb     cout        Out     0.066     2.420       -         
+next_fib_carry_11        Net                       -           -       0.000     -           1         
+next_fib_add12           cycloneive_lcell_comb     cin         In      -         2.420       -         
+next_fib_add12           cycloneive_lcell_comb     cout        Out     0.066     2.486       -         
+next_fib_carry_12        Net                       -           -       0.000     -           1         
+next_fib_add13           cycloneive_lcell_comb     cin         In      -         2.486       -         
+next_fib_add13           cycloneive_lcell_comb     cout        Out     0.066     2.552       -         
+next_fib_carry_13        Net                       -           -       0.000     -           1         
+next_fib_add14           cycloneive_lcell_comb     cin         In      -         2.552       -         
+next_fib_add14           cycloneive_lcell_comb     cout        Out     0.066     2.618       -         
+next_fib_carry_14        Net                       -           -       0.000     -           1         
+next_fib_add15           cycloneive_lcell_comb     cin         In      -         2.618       -         
+next_fib_add15           cycloneive_lcell_comb     combout     Out     0.000     2.618       -         
+next_fib_add15           Net                       -           -       0.432     -           2         
+next_state9.lt15         cycloneive_lcell_comb     datab       In      -         3.050       -         
+next_state9.lt15         cycloneive_lcell_comb     combout     Out     0.443     3.493       -         
+next_state9.lt15         Net                       -           -       0.652     -           1         
+current_state_RNO[0]     cycloneive_lcell_comb     datad       In      -         4.145       -         
+current_state_RNO[0]     cycloneive_lcell_comb     combout     Out     0.155     4.300       -         
+N_126_i_0_g0             Net                       -           -       0.000     -           1         
+current_state[0]         dffeas                    d           In      -         4.300       -         
+=======================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 3.773 is 2.349(62.3%) logic and 1.424(37.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 2: 
+      Requested Period:                      3.207
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         3.734
+
+    - Propagation time:                      3.687
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.566
+
+    Number of logic level(s):                18
+    Starting point:                          prev1[0] / q
+    Ending point:                            current_state[0] / d
+    The start point is clocked by            fibonacci|clk [rising] on pin clk
+    The end   point is clocked by            fibonacci|clk [rising] on pin clk
+
+Instance / Net                                     Pin         Pin               Arrival     No. of    
+Name                     Type                      Name        Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+prev1[0]                 dffeas                    q           Out     0.232     0.845       -         
+prev1[0]                 Net                       -           -       0.340     -           3         
+next_fib_add0            cycloneive_lcell_comb     datab       In      -         1.185       -         
+next_fib_add0            cycloneive_lcell_comb     cout        Out     0.509     1.694       -         
+next_fib_carry_0         Net                       -           -       0.000     -           1         
+next_fib_add1            cycloneive_lcell_comb     cin         In      -         1.694       -         
+next_fib_add1            cycloneive_lcell_comb     combout     Out     0.000     1.694       -         
+next_fib_add1            Net                       -           -       0.432     -           2         
+next_state9.lt1          cycloneive_lcell_comb     datab       In      -         2.126       -         
+next_state9.lt1          cycloneive_lcell_comb     cout        Out     0.509     2.635       -         
+next_state9.lt_1         Net                       -           -       0.000     -           1         
+next_state9.lt2          cycloneive_lcell_comb     cin         In      -         2.635       -         
+next_state9.lt2          cycloneive_lcell_comb     cout        Out     0.066     2.701       -         
+next_state9.lt_2         Net                       -           -       0.000     -           1         
+next_state9.lt3          cycloneive_lcell_comb     cin         In      -         2.701       -         
+next_state9.lt3          cycloneive_lcell_comb     cout        Out     0.066     2.767       -         
+next_state9.lt_3         Net                       -           -       0.000     -           1         
+next_state9.lt4          cycloneive_lcell_comb     cin         In      -         2.767       -         
+next_state9.lt4          cycloneive_lcell_comb     cout        Out     0.066     2.833       -         
+next_state9.lt_4         Net                       -           -       0.000     -           1         
+next_state9.lt5          cycloneive_lcell_comb     cin         In      -         2.833       -         
+next_state9.lt5          cycloneive_lcell_comb     cout        Out     0.066     2.899       -         
+next_state9.lt_5         Net                       -           -       0.000     -           1         
+next_state9.lt6          cycloneive_lcell_comb     cin         In      -         2.899       -         
+next_state9.lt6          cycloneive_lcell_comb     cout        Out     0.066     2.965       -         
+next_state9.lt_6         Net                       -           -       0.000     -           1         
+next_state9.lt7          cycloneive_lcell_comb     cin         In      -         2.965       -         
+next_state9.lt7          cycloneive_lcell_comb     cout        Out     0.066     3.031       -         
+next_state9.lt_7         Net                       -           -       0.000     -           1         
+next_state9.lt8          cycloneive_lcell_comb     cin         In      -         3.031       -         
+next_state9.lt8          cycloneive_lcell_comb     cout        Out     0.066     3.097       -         
+next_state9.lt_8         Net                       -           -       0.000     -           1         
+next_state9.lt9          cycloneive_lcell_comb     cin         In      -         3.097       -         
+next_state9.lt9          cycloneive_lcell_comb     cout        Out     0.066     3.163       -         
+next_state9.lt_9         Net                       -           -       0.000     -           1         
+next_state9.lt10         cycloneive_lcell_comb     cin         In      -         3.163       -         
+next_state9.lt10         cycloneive_lcell_comb     cout        Out     0.066     3.229       -         
+next_state9.lt_10        Net                       -           -       0.000     -           1         
+next_state9.lt11         cycloneive_lcell_comb     cin         In      -         3.229       -         
+next_state9.lt11         cycloneive_lcell_comb     cout        Out     0.066     3.295       -         
+next_state9.lt_11        Net                       -           -       0.000     -           1         
+next_state9.lt12         cycloneive_lcell_comb     cin         In      -         3.295       -         
+next_state9.lt12         cycloneive_lcell_comb     cout        Out     0.066     3.361       -         
+next_state9.lt_12        Net                       -           -       0.000     -           1         
+next_state9.lt13         cycloneive_lcell_comb     cin         In      -         3.361       -         
+next_state9.lt13         cycloneive_lcell_comb     cout        Out     0.066     3.427       -         
+next_state9.lt_13        Net                       -           -       0.000     -           1         
+next_state9.lt14         cycloneive_lcell_comb     cin         In      -         3.427       -         
+next_state9.lt14         cycloneive_lcell_comb     cout        Out     0.066     3.493       -         
+next_state9.lt_14        Net                       -           -       0.000     -           1         
+next_state9.lt15         cycloneive_lcell_comb     cin         In      -         3.493       -         
+next_state9.lt15         cycloneive_lcell_comb     combout     Out     0.000     3.493       -         
+next_state9.lt15         Net                       -           -       0.652     -           1         
+current_state_RNO[0]     cycloneive_lcell_comb     datad       In      -         4.145       -         
+current_state_RNO[0]     cycloneive_lcell_comb     combout     Out     0.155     4.300       -         
+N_126_i_0_g0             Net                       -           -       0.000     -           1         
+current_state[0]         dffeas                    d           In      -         4.300       -         
+=======================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 3.773 is 2.349(62.3%) logic and 1.424(37.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 3: 
+      Requested Period:                      3.207
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         3.734
+
+    - Propagation time:                      3.687
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.566
+
+    Number of logic level(s):                18
+    Starting point:                          prev1[0] / q
+    Ending point:                            current_state[0] / d
+    The start point is clocked by            fibonacci|clk [rising] on pin clk
+    The end   point is clocked by            fibonacci|clk [rising] on pin clk
+
+Instance / Net                                     Pin         Pin               Arrival     No. of    
+Name                     Type                      Name        Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+prev1[0]                 dffeas                    q           Out     0.232     0.845       -         
+prev1[0]                 Net                       -           -       0.340     -           3         
+next_fib_add0            cycloneive_lcell_comb     datab       In      -         1.185       -         
+next_fib_add0            cycloneive_lcell_comb     cout        Out     0.509     1.694       -         
+next_fib_carry_0         Net                       -           -       0.000     -           1         
+next_fib_add1            cycloneive_lcell_comb     cin         In      -         1.694       -         
+next_fib_add1            cycloneive_lcell_comb     cout        Out     0.066     1.760       -         
+next_fib_carry_1         Net                       -           -       0.000     -           1         
+next_fib_add2            cycloneive_lcell_comb     cin         In      -         1.760       -         
+next_fib_add2            cycloneive_lcell_comb     combout     Out     0.000     1.760       -         
+next_fib_add2            Net                       -           -       0.432     -           2         
+next_state9.lt2          cycloneive_lcell_comb     datab       In      -         2.192       -         
+next_state9.lt2          cycloneive_lcell_comb     cout        Out     0.509     2.701       -         
+next_state9.lt_2         Net                       -           -       0.000     -           1         
+next_state9.lt3          cycloneive_lcell_comb     cin         In      -         2.701       -         
+next_state9.lt3          cycloneive_lcell_comb     cout        Out     0.066     2.767       -         
+next_state9.lt_3         Net                       -           -       0.000     -           1         
+next_state9.lt4          cycloneive_lcell_comb     cin         In      -         2.767       -         
+next_state9.lt4          cycloneive_lcell_comb     cout        Out     0.066     2.833       -         
+next_state9.lt_4         Net                       -           -       0.000     -           1         
+next_state9.lt5          cycloneive_lcell_comb     cin         In      -         2.833       -         
+next_state9.lt5          cycloneive_lcell_comb     cout        Out     0.066     2.899       -         
+next_state9.lt_5         Net                       -           -       0.000     -           1         
+next_state9.lt6          cycloneive_lcell_comb     cin         In      -         2.899       -         
+next_state9.lt6          cycloneive_lcell_comb     cout        Out     0.066     2.965       -         
+next_state9.lt_6         Net                       -           -       0.000     -           1         
+next_state9.lt7          cycloneive_lcell_comb     cin         In      -         2.965       -         
+next_state9.lt7          cycloneive_lcell_comb     cout        Out     0.066     3.031       -         
+next_state9.lt_7         Net                       -           -       0.000     -           1         
+next_state9.lt8          cycloneive_lcell_comb     cin         In      -         3.031       -         
+next_state9.lt8          cycloneive_lcell_comb     cout        Out     0.066     3.097       -         
+next_state9.lt_8         Net                       -           -       0.000     -           1         
+next_state9.lt9          cycloneive_lcell_comb     cin         In      -         3.097       -         
+next_state9.lt9          cycloneive_lcell_comb     cout        Out     0.066     3.163       -         
+next_state9.lt_9         Net                       -           -       0.000     -           1         
+next_state9.lt10         cycloneive_lcell_comb     cin         In      -         3.163       -         
+next_state9.lt10         cycloneive_lcell_comb     cout        Out     0.066     3.229       -         
+next_state9.lt_10        Net                       -           -       0.000     -           1         
+next_state9.lt11         cycloneive_lcell_comb     cin         In      -         3.229       -         
+next_state9.lt11         cycloneive_lcell_comb     cout        Out     0.066     3.295       -         
+next_state9.lt_11        Net                       -           -       0.000     -           1         
+next_state9.lt12         cycloneive_lcell_comb     cin         In      -         3.295       -         
+next_state9.lt12         cycloneive_lcell_comb     cout        Out     0.066     3.361       -         
+next_state9.lt_12        Net                       -           -       0.000     -           1         
+next_state9.lt13         cycloneive_lcell_comb     cin         In      -         3.361       -         
+next_state9.lt13         cycloneive_lcell_comb     cout        Out     0.066     3.427       -         
+next_state9.lt_13        Net                       -           -       0.000     -           1         
+next_state9.lt14         cycloneive_lcell_comb     cin         In      -         3.427       -         
+next_state9.lt14         cycloneive_lcell_comb     cout        Out     0.066     3.493       -         
+next_state9.lt_14        Net                       -           -       0.000     -           1         
+next_state9.lt15         cycloneive_lcell_comb     cin         In      -         3.493       -         
+next_state9.lt15         cycloneive_lcell_comb     combout     Out     0.000     3.493       -         
+next_state9.lt15         Net                       -           -       0.652     -           1         
+current_state_RNO[0]     cycloneive_lcell_comb     datad       In      -         4.145       -         
+current_state_RNO[0]     cycloneive_lcell_comb     combout     Out     0.155     4.300       -         
+N_126_i_0_g0             Net                       -           -       0.000     -           1         
+current_state[0]         dffeas                    d           In      -         4.300       -         
+=======================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 3.773 is 2.349(62.3%) logic and 1.424(37.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 4: 
+      Requested Period:                      3.207
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         3.734
+
+    - Propagation time:                      3.687
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.566
+
+    Number of logic level(s):                18
+    Starting point:                          prev1[0] / q
+    Ending point:                            current_state[0] / d
+    The start point is clocked by            fibonacci|clk [rising] on pin clk
+    The end   point is clocked by            fibonacci|clk [rising] on pin clk
+
+Instance / Net                                     Pin         Pin               Arrival     No. of    
+Name                     Type                      Name        Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+prev1[0]                 dffeas                    q           Out     0.232     0.845       -         
+prev1[0]                 Net                       -           -       0.340     -           3         
+next_fib_add0            cycloneive_lcell_comb     datab       In      -         1.185       -         
+next_fib_add0            cycloneive_lcell_comb     cout        Out     0.509     1.694       -         
+next_fib_carry_0         Net                       -           -       0.000     -           1         
+next_fib_add1            cycloneive_lcell_comb     cin         In      -         1.694       -         
+next_fib_add1            cycloneive_lcell_comb     cout        Out     0.066     1.760       -         
+next_fib_carry_1         Net                       -           -       0.000     -           1         
+next_fib_add2            cycloneive_lcell_comb     cin         In      -         1.760       -         
+next_fib_add2            cycloneive_lcell_comb     cout        Out     0.066     1.826       -         
+next_fib_carry_2         Net                       -           -       0.000     -           1         
+next_fib_add3            cycloneive_lcell_comb     cin         In      -         1.826       -         
+next_fib_add3            cycloneive_lcell_comb     combout     Out     0.000     1.826       -         
+next_fib_add3            Net                       -           -       0.432     -           2         
+next_state9.lt3          cycloneive_lcell_comb     datab       In      -         2.258       -         
+next_state9.lt3          cycloneive_lcell_comb     cout        Out     0.509     2.767       -         
+next_state9.lt_3         Net                       -           -       0.000     -           1         
+next_state9.lt4          cycloneive_lcell_comb     cin         In      -         2.767       -         
+next_state9.lt4          cycloneive_lcell_comb     cout        Out     0.066     2.833       -         
+next_state9.lt_4         Net                       -           -       0.000     -           1         
+next_state9.lt5          cycloneive_lcell_comb     cin         In      -         2.833       -         
+next_state9.lt5          cycloneive_lcell_comb     cout        Out     0.066     2.899       -         
+next_state9.lt_5         Net                       -           -       0.000     -           1         
+next_state9.lt6          cycloneive_lcell_comb     cin         In      -         2.899       -         
+next_state9.lt6          cycloneive_lcell_comb     cout        Out     0.066     2.965       -         
+next_state9.lt_6         Net                       -           -       0.000     -           1         
+next_state9.lt7          cycloneive_lcell_comb     cin         In      -         2.965       -         
+next_state9.lt7          cycloneive_lcell_comb     cout        Out     0.066     3.031       -         
+next_state9.lt_7         Net                       -           -       0.000     -           1         
+next_state9.lt8          cycloneive_lcell_comb     cin         In      -         3.031       -         
+next_state9.lt8          cycloneive_lcell_comb     cout        Out     0.066     3.097       -         
+next_state9.lt_8         Net                       -           -       0.000     -           1         
+next_state9.lt9          cycloneive_lcell_comb     cin         In      -         3.097       -         
+next_state9.lt9          cycloneive_lcell_comb     cout        Out     0.066     3.163       -         
+next_state9.lt_9         Net                       -           -       0.000     -           1         
+next_state9.lt10         cycloneive_lcell_comb     cin         In      -         3.163       -         
+next_state9.lt10         cycloneive_lcell_comb     cout        Out     0.066     3.229       -         
+next_state9.lt_10        Net                       -           -       0.000     -           1         
+next_state9.lt11         cycloneive_lcell_comb     cin         In      -         3.229       -         
+next_state9.lt11         cycloneive_lcell_comb     cout        Out     0.066     3.295       -         
+next_state9.lt_11        Net                       -           -       0.000     -           1         
+next_state9.lt12         cycloneive_lcell_comb     cin         In      -         3.295       -         
+next_state9.lt12         cycloneive_lcell_comb     cout        Out     0.066     3.361       -         
+next_state9.lt_12        Net                       -           -       0.000     -           1         
+next_state9.lt13         cycloneive_lcell_comb     cin         In      -         3.361       -         
+next_state9.lt13         cycloneive_lcell_comb     cout        Out     0.066     3.427       -         
+next_state9.lt_13        Net                       -           -       0.000     -           1         
+next_state9.lt14         cycloneive_lcell_comb     cin         In      -         3.427       -         
+next_state9.lt14         cycloneive_lcell_comb     cout        Out     0.066     3.493       -         
+next_state9.lt_14        Net                       -           -       0.000     -           1         
+next_state9.lt15         cycloneive_lcell_comb     cin         In      -         3.493       -         
+next_state9.lt15         cycloneive_lcell_comb     combout     Out     0.000     3.493       -         
+next_state9.lt15         Net                       -           -       0.652     -           1         
+current_state_RNO[0]     cycloneive_lcell_comb     datad       In      -         4.145       -         
+current_state_RNO[0]     cycloneive_lcell_comb     combout     Out     0.155     4.300       -         
+N_126_i_0_g0             Net                       -           -       0.000     -           1         
+current_state[0]         dffeas                    d           In      -         4.300       -         
+=======================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 3.773 is 2.349(62.3%) logic and 1.424(37.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 5: 
+      Requested Period:                      3.207
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         3.734
+
+    - Propagation time:                      3.687
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.566
+
+    Number of logic level(s):                18
+    Starting point:                          prev1[0] / q
+    Ending point:                            current_state[0] / d
+    The start point is clocked by            fibonacci|clk [rising] on pin clk
+    The end   point is clocked by            fibonacci|clk [rising] on pin clk
+
+Instance / Net                                     Pin         Pin               Arrival     No. of    
+Name                     Type                      Name        Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+prev1[0]                 dffeas                    q           Out     0.232     0.845       -         
+prev1[0]                 Net                       -           -       0.340     -           3         
+next_fib_add0            cycloneive_lcell_comb     datab       In      -         1.185       -         
+next_fib_add0            cycloneive_lcell_comb     cout        Out     0.509     1.694       -         
+next_fib_carry_0         Net                       -           -       0.000     -           1         
+next_fib_add1            cycloneive_lcell_comb     cin         In      -         1.694       -         
+next_fib_add1            cycloneive_lcell_comb     cout        Out     0.066     1.760       -         
+next_fib_carry_1         Net                       -           -       0.000     -           1         
+next_fib_add2            cycloneive_lcell_comb     cin         In      -         1.760       -         
+next_fib_add2            cycloneive_lcell_comb     cout        Out     0.066     1.826       -         
+next_fib_carry_2         Net                       -           -       0.000     -           1         
+next_fib_add3            cycloneive_lcell_comb     cin         In      -         1.826       -         
+next_fib_add3            cycloneive_lcell_comb     cout        Out     0.066     1.892       -         
+next_fib_carry_3         Net                       -           -       0.000     -           1         
+next_fib_add4            cycloneive_lcell_comb     cin         In      -         1.892       -         
+next_fib_add4            cycloneive_lcell_comb     combout     Out     0.000     1.892       -         
+next_fib_add4            Net                       -           -       0.432     -           2         
+next_state9.lt4          cycloneive_lcell_comb     datab       In      -         2.324       -         
+next_state9.lt4          cycloneive_lcell_comb     cout        Out     0.509     2.833       -         
+next_state9.lt_4         Net                       -           -       0.000     -           1         
+next_state9.lt5          cycloneive_lcell_comb     cin         In      -         2.833       -         
+next_state9.lt5          cycloneive_lcell_comb     cout        Out     0.066     2.899       -         
+next_state9.lt_5         Net                       -           -       0.000     -           1         
+next_state9.lt6          cycloneive_lcell_comb     cin         In      -         2.899       -         
+next_state9.lt6          cycloneive_lcell_comb     cout        Out     0.066     2.965       -         
+next_state9.lt_6         Net                       -           -       0.000     -           1         
+next_state9.lt7          cycloneive_lcell_comb     cin         In      -         2.965       -         
+next_state9.lt7          cycloneive_lcell_comb     cout        Out     0.066     3.031       -         
+next_state9.lt_7         Net                       -           -       0.000     -           1         
+next_state9.lt8          cycloneive_lcell_comb     cin         In      -         3.031       -         
+next_state9.lt8          cycloneive_lcell_comb     cout        Out     0.066     3.097       -         
+next_state9.lt_8         Net                       -           -       0.000     -           1         
+next_state9.lt9          cycloneive_lcell_comb     cin         In      -         3.097       -         
+next_state9.lt9          cycloneive_lcell_comb     cout        Out     0.066     3.163       -         
+next_state9.lt_9         Net                       -           -       0.000     -           1         
+next_state9.lt10         cycloneive_lcell_comb     cin         In      -         3.163       -         
+next_state9.lt10         cycloneive_lcell_comb     cout        Out     0.066     3.229       -         
+next_state9.lt_10        Net                       -           -       0.000     -           1         
+next_state9.lt11         cycloneive_lcell_comb     cin         In      -         3.229       -         
+next_state9.lt11         cycloneive_lcell_comb     cout        Out     0.066     3.295       -         
+next_state9.lt_11        Net                       -           -       0.000     -           1         
+next_state9.lt12         cycloneive_lcell_comb     cin         In      -         3.295       -         
+next_state9.lt12         cycloneive_lcell_comb     cout        Out     0.066     3.361       -         
+next_state9.lt_12        Net                       -           -       0.000     -           1         
+next_state9.lt13         cycloneive_lcell_comb     cin         In      -         3.361       -         
+next_state9.lt13         cycloneive_lcell_comb     cout        Out     0.066     3.427       -         
+next_state9.lt_13        Net                       -           -       0.000     -           1         
+next_state9.lt14         cycloneive_lcell_comb     cin         In      -         3.427       -         
+next_state9.lt14         cycloneive_lcell_comb     cout        Out     0.066     3.493       -         
+next_state9.lt_14        Net                       -           -       0.000     -           1         
+next_state9.lt15         cycloneive_lcell_comb     cin         In      -         3.493       -         
+next_state9.lt15         cycloneive_lcell_comb     combout     Out     0.000     3.493       -         
+next_state9.lt15         Net                       -           -       0.652     -           1         
+current_state_RNO[0]     cycloneive_lcell_comb     datad       In      -         4.145       -         
+current_state_RNO[0]     cycloneive_lcell_comb     combout     Out     0.155     4.300       -         
+N_126_i_0_g0             Net                       -           -       0.000     -           1         
+current_state[0]         dffeas                    d           In      -         4.300       -         
+=======================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 3.773 is 2.349(62.3%) logic and 1.424(37.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 115MB peak: 118MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 115MB peak: 118MB)
+
+<a name=areaReport31></a>##### START OF AREA REPORT #####[</a>
+Design view:work.fibonacci(verilog)
+Selecting part EP4CE6E22A7
+@N:<a href="@N:FA174:@XP_HELP">FA174</a> : <!@TM:0> | The following device usage report estimates place and route data. Please look at the place and route report for final resource usage. 
+
+Total combinational functions 34 of 6272 ( 0%)
+Logic element usage by number of inputs
+		  4 input functions 	 1
+		  3 input functions 	 0
+		  [=2 input functions 	 33
+Logic elements by mode
+		  normal mode            1
+		  arithmetic mode        33
+Total registers 36 of 6272 ( 0%)
+I/O pins 36 of 180 (20%), total I/O based on largest package of this part.
+
+Number of I/O registers
+			Input DDRs    :0
+			Output DDRs   :0
+
+DSP Blocks:     0  (0 nine-bit DSP elements).
+DSP Utilization: 0.00% of available 15 blocks (30 nine-bit).
+ShiftTap:       0  (0 registers)
+Ena:             34
+Sload:           0
+Sclr:            33
+Total ESB:      0 bits 
+
+##### END OF AREA REPORT #####]
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 23MB peak: 118MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Jan 21 22:23:50 2025
+
+###########################################################]
+
+</pre></samp></body></html>

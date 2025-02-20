@@ -1,0 +1,47 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys HDL compiler and linker, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+Modified Files: 12
+FID:  path (prevtimestamp, timestamp)
+0        /home/icl5712/GitHub/CE387/Lab1/fibonacci.sv (N/A, 2025-01-12 23:18:20)
+1        /home/icl5712/GitHub/CE387/Lab1/rev_1/synwork//distcomp/distcomp0/distcomp0.xmr (N/A, 2025-01-21 22:23:44)
+2        /vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v (N/A, 2018-11-27 23:10:11)
+3        /vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v (N/A, 2018-11-27 23:10:39)
+4        /vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v (N/A, 2018-11-27 23:10:39)
+5        /vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v (N/A, 2018-11-27 23:10:39)
+6        /vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v (N/A, 2018-11-27 23:10:40)
+7        /vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v (N/A, 2018-11-27 23:12:11)
+8        /vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v (N/A, 2018-11-27 23:17:48)
+9        /vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v (N/A, 2018-11-27 23:17:48)
+10       /vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh (N/A, 2018-11-27 23:17:48)
+11       /vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v (N/A, 2018-08-08 02:43:25)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 1
+MID:  lib.cell.view
+0        work.fibonacci.verilog may have changed because the following files changed:
+                        /home/icl5712/GitHub/CE387/Lab1/fibonacci.sv (N/A, 2025-01-12 23:18:20) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 0
+FID:  path (timestamp)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

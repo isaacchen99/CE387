@@ -1,0 +1,111 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+
+# Written on Tue Jan 21 22:23:48 2025
+
+##### DESIGN INFO #######################################################
+
+Top View:                "fibonacci"
+Constraint File(s):      (none)
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 0 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting          Ending            |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------
+fibonacci|clk     fibonacci|clk     |     2.166            |     No paths         |     No paths         |     No paths                         
+===============================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:din[0]
+p:din[1]
+p:din[2]
+p:din[3]
+p:din[4]
+p:din[5]
+p:din[6]
+p:din[7]
+p:din[8]
+p:din[9]
+p:din[10]
+p:din[11]
+p:din[12]
+p:din[13]
+p:din[14]
+p:din[15]
+p:done
+p:dout[0]
+p:dout[1]
+p:dout[2]
+p:dout[3]
+p:dout[4]
+p:dout[5]
+p:dout[6]
+p:dout[7]
+p:dout[8]
+p:dout[9]
+p:dout[10]
+p:dout[11]
+p:dout[12]
+p:dout[13]
+p:dout[14]
+p:dout[15]
+p:reset
+p:start
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

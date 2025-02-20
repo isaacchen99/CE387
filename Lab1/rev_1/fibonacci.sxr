@@ -1,0 +1,126 @@
+
+BeginView fibonacci fibonacci
+Inst: prev1[0]   prev1_0_ dffeas 
+Inst: prev1[1]   prev1_1_ dffeas 
+Inst: prev1[2]   prev1_2_ dffeas 
+Inst: prev1[3]   prev1_3_ dffeas 
+Inst: prev1[4]   prev1_4_ dffeas 
+Inst: prev1[5]   prev1_5_ dffeas 
+Inst: prev1[6]   prev1_6_ dffeas 
+Inst: prev1[7]   prev1_7_ dffeas 
+Inst: prev1[8]   prev1_8_ dffeas 
+Inst: prev1[9]   prev1_9_ dffeas 
+Inst: prev1[10]   prev1_10_ dffeas 
+Inst: prev1[11]   prev1_11_ dffeas 
+Inst: prev1[12]   prev1_12_ dffeas 
+Inst: prev1[13]   prev1_13_ dffeas 
+Inst: prev1[14]   prev1_14_ dffeas 
+Inst: prev1[15]   prev1_15_ dffeas 
+Inst: current_state[1]   current_state_1_ dffeas 
+Inst: current_state[0]   current_state_0_ dffeas 
+Inst: prev2[0]   prev2_0_ dffeas 
+Inst: output_reg[15]   output_reg_15_ dffeas 
+Inst: output_reg[14]   output_reg_14_ dffeas 
+Inst: output_reg[13]   output_reg_13_ dffeas 
+Inst: output_reg[12]   output_reg_12_ dffeas 
+Inst: output_reg[11]   output_reg_11_ dffeas 
+Inst: output_reg[10]   output_reg_10_ dffeas 
+Inst: output_reg[9]   output_reg_9_ dffeas 
+Inst: output_reg[8]   output_reg_8_ dffeas 
+Inst: output_reg[7]   output_reg_7_ dffeas 
+Inst: output_reg[6]   output_reg_6_ dffeas 
+Inst: output_reg[5]   output_reg_5_ dffeas 
+Inst: output_reg[4]   output_reg_4_ dffeas 
+Inst: output_reg[3]   output_reg_3_ dffeas 
+Inst: output_reg[2]   output_reg_2_ dffeas 
+Inst: output_reg[1]   output_reg_1_ dffeas 
+Inst: output_reg[0]   output_reg_0_ dffeas 
+Inst: done_reg   done_reg_Z dffeas 
+Inst: prev2_RNO[0]   prev2_RNO_0_ inv 
+Inst: next_state9.lt0   next_state9_lt0 cycloneive_lcell_comb 
+Inst: next_state9.lt1   next_state9_lt1 cycloneive_lcell_comb 
+Inst: next_state9.lt2   next_state9_lt2 cycloneive_lcell_comb 
+Inst: next_state9.lt3   next_state9_lt3 cycloneive_lcell_comb 
+Inst: next_state9.lt4   next_state9_lt4 cycloneive_lcell_comb 
+Inst: next_state9.lt5   next_state9_lt5 cycloneive_lcell_comb 
+Inst: next_state9.lt6   next_state9_lt6 cycloneive_lcell_comb 
+Inst: next_state9.lt7   next_state9_lt7 cycloneive_lcell_comb 
+Inst: next_state9.lt8   next_state9_lt8 cycloneive_lcell_comb 
+Inst: next_state9.lt9   next_state9_lt9 cycloneive_lcell_comb 
+Inst: next_state9.lt10   next_state9_lt10 cycloneive_lcell_comb 
+Inst: next_state9.lt11   next_state9_lt11 cycloneive_lcell_comb 
+Inst: next_state9.lt12   next_state9_lt12 cycloneive_lcell_comb 
+Inst: next_state9.lt13   next_state9_lt13 cycloneive_lcell_comb 
+Inst: next_state9.lt14   next_state9_lt14 cycloneive_lcell_comb 
+Inst: next_state9.lt15   next_state9_lt15_cZ cycloneive_lcell_comb 
+Inst: next_fib_add0   next_fib_add0_cZ cycloneive_lcell_comb 
+Inst: next_fib_add1   next_fib_add1_cZ cycloneive_lcell_comb 
+Inst: next_fib_add2   next_fib_add2_cZ cycloneive_lcell_comb 
+Inst: next_fib_add3   next_fib_add3_cZ cycloneive_lcell_comb 
+Inst: next_fib_add4   next_fib_add4_cZ cycloneive_lcell_comb 
+Inst: next_fib_add5   next_fib_add5_cZ cycloneive_lcell_comb 
+Inst: next_fib_add6   next_fib_add6_cZ cycloneive_lcell_comb 
+Inst: next_fib_add7   next_fib_add7_cZ cycloneive_lcell_comb 
+Inst: next_fib_add8   next_fib_add8_cZ cycloneive_lcell_comb 
+Inst: next_fib_add9   next_fib_add9_cZ cycloneive_lcell_comb 
+Inst: next_fib_add10   next_fib_add10_cZ cycloneive_lcell_comb 
+Inst: next_fib_add11   next_fib_add11_cZ cycloneive_lcell_comb 
+Inst: next_fib_add12   next_fib_add12_cZ cycloneive_lcell_comb 
+Inst: next_fib_add13   next_fib_add13_cZ cycloneive_lcell_comb 
+Inst: next_fib_add14   next_fib_add14_cZ cycloneive_lcell_comb 
+Inst: next_fib_add15   next_fib_add15_cZ cycloneive_lcell_comb 
+Inst: current_state_RNO[0]   current_state_RNO_0_ cycloneive_lcell_comb 
+Inst: current_state_RNO[1]   current_state_RNO_1_ cycloneive_lcell_comb 
+Inst: din_in[15]   din_in_15_ cycloneive_io_ibuf 
+Inst: din_in[14]   din_in_14_ cycloneive_io_ibuf 
+Inst: din_in[13]   din_in_13_ cycloneive_io_ibuf 
+Inst: din_in[12]   din_in_12_ cycloneive_io_ibuf 
+Inst: din_in[11]   din_in_11_ cycloneive_io_ibuf 
+Inst: din_in[10]   din_in_10_ cycloneive_io_ibuf 
+Inst: din_in[9]   din_in_9_ cycloneive_io_ibuf 
+Inst: din_in[8]   din_in_8_ cycloneive_io_ibuf 
+Inst: din_in[7]   din_in_7_ cycloneive_io_ibuf 
+Inst: din_in[6]   din_in_6_ cycloneive_io_ibuf 
+Inst: din_in[5]   din_in_5_ cycloneive_io_ibuf 
+Inst: din_in[4]   din_in_4_ cycloneive_io_ibuf 
+Inst: din_in[3]   din_in_3_ cycloneive_io_ibuf 
+Inst: din_in[2]   din_in_2_ cycloneive_io_ibuf 
+Inst: din_in[1]   din_in_1_ cycloneive_io_ibuf 
+Inst: din_in[0]   din_in_0_ cycloneive_io_ibuf 
+Inst: dout_out[15]   dout_out_15_ cycloneive_io_obuf 
+Inst: dout_out[14]   dout_out_14_ cycloneive_io_obuf 
+Inst: dout_out[13]   dout_out_13_ cycloneive_io_obuf 
+Inst: dout_out[12]   dout_out_12_ cycloneive_io_obuf 
+Inst: dout_out[11]   dout_out_11_ cycloneive_io_obuf 
+Inst: dout_out[10]   dout_out_10_ cycloneive_io_obuf 
+Inst: dout_out[9]   dout_out_9_ cycloneive_io_obuf 
+Inst: dout_out[8]   dout_out_8_ cycloneive_io_obuf 
+Inst: dout_out[7]   dout_out_7_ cycloneive_io_obuf 
+Inst: dout_out[6]   dout_out_6_ cycloneive_io_obuf 
+Inst: dout_out[5]   dout_out_5_ cycloneive_io_obuf 
+Inst: dout_out[4]   dout_out_4_ cycloneive_io_obuf 
+Inst: dout_out[3]   dout_out_3_ cycloneive_io_obuf 
+Inst: dout_out[2]   dout_out_2_ cycloneive_io_obuf 
+Inst: dout_out[1]   dout_out_1_ cycloneive_io_obuf 
+Inst: dout_out[0]   dout_out_0_ cycloneive_io_obuf 
+Inst: current_state[2:0]   current_state_2_0_ ghost 
+Inst: reset_c_i   reset_c_i_cZ inv 
+Inst: current_state_i[0]   current_state_i_0_ inv 
+Inst: current_state_i[1]   current_state_i_1_ inv 
+Net:  next_state9.lt15   next_state9_lt15 
+Net:  next_state9.lt_0   next_state9_lt_0 
+Net:  next_state9.lt_1   next_state9_lt_1 
+Net:  next_state9.lt_2   next_state9_lt_2 
+Net:  next_state9.lt_3   next_state9_lt_3 
+Net:  next_state9.lt_4   next_state9_lt_4 
+Net:  next_state9.lt_5   next_state9_lt_5 
+Net:  next_state9.lt_6   next_state9_lt_6 
+Net:  next_state9.lt_7   next_state9_lt_7 
+Net:  next_state9.lt_8   next_state9_lt_8 
+Net:  next_state9.lt_9   next_state9_lt_9 
+Net:  next_state9.lt_10   next_state9_lt_10 
+Net:  next_state9.lt_11   next_state9_lt_11 
+Net:  next_state9.lt_12   next_state9_lt_12 
+Net:  next_state9.lt_13   next_state9_lt_13 
+Net:  next_state9.lt_14   next_state9_lt_14 
+EndView fibonacci fibonacci

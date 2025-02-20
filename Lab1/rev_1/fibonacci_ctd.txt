@@ -1,0 +1,282 @@
+
+
+End Points:
+
+Index     Instance             Pin      Type     Start Clock         End Clock           Clock Delay     Req Per     Slack      Data path delay     Constraint
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+1         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.566     3.455                         
+2         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.540     3.429                         
+3         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.492     3.381                         
+4         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.486     3.375                         
+5         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.426     3.315                         
+6         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.420     3.309                         
+7         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.360     3.249                         
+8         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.354     3.243                         
+9         current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.294     3.183                         
+10        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.288     3.177                         
+11        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.229     3.117                         
+12        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.223     3.111                         
+13        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.163     3.051                         
+14        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.157     3.045                         
+15        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.097     2.985                         
+16        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.090     2.979                         
+17        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.030     2.919                         
+18        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       -0.025     2.913                         
+19        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.035      2.853                         
+20        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.042      2.847                         
+21        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.102      2.787                         
+22        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.107      2.781                         
+23        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.168      2.721                         
+24        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.173      2.715                         
+25        current_state[1]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.175      2.714                         
+26        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.234      2.655                         
+27        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.239      2.649                         
+28        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.299      2.589                         
+29        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.305      2.583                         
+30        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.365      2.523                         
+31        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.371      2.517                         
+32        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.431      2.457                         
+33        current_state[0]     d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.438      2.451                         
+34        prev1[15]            d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.684      2.205                         
+35        prev1[14]            d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.750      2.139                         
+36        prev1[13]            d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.816      2.073                         
+37        prev1[12]            d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.882      2.007                         
+38        prev1[11]            d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       0.948      1.941                         
+39        prev1[10]            d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.014      1.875                         
+40        prev1[9]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.080      1.809                         
+41        prev1[8]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.146      1.743                         
+42        prev1[7]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.212      1.677                         
+43        prev1[6]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.278      1.611                         
+44        prev1[5]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.344      1.545                         
+45        prev1[4]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.410      1.479                         
+46        prev1[3]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.476      1.413                         
+47        prev1[2]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.542      1.347                         
+48        prev1[1]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.608      1.281                         
+49        prev1[0]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.772      1.116                         
+50        done_reg             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+51        output_reg[0]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+52        output_reg[10]       ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+53        output_reg[11]       ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+54        output_reg[12]       ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+55        output_reg[13]       ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+56        output_reg[14]       ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+57        output_reg[15]       ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+58        output_reg[1]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+59        output_reg[2]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+60        output_reg[3]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+61        output_reg[4]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+62        output_reg[5]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+63        output_reg[6]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+64        output_reg[7]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+65        output_reg[8]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+66        output_reg[9]        ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+67        prev1[0]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+68        prev1[10]            ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+69        prev1[11]            ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+70        prev1[12]            ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+71        prev1[13]            ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+72        prev1[14]            ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+73        prev1[15]            ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+74        prev1[1]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+75        prev1[2]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+76        prev1[3]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+77        prev1[4]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+78        prev1[5]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+79        prev1[6]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+80        prev1[7]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+81        prev1[8]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+82        prev1[9]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+83        prev2[0]             ena      reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.856      0.429                         
+84        output_reg[0]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+85        output_reg[10]       sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+86        output_reg[11]       sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+87        output_reg[12]       sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+88        output_reg[13]       sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+89        output_reg[14]       sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+90        output_reg[15]       sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+91        output_reg[1]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+92        output_reg[2]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+93        output_reg[3]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+94        output_reg[4]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+95        output_reg[5]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+96        output_reg[6]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+97        output_reg[7]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+98        output_reg[8]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+99        output_reg[9]        sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+100       prev1[0]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+101       prev1[10]            sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+102       prev1[11]            sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+103       prev1[12]            sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+104       prev1[13]            sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+105       prev1[14]            sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+106       prev1[15]            sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+107       prev1[1]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+108       prev1[2]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+109       prev1[3]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+110       prev1[4]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+111       prev1[5]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+112       prev1[6]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+113       prev1[7]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+114       prev1[8]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+115       prev1[9]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+116       prev2[0]             sclr     reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       1.937      0.429                         
+117       done_reg             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.460      0.429                         
+118       output_reg[0]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.549      0.340                         
+119       prev2[0]             d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.549      0.340                         
+120       output_reg[10]       d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+121       output_reg[11]       d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+122       output_reg[12]       d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+123       output_reg[13]       d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+124       output_reg[14]       d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+125       output_reg[15]       d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+126       output_reg[1]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+127       output_reg[2]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+128       output_reg[3]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+129       output_reg[4]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+130       output_reg[5]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+131       output_reg[6]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+132       output_reg[7]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+133       output_reg[8]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+134       output_reg[9]        d        reg      fibonacci|clk:r     fibonacci|clk:r     0.000           3.207       2.556      0.333                         
+==============================================================================================================================================================
+
+
+Start Points:
+
+Index     Instance             Pin     Type     Start Clock         Clock Delay     Slack 
+------------------------------------------------------------------------------------------
+1         prev1[0]             q       reg      fibonacci|clk:r     0.000           -0.566
+2         prev2[0]             q       reg      fibonacci|clk:r     0.000           -0.540
+3         output_reg[1]        q       reg      fibonacci|clk:r     0.000           -0.492
+4         prev1[1]             q       reg      fibonacci|clk:r     0.000           -0.486
+5         output_reg[2]        q       reg      fibonacci|clk:r     0.000           -0.426
+6         prev1[2]             q       reg      fibonacci|clk:r     0.000           -0.420
+7         output_reg[3]        q       reg      fibonacci|clk:r     0.000           -0.360
+8         prev1[3]             q       reg      fibonacci|clk:r     0.000           -0.354
+9         output_reg[4]        q       reg      fibonacci|clk:r     0.000           -0.294
+10        prev1[4]             q       reg      fibonacci|clk:r     0.000           -0.288
+11        output_reg[5]        q       reg      fibonacci|clk:r     0.000           -0.229
+12        prev1[5]             q       reg      fibonacci|clk:r     0.000           -0.223
+13        output_reg[6]        q       reg      fibonacci|clk:r     0.000           -0.163
+14        prev1[6]             q       reg      fibonacci|clk:r     0.000           -0.157
+15        output_reg[7]        q       reg      fibonacci|clk:r     0.000           -0.097
+16        prev1[7]             q       reg      fibonacci|clk:r     0.000           -0.090
+17        output_reg[8]        q       reg      fibonacci|clk:r     0.000           -0.030
+18        prev1[8]             q       reg      fibonacci|clk:r     0.000           -0.025
+19        output_reg[9]        q       reg      fibonacci|clk:r     0.000           0.035 
+20        prev1[9]             q       reg      fibonacci|clk:r     0.000           0.042 
+21        output_reg[10]       q       reg      fibonacci|clk:r     0.000           0.102 
+22        prev1[10]            q       reg      fibonacci|clk:r     0.000           0.107 
+23        output_reg[11]       q       reg      fibonacci|clk:r     0.000           0.168 
+24        prev1[11]            q       reg      fibonacci|clk:r     0.000           0.173 
+25        prev1[0]             q       reg      fibonacci|clk:r     0.000           0.175 
+26        output_reg[12]       q       reg      fibonacci|clk:r     0.000           0.234 
+27        prev1[12]            q       reg      fibonacci|clk:r     0.000           0.239 
+28        output_reg[13]       q       reg      fibonacci|clk:r     0.000           0.299 
+29        prev1[13]            q       reg      fibonacci|clk:r     0.000           0.305 
+30        output_reg[14]       q       reg      fibonacci|clk:r     0.000           0.365 
+31        prev1[14]            q       reg      fibonacci|clk:r     0.000           0.371 
+32        output_reg[15]       q       reg      fibonacci|clk:r     0.000           0.431 
+33        prev1[15]            q       reg      fibonacci|clk:r     0.000           0.438 
+34        prev1[0]             q       reg      fibonacci|clk:r     0.000           0.684 
+35        prev1[0]             q       reg      fibonacci|clk:r     0.000           0.750 
+36        prev1[0]             q       reg      fibonacci|clk:r     0.000           0.816 
+37        prev1[0]             q       reg      fibonacci|clk:r     0.000           0.882 
+38        prev1[0]             q       reg      fibonacci|clk:r     0.000           0.948 
+39        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.014 
+40        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.080 
+41        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.146 
+42        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.212 
+43        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.278 
+44        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.344 
+45        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.410 
+46        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.476 
+47        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.542 
+48        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.608 
+49        prev1[0]             q       reg      fibonacci|clk:r     0.000           1.772 
+50        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.856 
+51        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+52        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+53        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+54        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+55        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+56        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+57        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+58        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+59        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+60        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+61        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+62        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+63        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+64        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+65        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+66        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+67        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+68        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+69        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+70        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+71        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+72        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+73        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+74        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+75        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+76        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+77        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+78        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+79        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+80        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+81        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+82        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+83        current_state[1]     q       reg      fibonacci|clk:r     0.000           1.856 
+84        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+85        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+86        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+87        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+88        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+89        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+90        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+91        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+92        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+93        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+94        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+95        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+96        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+97        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+98        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+99        current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+100       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+101       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+102       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+103       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+104       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+105       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+106       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+107       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+108       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+109       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+110       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+111       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+112       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+113       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+114       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+115       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+116       current_state[0]     q       reg      fibonacci|clk:r     0.000           1.937 
+117       current_state[1]     q       reg      fibonacci|clk:r     0.000           2.460 
+118       prev1[0]             q       reg      fibonacci|clk:r     0.000           2.549 
+119       prev1[0]             q       reg      fibonacci|clk:r     0.000           2.549 
+120       prev1[10]            q       reg      fibonacci|clk:r     0.000           2.556 
+121       prev1[11]            q       reg      fibonacci|clk:r     0.000           2.556 
+122       prev1[12]            q       reg      fibonacci|clk:r     0.000           2.556 
+123       prev1[13]            q       reg      fibonacci|clk:r     0.000           2.556 
+124       prev1[14]            q       reg      fibonacci|clk:r     0.000           2.556 
+125       prev1[15]            q       reg      fibonacci|clk:r     0.000           2.556 
+126       prev1[1]             q       reg      fibonacci|clk:r     0.000           2.556 
+127       prev1[2]             q       reg      fibonacci|clk:r     0.000           2.556 
+128       prev1[3]             q       reg      fibonacci|clk:r     0.000           2.556 
+129       prev1[4]             q       reg      fibonacci|clk:r     0.000           2.556 
+130       prev1[5]             q       reg      fibonacci|clk:r     0.000           2.556 
+131       prev1[6]             q       reg      fibonacci|clk:r     0.000           2.556 
+132       prev1[7]             q       reg      fibonacci|clk:r     0.000           2.556 
+133       prev1[8]             q       reg      fibonacci|clk:r     0.000           2.556 
+134       prev1[9]             q       reg      fibonacci|clk:r     0.000           2.556 
+==========================================================================================

@@ -1,0 +1,19 @@
+@N:: Applying property .distcompmodetop with value 1 on module fibonacci in library work
+@N:: Applying property .distcompnoprune with value 1 on module fibonacci in library work
+@N:: Applying property .noprune with value 1 on module fibonacci in library work
+Selecting top level module fibonacci
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab1/fibonacci.sv":1:7:1:15|Synthesizing module fibonacci in library work.
+Running optimization stage 1 on fibonacci .......
+@W: CL169 :"/home/icl5712/GitHub/CE387/Lab1/fibonacci.sv":18:2:18:10|Pruning unused register next_fib[15:0]. Make sure that there are no unused intermediate registers.
+Running optimization stage 2 on fibonacci .......
+@N: CL201 :"/home/icl5712/GitHub/CE387/Lab1/fibonacci.sv":18:2:18:10|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/icl5712/GitHub/CE387/Lab1/rev_1/synwork//distcomp/distcomp0/distcomp0.rt.csv
+
