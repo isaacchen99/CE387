@@ -1,0 +1,67 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MT206 |Auto Constrain mode is enabled
+@N: MO231 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":86:0:86:8|Found counter in view:work.cordic(verilog) instance counter[4:0] 
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[0] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[1] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[2] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[3] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[4] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[5] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[6] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[7] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[8] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[9] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[10] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[11] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[12] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[13] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[14] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[0] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[1] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[2] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[3] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[4] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[5] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[6] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[7] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[8] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[9] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[10] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[11] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[12] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[13] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[14] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_67 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_68 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_69 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_70 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_67 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_68 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_69 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_70 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_67 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_68 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_69 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_70 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MF135 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|RAM sin_fifo.fifo_buf[15:0] (in view: work.cordic_top(verilog)) is 16 words by 16 bits.
+@N: MF135 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|RAM cos_fifo.fifo_buf[15:0] (in view: work.cordic_top(verilog)) is 16 words by 16 bits.
+@N: MF135 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|RAM input_fifo.fifo_buf[15:0] (in view: work.cordic_top(verilog)) is 16 words by 16 bits.
+@N: MF794 |RAM sin_fifo.fifo_buf[15:0] required 768 registers during mapping 
+@N: FA100 :|Instance "cos_fifo.fifo_buf_1.muxe0__0_0__g2" with "32" loads has been replicated "1" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "sin_fifo.fifo_buf.muxe0__0_0__g2" with "32" loads has been replicated "1" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "input_fifo.fifo_buf_67[1]" with "128" loads has been replicated "4" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "input_fifo.fifo_buf_67[0]" with "64" loads has been replicated "2" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "cos_fifo.fifo_buf_67[1]" with "128" loads has been replicated "4" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "cos_fifo.fifo_buf_67[0]" with "64" loads has been replicated "2" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "sin_fifo.fifo_buf_67[1]" with "128" loads has been replicated "4" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "sin_fifo.fifo_buf_67[0]" with "64" loads has been replicated "2" time(s) due to hard fanout limit of "30" 
+@N: FA100 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":86:0:86:8|Instance "cordic_inst.curr_state[4]" with "560" loads has been replicated "18" time(s) due to hard fanout limit of "30" 
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage.

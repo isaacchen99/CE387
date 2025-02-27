@@ -1,0 +1,339 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys HDL Compiler, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Verilog Compiler, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v" (library work)
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53001:16:53001:28|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53051:16:53051:27|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53060:16:53060:28|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53074:16:53074:27|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53221:20:53221:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53226:20:53226:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53229:20:53229:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53232:20:53232:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53346:20:53346:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53351:20:53351:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53354:20:53354:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53357:20:53357:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53446:20:53446:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53451:20:53451:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53454:20:53454:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53457:20:53457:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53545:20:53545:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53550:20:53550:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53553:20:53553:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53556:20:53556:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53642:20:53642:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53647:20:53647:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53650:20:53650:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53653:20:53653:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53861:12:53861:24|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53875:12:53875:23|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":54140:12:54140:24|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":54154:12:54154:23|Read directive translate_on.
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv" (library work)
+Verilog syntax check successful!
+Selecting top level module cordic_top
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000101
+   Generated name = fifo_16s_16s_5s
+Running optimization stage 1 on fifo_16s_16s_5s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":1:7:1:12|Synthesizing module cordic in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	NUM_STAGES=32'b00000000000000000000000000010000
+   Generated name = cordic_16s_16s_16s
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000000
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_0s_Z1
+Running optimization stage 1 on cordic_stage_16s_16s_0s_Z1 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000001
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_1s_Z2
+Running optimization stage 1 on cordic_stage_16s_16s_1s_Z2 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000010
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_2s_Z3
+Running optimization stage 1 on cordic_stage_16s_16s_2s_Z3 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000011
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_3s_Z4
+Running optimization stage 1 on cordic_stage_16s_16s_3s_Z4 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000100
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_4s_Z5
+Running optimization stage 1 on cordic_stage_16s_16s_4s_Z5 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000101
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_5s_Z6
+Running optimization stage 1 on cordic_stage_16s_16s_5s_Z6 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000110
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_6s_Z7
+Running optimization stage 1 on cordic_stage_16s_16s_6s_Z7 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000111
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_7s_Z8
+Running optimization stage 1 on cordic_stage_16s_16s_7s_Z8 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001000
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_8s_Z9
+Running optimization stage 1 on cordic_stage_16s_16s_8s_Z9 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001001
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_9s_Z10
+Running optimization stage 1 on cordic_stage_16s_16s_9s_Z10 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001010
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_10s_Z11
+Running optimization stage 1 on cordic_stage_16s_16s_10s_Z11 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001011
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_11s_Z12
+Running optimization stage 1 on cordic_stage_16s_16s_11s_Z12 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001100
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_12s_Z13
+Running optimization stage 1 on cordic_stage_16s_16s_12s_Z13 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001101
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_13s_Z14
+Running optimization stage 1 on cordic_stage_16s_16s_13s_Z14 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001110
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_14s_Z15
+Running optimization stage 1 on cordic_stage_16s_16s_14s_Z15 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001111
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_15s_Z16
+Running optimization stage 1 on cordic_stage_16s_16s_15s_Z16 .......
+Running optimization stage 1 on cordic_16s_16s_16s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Synthesizing module cordic_top in library work.
+Running optimization stage 1 on cordic_top .......
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 79MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:53 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+@N: NF107 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Selected library: work cell: cordic_top view verilog as top level
+@N: NF107 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Selected library: work cell: cordic_top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:54 2025
+
+###########################################################]
+
+Finished Containment srs generation. (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Divided design in to 2 groups
+@L:"/home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp0/distcomp0.log" "Log file for distribution node work.cordic_16s_16s_16s.verilog "
+Compiling work_cordic_16s_16s_16s_verilog as a separate process
+@L:"/home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp1/distcomp1.log" "Log file for distribution node work.cordic_top.verilog "
+Compiling work_cordic_top_verilog as a separate process
+Compilation of node work.cordic_top finished successfully.Real start time 0h:00m:00s, Real end time = 0h:00m:01s, Total real run time = 0h:00m:01s
+Compilation of node work.cordic finished successfully.Real start time 0h:00m:00s, Real end time = 0h:00m:02s, Total real run time = 0h:00m:02s
+
+Distributed Compiler Report
+***************************
+
+DP Name                             Status      Start time     End Time       Total Real Time     Log File                                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+work.cordic_top.verilog             Success     0h:00m:00s     0h:00m:01s     0h:00m:01s          /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp1/distcomp1.log
+work.cordic_16s_16s_16s.verilog     Success     0h:00m:00s     0h:00m:02s     0h:00m:02s          /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp0/distcomp0.log
+====================================================================================================================================================================================
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork/cordic_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:57 2025
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 3MB peak: 5MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:57 2025
+
+###########################################################]

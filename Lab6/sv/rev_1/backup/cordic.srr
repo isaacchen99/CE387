@@ -1,0 +1,1285 @@
+#Build: Synplify (R) Premier O-2018.09-SP1, Build 3588R, Nov 27 2018
+#install: /vol/synopsys/fpga/O-2018.09-SP1
+#OS: Linux 
+#Hostname: moore.wot.eecs.northwestern.edu
+
+# Thu Feb 27 01:34:53 2025
+
+#Implementation: rev_1
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys HDL Compiler, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Verilog Compiler, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v" (library work)
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53001:16:53001:28|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53051:16:53051:27|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53060:16:53060:28|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53074:16:53074:27|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53221:20:53221:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53226:20:53226:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53229:20:53229:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53232:20:53232:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53346:20:53346:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53351:20:53351:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53354:20:53354:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53357:20:53357:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53446:20:53446:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53451:20:53451:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53454:20:53454:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53457:20:53457:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53545:20:53545:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53550:20:53550:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53553:20:53553:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53556:20:53556:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53642:20:53642:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53647:20:53647:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53650:20:53650:32|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53653:20:53653:31|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53861:12:53861:24|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":53875:12:53875:23|Read directive translate_on.
+@N: CG334 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":54140:12:54140:24|Read directive translate_off.
+@N: CG333 :"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v":54154:12:54154:23|Read directive translate_on.
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v" (library work)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv" (library work)
+@I::"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv" (library work)
+Verilog syntax check successful!
+Selecting top level module cordic_top
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000101
+   Generated name = fifo_16s_16s_5s
+Running optimization stage 1 on fifo_16s_16s_5s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":1:7:1:12|Synthesizing module cordic in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	NUM_STAGES=32'b00000000000000000000000000010000
+   Generated name = cordic_16s_16s_16s
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000000
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_0s_Z1
+Running optimization stage 1 on cordic_stage_16s_16s_0s_Z1 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000001
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_1s_Z2
+Running optimization stage 1 on cordic_stage_16s_16s_1s_Z2 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000010
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_2s_Z3
+Running optimization stage 1 on cordic_stage_16s_16s_2s_Z3 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000011
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_3s_Z4
+Running optimization stage 1 on cordic_stage_16s_16s_3s_Z4 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000100
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_4s_Z5
+Running optimization stage 1 on cordic_stage_16s_16s_4s_Z5 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000101
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_5s_Z6
+Running optimization stage 1 on cordic_stage_16s_16s_5s_Z6 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000110
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_6s_Z7
+Running optimization stage 1 on cordic_stage_16s_16s_6s_Z7 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000000111
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_7s_Z8
+Running optimization stage 1 on cordic_stage_16s_16s_7s_Z8 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001000
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_8s_Z9
+Running optimization stage 1 on cordic_stage_16s_16s_8s_Z9 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001001
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_9s_Z10
+Running optimization stage 1 on cordic_stage_16s_16s_9s_Z10 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001010
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_10s_Z11
+Running optimization stage 1 on cordic_stage_16s_16s_10s_Z11 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001011
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_11s_Z12
+Running optimization stage 1 on cordic_stage_16s_16s_11s_Z12 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001100
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_12s_Z13
+Running optimization stage 1 on cordic_stage_16s_16s_12s_Z13 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001101
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_13s_Z14
+Running optimization stage 1 on cordic_stage_16s_16s_13s_Z14 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001110
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_14s_Z15
+Running optimization stage 1 on cordic_stage_16s_16s_14s_Z15 .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":1:7:1:18|Synthesizing module cordic_stage in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	STAGE=32'b00000000000000000000000000001111
+	CORDIC_TABLE=256'b0011001001000011000111011010110000001111101011010000011111110101000000111111111000000001111111110000000011111111000000000111111100000000001111110000000000011111000000000000111100000000000001110000000000000011000000000000000100000000000000000000000000000000
+   Generated name = cordic_stage_16s_16s_15s_Z16
+Running optimization stage 1 on cordic_stage_16s_16s_15s_Z16 .......
+Running optimization stage 1 on cordic_16s_16s_16s .......
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Synthesizing module cordic_top in library work.
+Running optimization stage 1 on cordic_top .......
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 79MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:53 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+@N: NF107 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Selected library: work cell: cordic_top view verilog as top level
+@N: NF107 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Selected library: work cell: cordic_top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:54 2025
+
+###########################################################]
+
+Finished Containment srs generation. (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Divided design in to 2 groups
+@L:"/home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp0/distcomp0.log" "Log file for distribution node work.cordic_16s_16s_16s.verilog "
+Compiling work_cordic_16s_16s_16s_verilog as a separate process
+@L:"/home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp1/distcomp1.log" "Log file for distribution node work.cordic_top.verilog "
+Compiling work_cordic_top_verilog as a separate process
+Compilation of node work.cordic_top finished successfully.Real start time 0h:00m:00s, Real end time = 0h:00m:01s, Total real run time = 0h:00m:01s
+Compilation of node work.cordic finished successfully.Real start time 0h:00m:00s, Real end time = 0h:00m:02s, Total real run time = 0h:00m:02s
+
+Distributed Compiler Report
+***************************
+
+DP Name                             Status      Start time     End Time       Total Real Time     Log File                                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+work.cordic_top.verilog             Success     0h:00m:00s     0h:00m:01s     0h:00m:01s          /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp1/distcomp1.log
+work.cordic_16s_16s_16s.verilog     Success     0h:00m:00s     0h:00m:02s     0h:00m:02s          /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp0/distcomp0.log
+====================================================================================================================================================================================
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork/cordic_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:57 2025
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 3MB peak: 5MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:57 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Synopsys Netlist Linker, Version comp2018q4p1, Build 004R, Built Nov 27 2018 21:19:49
+
+@N|Running in 64-bit mode
+@N: NF107 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Selected library: work cell: cordic_top view verilog as top level
+@N: NF107 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Selected library: work cell: cordic_top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Feb 27 01:34:58 2025
+
+###########################################################]
+Premap Report
+
+# Thu Feb 27 01:34:58 2025
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Intel FPGA Technology Pre-mapping, Version maprc, Build 4745R, Built Nov 27 2018 21:14:52
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@N: MF284 |Setting synthesis effort to medium for the design
+@L: /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/cordic_scck.rpt 
+Printing clock  summary report in "/home/icl5712/GitHub/CE387/Lab6/sv/rev_1/cordic_scck.rpt" file 
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
+
+@W: FA406 |Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.
+@N: MF284 |Setting synthesis effort to medium for the design
+
+Finished Clear Box Flow. (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 120MB)
+
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance z_output[15:0] (in view: work.cordic_stage_16s_16s_15s_Z16(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 120MB)
+
+
+
+Clock Summary
+******************
+
+          Start                Requested     Requested     Clock        Clock                     Clock
+Level     Clock                Frequency     Period        Type         Group                     Load 
+-------------------------------------------------------------------------------------------------------
+0 -       cordic_top|clock     434.2 MHz     2.303         inferred     Autoconstr_clkgroup_0     907  
+=======================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                     Clock     Source          Clock Pin                           Non-clock Pin     Non-clock Pin
+Clock                Load      Pin             Seq Example                         Seq Example       Comb Example 
+------------------------------------------------------------------------------------------------------------------
+cordic_top|clock     907       clock(port)     cordic_inst.z_pipe\[0\][15:0].C     -                 -            
+==================================================================================================================
+
+@W: MT529 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":62:4:62:12|Found inferred clock cordic_top|clock which controls 907 sequential elements including input_fifo.empty. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/cordic.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 121MB)
+
+Encoding state machine curr_state[4:0] (in view: work.cordic(verilog))
+original code -> new code
+   000 -> 00000
+   001 -> 00011
+   010 -> 00101
+   011 -> 01001
+   100 -> 10001
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 121MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 121MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 35MB peak: 121MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 27 01:34:59 2025
+
+###########################################################]
+Map & Optimize Report
+
+# Thu Feb 27 01:34:59 2025
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.10 (Ootpa)
+Hostname: moore.wot.eecs.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 1028009
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Intel FPGA Technology Mapper, Version maprc, Build 4745R, Built Nov 27 2018 21:14:52
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+@W: FA406 |Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 119MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 119MB)
+
+@N: MO231 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":86:0:86:8|Found counter in view:work.cordic(verilog) instance counter[4:0] 
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[0] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[1] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[2] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[3] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[4] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[5] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[6] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[7] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[8] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[9] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[10] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[11] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[12] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[13] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[14\]\.cordic_stage_inst.z_output[14] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+Encoding state machine curr_state[4:0] (in view: work.cordic(verilog))
+original code -> new code
+   000 -> 00000
+   001 -> 00011
+   010 -> 00101
+   011 -> 01001
+   100 -> 10001
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[0] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[1] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[2] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[3] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[4] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[5] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[6] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[7] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[8] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[9] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[10] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[11] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[12] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[13] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_stage_gen\[13\]\.cordic_stage_inst.z_output[14] (in view: work.cordic(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[0] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[8]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[8] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[7] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[6] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[5] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[4] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[3] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[2] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[1] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.x_output[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[3] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[4] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[5] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[6] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[8] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[9] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[12] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[7] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[13] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[14] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[11] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_stage.sv":31:0:31:8|Removing sequential instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[10] because it is equivalent to instance cordic_inst.cordic_stage_gen[0].cordic_stage_inst.y_output[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 121MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 121MB)
+
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_67 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_68 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_69 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance sin_fifo.fifo_buf_70 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_67 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_68 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_69 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance cos_fifo.fifo_buf_70 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_67 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_68 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_69 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance input_fifo.fifo_buf_70 (in view: work.cordic_top(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 121MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 121MB)
+
+@N: MF135 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|RAM sin_fifo.fifo_buf[15:0] (in view: work.cordic_top(verilog)) is 16 words by 16 bits.
+@W: FA365 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|Ram sin_fifo.fifo_buf[15:0] will be mapped into logic and will consume around 256 register resources.
+@N: MF135 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|RAM cos_fifo.fifo_buf[15:0] (in view: work.cordic_top(verilog)) is 16 words by 16 bits.
+@W: FA365 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|Ram cos_fifo.fifo_buf[15:0] will be mapped into logic and will consume around 256 register resources.
+@N: MF135 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|RAM input_fifo.fifo_buf[15:0] (in view: work.cordic_top(verilog)) is 16 words by 16 bits.
+@W: FA365 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|Ram input_fifo.fifo_buf[15:0] will be mapped into logic and will consume around 256 register resources.
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 137MB peak: 140MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 137MB peak: 140MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 142MB peak: 142MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 143MB peak: 144MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 143MB peak: 144MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 142MB peak: 144MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 142MB peak: 144MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 142MB peak: 144MB)
+
+@N: MF794 |RAM sin_fifo.fifo_buf[15:0] required 768 registers during mapping 
+
+Finished preparing to map (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 142MB peak: 144MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 173MB peak: 178MB)
+
+@N: FA100 :|Instance "cos_fifo.fifo_buf_1.muxe0__0_0__g2" with "32" loads has been replicated "1" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "sin_fifo.fifo_buf.muxe0__0_0__g2" with "32" loads has been replicated "1" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "input_fifo.fifo_buf_67[1]" with "128" loads has been replicated "4" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "input_fifo.fifo_buf_67[0]" with "64" loads has been replicated "2" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "cos_fifo.fifo_buf_67[1]" with "128" loads has been replicated "4" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "cos_fifo.fifo_buf_67[0]" with "64" loads has been replicated "2" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "sin_fifo.fifo_buf_67[1]" with "128" loads has been replicated "4" time(s) due to hard fanout limit of "30" 
+@N: FA100 :|Instance "sin_fifo.fifo_buf_67[0]" with "64" loads has been replicated "2" time(s) due to hard fanout limit of "30" 
+@N: FA100 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":86:0:86:8|Instance "cordic_inst.curr_state[4]" with "560" loads has been replicated "18" time(s) due to hard fanout limit of "30" 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 174MB peak: 178MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 175MB peak: 178MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 1649 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=================================== Non-Gated/Non-Generated Clocks ====================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance                
+-------------------------------------------------------------------------------------------------------
+@K:CKID0001       clock_in            cycloneive_io_ibuf     1649       cordic_inst.curr_state_rep18[4]
+=======================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 152MB peak: 178MB)
+
+Writing Analyst data base /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork/cordic_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 166MB peak: 178MB)
+
+Writing Verilog Netlist and constraint files
+Writing .vqm output for Quartus
+
+Writing scf file... (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 169MB peak: 178MB)
+
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+Writing FDC file /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/cordic_synplify.fdc
+
+Finished Writing Verilog Netlist and constraint files (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 166MB peak: 178MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:12s; Memory used current: 167MB peak: 178MB)
+
+@W: MT420 |Found inferred clock cordic_top|clock with period 4.19ns. Please declare a user-defined clock on port clock.
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Thu Feb 27 01:35:12 2025
+#
+
+
+Top view:               cordic_top
+Requested Frequency:    238.5 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.740
+
+                     Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock       Frequency     Frequency     Period        Period        Slack      Type         Group                
+--------------------------------------------------------------------------------------------------------------------------
+cordic_top|clock     238.5 MHz     202.7 MHz     4.194         4.934         -0.740     inferred     Autoconstr_clkgroup_0
+==========================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                              |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------
+Starting          Ending            |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------
+cordic_top|clock  cordic_top|clock  |  4.194       -0.740  |  No paths    -      |  No paths    -      |  No paths    -    
+===========================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: cordic_top|clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                      Starting                                                Arrival           
+Instance                                                              Reference            Type       Pin     Net             Time        Slack 
+                                                                      Clock                                                                     
+------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15]     cordic_top|clock     dffeas     q       z_output_15     0.845       -0.740
+input_fifo.wr_addr[2]                                                 cordic_top|clock     dffeas     q       wr_addr[2]      0.845       -0.272
+input_fifo.rd_addr[2]                                                 cordic_top|clock     dffeas     q       rd_addr_2       0.845       -0.234
+sin_fifo.wr_addr[3]                                                   cordic_top|clock     dffeas     q       wr_addr[3]      0.845       -0.224
+cos_fifo.wr_addr[3]                                                   cordic_top|clock     dffeas     q       wr_addr[3]      0.845       -0.224
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.z_output[15]     cordic_top|clock     dffeas     q       z_output_15     0.845       -0.048
+cordic_inst.cordic_stage_gen\[2\]\.cordic_stage_inst.z_output[15]     cordic_top|clock     dffeas     q       z_output_15     0.845       -0.028
+cos_fifo.wr_addr[0]                                                   cordic_top|clock     dffeas     q       wr_addr[0]      0.845       -0.022
+sin_fifo.wr_addr[0]                                                   cordic_top|clock     dffeas     q       wr_addr[0]      0.845       -0.022
+cordic_inst.cordic_stage_gen\[3\]\.cordic_stage_inst.z_output[15]     cordic_top|clock     dffeas     q       z_output_15     0.845       -0.009
+================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                      Starting                                                        Required           
+Instance                                                              Reference            Type       Pin     Net                     Time         Slack 
+                                                                      Clock                                                                              
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15]     cordic_top|clock     dffeas     d       un14_x_output_add15     4.721        -0.740
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[14]     cordic_top|clock     dffeas     d       un14_x_output_add14     4.721        -0.674
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[13]     cordic_top|clock     dffeas     d       un14_x_output_add13     4.721        -0.608
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[12]     cordic_top|clock     dffeas     d       un14_x_output_add12     4.721        -0.542
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[11]     cordic_top|clock     dffeas     d       un14_x_output_add11     4.721        -0.476
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[10]     cordic_top|clock     dffeas     d       un14_x_output_add10     4.721        -0.410
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[9]      cordic_top|clock     dffeas     d       un14_x_output_add9      4.721        -0.344
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[8]      cordic_top|clock     dffeas     d       un14_x_output_add8      4.721        -0.278
+input_fifo.fifo_buf.input_fifo.fifo_buf_ram15_[0]                     cordic_top|clock     dffeas     ena     muxe15_m2               4.117        -0.272
+input_fifo.fifo_buf.input_fifo.fifo_buf_ram15_[1]                     cordic_top|clock     dffeas     ena     muxe15_m2               4.117        -0.272
+=========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      4.194
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.721
+
+    - Propagation time:                      4.848
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.740
+
+    Number of logic level(s):                18
+    Starting point:                          cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15] / q
+    Ending point:                            cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15] / d
+    The start point is clocked by            cordic_top|clock [rising] on pin clk
+    The end   point is clocked by            cordic_top|clock [rising] on pin clk
+
+Instance / Net                                                                                               Pin         Pin               Arrival     No. of    
+Name                                                                               Type                      Name        Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15]                  dffeas                    q           Out     0.232     0.845       -         
+z_output_15                                                                        Net                       -           -       1.216     -           51        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     datab       In      -         2.061       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     combout     Out     0.443     2.503       -         
+un17_x_output_combout[0]                                                           Net                       -           -       0.429     -           10        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     datab       In      -         2.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     cout        Out     0.509     3.442       -         
+un14_x_output_0_carry_0                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cin         In      -         3.442       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cout        Out     0.066     3.508       -         
+un14_x_output_0_carry_1                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cin         In      -         3.508       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cout        Out     0.066     3.574       -         
+un14_x_output_0_carry_2                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIAKSV1[0]     cycloneive_lcell_comb     cin         In      -         3.574       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIAKSV1[0]     cycloneive_lcell_comb     cout        Out     0.066     3.640       -         
+un14_x_output_0_carry_3                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIIL0G2[0]     cycloneive_lcell_comb     cin         In      -         3.640       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIIL0G2[0]     cycloneive_lcell_comb     cout        Out     0.066     3.706       -         
+un14_x_output_0_carry_4                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIQM403[0]     cycloneive_lcell_comb     cin         In      -         3.706       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIQM403[0]     cycloneive_lcell_comb     cout        Out     0.066     3.772       -         
+un14_x_output_0_carry_5                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2O8G3[0]     cycloneive_lcell_comb     cin         In      -         3.772       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2O8G3[0]     cycloneive_lcell_comb     cout        Out     0.066     3.838       -         
+un14_x_output_0_carry_6                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIBQC04[0]     cycloneive_lcell_comb     cin         In      -         3.838       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIBQC04[0]     cycloneive_lcell_comb     cout        Out     0.066     3.904       -         
+un14_x_output_0_carry_7                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIJRGG4[0]     cycloneive_lcell_comb     cin         In      -         3.904       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIJRGG4[0]     cycloneive_lcell_comb     cout        Out     0.066     3.970       -         
+un14_x_output_0_carry_8                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIRSK05[0]     cycloneive_lcell_comb     cin         In      -         3.970       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIRSK05[0]     cycloneive_lcell_comb     cout        Out     0.066     4.036       -         
+un14_x_output_0_carry_9                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI4VOG5[0]     cycloneive_lcell_comb     cin         In      -         4.036       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI4VOG5[0]     cycloneive_lcell_comb     cout        Out     0.066     4.102       -         
+un14_x_output_0_carry_10                                                           Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNID1T06[0]     cycloneive_lcell_comb     cin         In      -         4.102       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNID1T06[0]     cycloneive_lcell_comb     cout        Out     0.066     4.168       -         
+un14_x_output_0_carry_11                                                           Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIL21H6[0]     cycloneive_lcell_comb     cin         In      -         4.168       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIL21H6[0]     cycloneive_lcell_comb     cout        Out     0.066     4.234       -         
+un14_x_output_0_carry_12                                                           Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIU4517[0]     cycloneive_lcell_comb     cin         In      -         4.234       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIU4517[0]     cycloneive_lcell_comb     combout     Out     0.000     4.234       -         
+un14_x_output_0_add13                                                              Net                       -           -       0.652     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     datab       In      -         4.886       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cout        Out     0.509     5.394       -         
+un14_x_output_carry_13                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cin         In      -         5.394       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cout        Out     0.066     5.460       -         
+un14_x_output_carry_14                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     cin         In      -         5.460       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     combout     Out     0.000     5.460       -         
+un14_x_output_add15                                                                Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15]                  dffeas                    d           In      -         5.460       -         
+=================================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 4.934 is 2.637(53.5%) logic and 2.296(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 2: 
+      Requested Period:                      4.194
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.721
+
+    - Propagation time:                      4.848
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.740
+
+    Number of logic level(s):                18
+    Starting point:                          cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15] / q
+    Ending point:                            cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15] / d
+    The start point is clocked by            cordic_top|clock [rising] on pin clk
+    The end   point is clocked by            cordic_top|clock [rising] on pin clk
+
+Instance / Net                                                                                              Pin         Pin               Arrival     No. of    
+Name                                                                              Type                      Name        Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15]                 dffeas                    q           Out     0.232     0.845       -         
+z_output_15                                                                       Net                       -           -       1.216     -           51        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]             cycloneive_lcell_comb     datab       In      -         2.061       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]             cycloneive_lcell_comb     combout     Out     0.443     2.503       -         
+un17_x_output_combout[0]                                                          Net                       -           -       0.429     -           10        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]     cycloneive_lcell_comb     datab       In      -         2.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]     cycloneive_lcell_comb     cout        Out     0.509     3.442       -         
+un14_x_output_0_carry_0                                                           Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]     cycloneive_lcell_comb     cin         In      -         3.442       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]     cycloneive_lcell_comb     combout     Out     0.000     3.442       -         
+un14_x_output_0_add1                                                              Net                       -           -       0.652     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add1           cycloneive_lcell_comb     datab       In      -         4.093       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add1           cycloneive_lcell_comb     cout        Out     0.509     4.603       -         
+un14_x_output_carry_1                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add2           cycloneive_lcell_comb     cin         In      -         4.603       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add2           cycloneive_lcell_comb     cout        Out     0.066     4.668       -         
+un14_x_output_carry_2                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add3           cycloneive_lcell_comb     cin         In      -         4.668       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add3           cycloneive_lcell_comb     cout        Out     0.066     4.734       -         
+un14_x_output_carry_3                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4           cycloneive_lcell_comb     cin         In      -         4.734       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4           cycloneive_lcell_comb     cout        Out     0.066     4.801       -         
+un14_x_output_carry_4                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5           cycloneive_lcell_comb     cin         In      -         4.801       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5           cycloneive_lcell_comb     cout        Out     0.066     4.867       -         
+un14_x_output_carry_5                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6           cycloneive_lcell_comb     cin         In      -         4.867       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6           cycloneive_lcell_comb     cout        Out     0.066     4.933       -         
+un14_x_output_carry_6                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7           cycloneive_lcell_comb     cin         In      -         4.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7           cycloneive_lcell_comb     cout        Out     0.066     4.998       -         
+un14_x_output_carry_7                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8           cycloneive_lcell_comb     cin         In      -         4.998       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8           cycloneive_lcell_comb     cout        Out     0.066     5.064       -         
+un14_x_output_carry_8                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9           cycloneive_lcell_comb     cin         In      -         5.064       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9           cycloneive_lcell_comb     cout        Out     0.066     5.130       -         
+un14_x_output_carry_9                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10          cycloneive_lcell_comb     cin         In      -         5.130       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10          cycloneive_lcell_comb     cout        Out     0.066     5.197       -         
+un14_x_output_carry_10                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11          cycloneive_lcell_comb     cin         In      -         5.197       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11          cycloneive_lcell_comb     cout        Out     0.066     5.263       -         
+un14_x_output_carry_11                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12          cycloneive_lcell_comb     cin         In      -         5.263       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12          cycloneive_lcell_comb     cout        Out     0.066     5.329       -         
+un14_x_output_carry_12                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13          cycloneive_lcell_comb     cin         In      -         5.329       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13          cycloneive_lcell_comb     cout        Out     0.066     5.394       -         
+un14_x_output_carry_13                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14          cycloneive_lcell_comb     cin         In      -         5.394       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14          cycloneive_lcell_comb     cout        Out     0.066     5.460       -         
+un14_x_output_carry_14                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15          cycloneive_lcell_comb     cin         In      -         5.460       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15          cycloneive_lcell_comb     combout     Out     0.000     5.460       -         
+un14_x_output_add15                                                               Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15]                 dffeas                    d           In      -         5.460       -         
+================================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 4.934 is 2.637(53.5%) logic and 2.296(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 3: 
+      Requested Period:                      4.194
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.721
+
+    - Propagation time:                      4.848
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.740
+
+    Number of logic level(s):                18
+    Starting point:                          cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15] / q
+    Ending point:                            cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15] / d
+    The start point is clocked by            cordic_top|clock [rising] on pin clk
+    The end   point is clocked by            cordic_top|clock [rising] on pin clk
+
+Instance / Net                                                                                               Pin         Pin               Arrival     No. of    
+Name                                                                               Type                      Name        Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15]                  dffeas                    q           Out     0.232     0.845       -         
+z_output_15                                                                        Net                       -           -       1.216     -           51        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     datab       In      -         2.061       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     combout     Out     0.443     2.503       -         
+un17_x_output_combout[0]                                                           Net                       -           -       0.429     -           10        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     datab       In      -         2.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     cout        Out     0.509     3.442       -         
+un14_x_output_0_carry_0                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cin         In      -         3.442       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cout        Out     0.066     3.508       -         
+un14_x_output_0_carry_1                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cin         In      -         3.508       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     combout     Out     0.000     3.508       -         
+un14_x_output_0_add2                                                               Net                       -           -       0.652     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add2            cycloneive_lcell_comb     datab       In      -         4.160       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add2            cycloneive_lcell_comb     cout        Out     0.509     4.668       -         
+un14_x_output_carry_2                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add3            cycloneive_lcell_comb     cin         In      -         4.668       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add3            cycloneive_lcell_comb     cout        Out     0.066     4.734       -         
+un14_x_output_carry_3                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4            cycloneive_lcell_comb     cin         In      -         4.734       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4            cycloneive_lcell_comb     cout        Out     0.066     4.801       -         
+un14_x_output_carry_4                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5            cycloneive_lcell_comb     cin         In      -         4.801       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5            cycloneive_lcell_comb     cout        Out     0.066     4.867       -         
+un14_x_output_carry_5                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6            cycloneive_lcell_comb     cin         In      -         4.867       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6            cycloneive_lcell_comb     cout        Out     0.066     4.933       -         
+un14_x_output_carry_6                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7            cycloneive_lcell_comb     cin         In      -         4.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7            cycloneive_lcell_comb     cout        Out     0.066     4.998       -         
+un14_x_output_carry_7                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8            cycloneive_lcell_comb     cin         In      -         4.998       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8            cycloneive_lcell_comb     cout        Out     0.066     5.064       -         
+un14_x_output_carry_8                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9            cycloneive_lcell_comb     cin         In      -         5.064       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9            cycloneive_lcell_comb     cout        Out     0.066     5.130       -         
+un14_x_output_carry_9                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10           cycloneive_lcell_comb     cin         In      -         5.130       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10           cycloneive_lcell_comb     cout        Out     0.066     5.197       -         
+un14_x_output_carry_10                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11           cycloneive_lcell_comb     cin         In      -         5.197       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11           cycloneive_lcell_comb     cout        Out     0.066     5.263       -         
+un14_x_output_carry_11                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12           cycloneive_lcell_comb     cin         In      -         5.263       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12           cycloneive_lcell_comb     cout        Out     0.066     5.329       -         
+un14_x_output_carry_12                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cin         In      -         5.329       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cout        Out     0.066     5.394       -         
+un14_x_output_carry_13                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cin         In      -         5.394       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cout        Out     0.066     5.460       -         
+un14_x_output_carry_14                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     cin         In      -         5.460       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     combout     Out     0.000     5.460       -         
+un14_x_output_add15                                                                Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15]                  dffeas                    d           In      -         5.460       -         
+=================================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 4.934 is 2.637(53.5%) logic and 2.296(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 4: 
+      Requested Period:                      4.194
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.721
+
+    - Propagation time:                      4.848
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.740
+
+    Number of logic level(s):                18
+    Starting point:                          cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15] / q
+    Ending point:                            cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15] / d
+    The start point is clocked by            cordic_top|clock [rising] on pin clk
+    The end   point is clocked by            cordic_top|clock [rising] on pin clk
+
+Instance / Net                                                                                               Pin         Pin               Arrival     No. of    
+Name                                                                               Type                      Name        Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15]                  dffeas                    q           Out     0.232     0.845       -         
+z_output_15                                                                        Net                       -           -       1.216     -           51        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     datab       In      -         2.061       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     combout     Out     0.443     2.503       -         
+un17_x_output_combout[0]                                                           Net                       -           -       0.429     -           10        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     datab       In      -         2.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     cout        Out     0.509     3.442       -         
+un14_x_output_0_carry_0                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cin         In      -         3.442       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cout        Out     0.066     3.508       -         
+un14_x_output_0_carry_1                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cin         In      -         3.508       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cout        Out     0.066     3.574       -         
+un14_x_output_0_carry_2                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIAKSV1[0]     cycloneive_lcell_comb     cin         In      -         3.574       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIAKSV1[0]     cycloneive_lcell_comb     combout     Out     0.000     3.574       -         
+un14_x_output_0_add3                                                               Net                       -           -       0.652     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add3            cycloneive_lcell_comb     datab       In      -         4.226       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add3            cycloneive_lcell_comb     cout        Out     0.509     4.734       -         
+un14_x_output_carry_3                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4            cycloneive_lcell_comb     cin         In      -         4.734       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4            cycloneive_lcell_comb     cout        Out     0.066     4.801       -         
+un14_x_output_carry_4                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5            cycloneive_lcell_comb     cin         In      -         4.801       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5            cycloneive_lcell_comb     cout        Out     0.066     4.867       -         
+un14_x_output_carry_5                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6            cycloneive_lcell_comb     cin         In      -         4.867       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6            cycloneive_lcell_comb     cout        Out     0.066     4.933       -         
+un14_x_output_carry_6                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7            cycloneive_lcell_comb     cin         In      -         4.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7            cycloneive_lcell_comb     cout        Out     0.066     4.998       -         
+un14_x_output_carry_7                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8            cycloneive_lcell_comb     cin         In      -         4.998       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8            cycloneive_lcell_comb     cout        Out     0.066     5.064       -         
+un14_x_output_carry_8                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9            cycloneive_lcell_comb     cin         In      -         5.064       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9            cycloneive_lcell_comb     cout        Out     0.066     5.130       -         
+un14_x_output_carry_9                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10           cycloneive_lcell_comb     cin         In      -         5.130       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10           cycloneive_lcell_comb     cout        Out     0.066     5.197       -         
+un14_x_output_carry_10                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11           cycloneive_lcell_comb     cin         In      -         5.197       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11           cycloneive_lcell_comb     cout        Out     0.066     5.263       -         
+un14_x_output_carry_11                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12           cycloneive_lcell_comb     cin         In      -         5.263       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12           cycloneive_lcell_comb     cout        Out     0.066     5.329       -         
+un14_x_output_carry_12                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cin         In      -         5.329       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cout        Out     0.066     5.394       -         
+un14_x_output_carry_13                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cin         In      -         5.394       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cout        Out     0.066     5.460       -         
+un14_x_output_carry_14                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     cin         In      -         5.460       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     combout     Out     0.000     5.460       -         
+un14_x_output_add15                                                                Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15]                  dffeas                    d           In      -         5.460       -         
+=================================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 4.934 is 2.637(53.5%) logic and 2.296(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+Path information for path number 5: 
+      Requested Period:                      4.194
+    - Setup time:                            0.086
+    + Intrinsic clock delay:                 0.613
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.721
+
+    - Propagation time:                      4.848
+    - Intrinsic clock delay:                 0.613
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.740
+
+    Number of logic level(s):                18
+    Starting point:                          cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15] / q
+    Ending point:                            cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15] / d
+    The start point is clocked by            cordic_top|clock [rising] on pin clk
+    The end   point is clocked by            cordic_top|clock [rising] on pin clk
+
+Instance / Net                                                                                               Pin         Pin               Arrival     No. of    
+Name                                                                               Type                      Name        Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+cordic_inst.cordic_stage_gen\[0\]\.cordic_stage_inst.z_output[15]                  dffeas                    q           Out     0.232     0.845       -         
+z_output_15                                                                        Net                       -           -       1.216     -           51        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     datab       In      -         2.061       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output[0]              cycloneive_lcell_comb     combout     Out     0.443     2.503       -         
+un17_x_output_combout[0]                                                           Net                       -           -       0.429     -           10        
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     datab       In      -         2.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIHFGF[0]      cycloneive_lcell_comb     cout        Out     0.509     3.442       -         
+un14_x_output_0_carry_0                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cin         In      -         3.442       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIPGKV[0]      cycloneive_lcell_comb     cout        Out     0.066     3.508       -         
+un14_x_output_0_carry_1                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cin         In      -         3.508       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNI2JOF1[0]     cycloneive_lcell_comb     cout        Out     0.066     3.574       -         
+un14_x_output_0_carry_2                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIAKSV1[0]     cycloneive_lcell_comb     cin         In      -         3.574       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIAKSV1[0]     cycloneive_lcell_comb     cout        Out     0.066     3.640       -         
+un14_x_output_0_carry_3                                                            Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIIL0G2[0]     cycloneive_lcell_comb     cin         In      -         3.640       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un17_x_output_RNIIL0G2[0]     cycloneive_lcell_comb     combout     Out     0.000     3.640       -         
+un14_x_output_0_add4                                                               Net                       -           -       0.652     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4            cycloneive_lcell_comb     datab       In      -         4.292       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add4            cycloneive_lcell_comb     cout        Out     0.509     4.801       -         
+un14_x_output_carry_4                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5            cycloneive_lcell_comb     cin         In      -         4.801       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add5            cycloneive_lcell_comb     cout        Out     0.066     4.867       -         
+un14_x_output_carry_5                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6            cycloneive_lcell_comb     cin         In      -         4.867       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add6            cycloneive_lcell_comb     cout        Out     0.066     4.933       -         
+un14_x_output_carry_6                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7            cycloneive_lcell_comb     cin         In      -         4.933       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add7            cycloneive_lcell_comb     cout        Out     0.066     4.998       -         
+un14_x_output_carry_7                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8            cycloneive_lcell_comb     cin         In      -         4.998       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add8            cycloneive_lcell_comb     cout        Out     0.066     5.064       -         
+un14_x_output_carry_8                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9            cycloneive_lcell_comb     cin         In      -         5.064       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add9            cycloneive_lcell_comb     cout        Out     0.066     5.130       -         
+un14_x_output_carry_9                                                              Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10           cycloneive_lcell_comb     cin         In      -         5.130       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add10           cycloneive_lcell_comb     cout        Out     0.066     5.197       -         
+un14_x_output_carry_10                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11           cycloneive_lcell_comb     cin         In      -         5.197       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add11           cycloneive_lcell_comb     cout        Out     0.066     5.263       -         
+un14_x_output_carry_11                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12           cycloneive_lcell_comb     cin         In      -         5.263       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add12           cycloneive_lcell_comb     cout        Out     0.066     5.329       -         
+un14_x_output_carry_12                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cin         In      -         5.329       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add13           cycloneive_lcell_comb     cout        Out     0.066     5.394       -         
+un14_x_output_carry_13                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cin         In      -         5.394       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add14           cycloneive_lcell_comb     cout        Out     0.066     5.460       -         
+un14_x_output_carry_14                                                             Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     cin         In      -         5.460       -         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.un14_x_output_add15           cycloneive_lcell_comb     combout     Out     0.000     5.460       -         
+un14_x_output_add15                                                                Net                       -           -       0.000     -           1         
+cordic_inst.cordic_stage_gen\[1\]\.cordic_stage_inst.x_output[15]                  dffeas                    d           In      -         5.460       -         
+=================================================================================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 4.934 is 2.637(53.5%) logic and 2.296(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 167MB peak: 178MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 167MB peak: 178MB)
+
+##### START OF AREA REPORT #####[
+Design view:work.cordic_top(verilog)
+Selecting part EP4CE6E22A7
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage.
+
+Total combinational functions 2735 of 6272 (43%)
+Logic element usage by number of inputs
+		  4 input functions 	 1038
+		  3 input functions 	 180
+		  <=2 input functions 	 1517
+Logic elements by mode
+		  normal mode            1457
+		  arithmetic mode        1278
+Total registers 1649 of 6272 (26%)
+I/O pins 56 of 180 (31%), total I/O based on largest package of this part.
+
+Number of I/O registers
+			Input DDRs    :0
+			Output DDRs   :0
+
+DSP Blocks:     0  (0 nine-bit DSP elements).
+DSP Utilization: 0.00% of available 15 blocks (30 nine-bit).
+ShiftTap:       0  (0 registers)
+Ena:             320
+Sload:           48
+Sclr:            708
+Total ESB:      0 bits 
+
+##### END OF AREA REPORT #####]
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 40MB peak: 178MB)
+
+Process took 0h:00m:13s realtime, 0h:00m:13s cputime
+# Thu Feb 27 01:35:13 2025
+
+###########################################################]

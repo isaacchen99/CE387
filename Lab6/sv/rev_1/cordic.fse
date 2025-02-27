@@ -1,0 +1,14 @@
+
+fsm_encoding {11860861} onehot
+
+fsm_state_encoding {11860861} IDLE {00000}
+
+fsm_state_encoding {11860861} READ {00011}
+
+fsm_state_encoding {11860861} PROC {00101}
+
+fsm_state_encoding {11860861} WAIT {01001}
+
+fsm_state_encoding {11860861} DONE {10001}
+
+fsm_registers {11860861} {curr_state[4]}  {curr_state[3]}  {curr_state[2]}  {curr_state[1]}  {curr_state_i_0[0]} 

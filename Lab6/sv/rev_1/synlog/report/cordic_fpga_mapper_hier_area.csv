@@ -1,0 +1,23 @@
+
+. Module name, ATOMS, ARITHMETIC MODE, REGISTERS, SYNC RAMS, MACs
+. cordic_top, 1457, 0, 1649, 0, 0
+.	. cordic, 248, 0, 737, 0, 0
+.	.	. cordic_stage_16s_16s_0s_Z1, 0, 0, 19, 0, 0
+.	.	. cordic_stage_16s_16s_10s_Z11, 19, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_11s_Z12, 16, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_12s_Z13, 11, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_13s_Z14, 6, 0, 33, 0, 0
+.	.	. cordic_stage_16s_16s_14s_Z15, 4, 0, 33, 0, 0
+.	.	. cordic_stage_16s_16s_15s_Z16, 2, 0, 32, 0, 0
+.	.	. cordic_stage_16s_16s_1s_Z2, 1, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_2s_Z3, 28, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_3s_Z4, 26, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_4s_Z5, 24, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_5s_Z6, 22, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_6s_Z7, 20, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_7s_Z8, 18, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_8s_Z9, 16, 0, 48, 0, 0
+.	.	. cordic_stage_16s_16s_9s_Z10, 14, 0, 48, 0, 0
+.	. fifo_16s_16s_5s, 235, 0, 293, 0, 0
+.	. fifo_16s_16s_5s_0, 492, 0, 310, 0, 0
+.	. fifo_16s_16s_5s_1, 473, 0, 309, 0, 0

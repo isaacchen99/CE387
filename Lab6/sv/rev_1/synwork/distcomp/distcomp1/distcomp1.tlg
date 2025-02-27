@@ -1,0 +1,33 @@
+@N:: Applying property .distcompnoprune with value 1 on module cordic in library work
+@N:: Applying property .noprune with value 1 on module cordic in library work
+@N:: Applying property .distcomp_black_box with value 1 on module cordic in library work
+@N:: Applying property syn_black_box with value 1 on module cordic in library work
+@N:: Applying property .distcompmodetop with value 1 on module cordic_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module cordic_top in library work
+@N:: Applying property .noprune with value 1 on module cordic_top in library work
+@N:: Applying property .distcompnoprune with value 1 on module fifo in library work
+@N:: Applying property .noprune with value 1 on module fifo in library work
+Selecting top level module cordic_top
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":1:7:1:10|Synthesizing module fifo in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	FIFO_ADDR_WIDTH=32'b00000000000000000000000000000101
+   Generated name = fifo_16s_16s_5s
+Running optimization stage 1 on fifo_16s_16s_5s .......
+@N: CL134 :"/home/icl5712/GitHub/CE387/Lab6/sv/fifo.sv":34:4:34:12|Found RAM fifo_buf, depth=16, width=16
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic.sv":1:7:1:12|Synthesizing module cordic in library work.
+
+	FIFO_DATA_WIDTH=32'b00000000000000000000000000010000
+	FIFO_BUFFER_SIZE=32'b00000000000000000000000000010000
+	NUM_STAGES=32'b00000000000000000000000000010000
+   Generated name = cordic_16s_16s_16s
+@N: CG364 :"/home/icl5712/GitHub/CE387/Lab6/sv/cordic_top.sv":1:7:1:16|Synthesizing module cordic_top in library work.
+Running optimization stage 1 on cordic_top .......
+Running optimization stage 2 on cordic_top .......
+Running optimization stage 2 on fifo_16s_16s_5s .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork//distcomp/distcomp1/distcomp1.rt.csv
+

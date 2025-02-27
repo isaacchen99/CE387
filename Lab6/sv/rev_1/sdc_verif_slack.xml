@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Timing Correlation XML file -->
+<timing_correlation_data>
+<!-- Points -->
+<path_info title="true">
+<index> Index   </index>
+<start_inst> Start Inst   </start_inst>
+<start_type> Start Type   </start_type>
+<start_clock> Start Clock   </start_clock>
+<end_inst> End Inst   </end_inst>
+<end_type> End Type   </end_type>
+<end_clock> End Clock   </end_clock>
+<clock_skew> Clock Skew   </clock_skew>
+<req_per> Required Time   </req_per>
+<slack> Slack   </slack>
+<ucf> Clock Group   </ucf>
+<status> Status   </status>
+</path_info>
+<path_info>
+<index> 1   </index>
+<start_inst> cordic_inst/cordic_stage_gen\[0\]\.cordic_stage_inst/z_output[15]   </start_inst>
+<start_type> reg </start_type>
+<start_clock> cordic_top|clock:r   </start_clock>
+<end_inst> cordic_inst/cordic_stage_gen\[1\]\.cordic_stage_inst/x_output[15]   </end_inst>
+<end_type> reg   </end_type>
+<end_clock> cordic_top|clock:r   </end_clock>
+<clock_skew>
+<val> 0.0 </val>
+<txt> 0.000 - 0.000 </txt>
+</clock_skew>
+<req_per> 4.194 </req_per>
+<slack> -0.740 </slack>
+<ucf>  </ucf>
+<status>
+<val> 0 </val>
+</status>
+<margin>
+<val> 0 </val>
+</margin>
+</path_info>
+</timing_correlation_data>

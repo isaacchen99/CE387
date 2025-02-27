@@ -1,0 +1,8 @@
+/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter  -link  -multisrs  /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork/cordic_comp.srs  -osyn  /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synwork/cordic_mult.srs  -log  /home/icl5712/GitHub/CE387/Lab6/sv/rev_1/synlog/cordic_multi_srs_gen.srr 
+relcom:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter -link -multisrs ../synwork/cordic_comp.srs -osyn ../synwork/cordic_mult.srs -log ../synlog/cordic_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:../synwork/cordic_comp.srs|io:i|time:1740641697|size:40706|exec:0|csum:453AE07A1B624545D55C49E52EAD9612
+file:../synwork/cordic_mult.srs|io:o|time:1740641698|size:3790|exec:0|csum:
+file:../synlog/cordic_multi_srs_gen.srr|io:o|time:1740641698|size:1428|exec:0|csum:
+file:/vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/syn_nfilter|io:i|time:1543382463|size:12202632|exec:1|csum:2CF5CA82A12C53A85C3E36D57C2461DC
+file:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter|io:i|time:1543382354|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0
