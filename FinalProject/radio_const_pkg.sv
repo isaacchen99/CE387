@@ -81,6 +81,10 @@ package radio_const_pkg;
     32'h0000000c, 32'h0000000b, 32'h00000008, 32'h00000004, 32'h00000002, 32'h00000000, 32'h00000000, 32'hffffffff
   };
 
+  parameter logic [31:0] TEST_COEFFS[32] = '{
+    default: 32'h00000001  // SystemVerilog-2012 feature, may need verification for synthesis
+  };
+
   // Sin lookup table
   parameter logic sin_lut[1024] = '{
     32'h00000000, 32'h00000006, 32'h0000000C, 32'h00000012, 32'h00000019, 32'h0000001F, 32'h00000025, 32'h0000002B, 
@@ -213,4 +217,3 @@ package radio_const_pkg;
     32'hFFFFFFCE, 32'hFFFFFFD5, 32'hFFFFFFDB, 32'hFFFFFFE1, 32'hFFFFFFE7, 32'hFFFFFFEE, 32'hFFFFFFF4, 32'hFFFFFFFA
   };
 endpackage;
-

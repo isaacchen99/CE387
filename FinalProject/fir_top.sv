@@ -1,6 +1,8 @@
+import radio_const_pkg::*;
+
 module fir_top #(
   parameter DECIMATION       = 1,
-  parameter FIFO_DATA_WIDTH  = 32,
+  parameter FIFO_DATA_WIDTH  = 16,
   parameter NUM_TAPS         = 32,
   parameter logic signed [31:0] COEFFS [NUM_TAPS] = '{default:32'd0}
 ) (

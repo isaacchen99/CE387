@@ -2,9 +2,9 @@ import radio_const_pkg::*;
 
 module fir #(
   parameter DECIMATION = 1,
-  parameter FIFO_DATA_WIDTH = 10,
+  parameter FIFO_DATA_WIDTH = 16,
   parameter NUM_TAPS = 32,
-  parameter logic signed [31:0] COEFFS [NUM_TAPS] = '{default:32'd0}  // pass in the desired coeffs (e.g. AUDIO_LPR_COEFFS)
+  parameter logic signed [31:0] COEFFS [NUM_TAPS] = '{default:32'd0}
 ) (
   input  logic clk,
   input  logic rst,
@@ -45,16 +45,18 @@ module fir #(
       end
 
       READ: begin
-        // If we've read the required number of samples, move to MULT
-        if (decimation_counter == DECIMATION)
-          next_state = MULT;
-        else begin
-          // Only drive FIFO read enable if the FIFO is not empty.
-          if (!rd_fifo_empty)
-            rd_fifo_rd_en = 1'b1;
+        // First, check if the FIFO is empty.
+        if (rd_fifo_empty) begin
+          rd_fifo_rd_en = 1'b0;
+          next_state    = READ; // Stay in READ if there's no data.
+        end else begin
+          // When data is available, assert the read enable.
+          rd_fifo_rd_en = 1'b1;
+          // Only increment the decimation counter after reading valid data.
+          if (decimation_counter == (DECIMATION - 1))
+            next_state = MULT;
           else
-            rd_fifo_rd_en = 1'b0;
-          next_state = READ;
+            next_state = READ;
         end
       end
 
