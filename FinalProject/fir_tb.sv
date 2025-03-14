@@ -2,9 +2,9 @@ import radio_const_pkg::*;
 
 `timescale 1ns/1ps
 
-module tb_fir_top;
+module fir_tb;
 
-  localparam DECIMATION       = 1;      // Process every sample
+  localparam DECIMATION       = 2;      // Process every sample
   localparam FIFO_DATA_WIDTH  = 16;
   localparam NUM_TAPS         = 32;
   localparam int NUM_INPUTS   = 128;

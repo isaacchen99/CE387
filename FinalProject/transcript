@@ -1,0 +1,154 @@
+# //  Questa Sim
+# //  Version 2019.3_2 linux Sep 24 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do fir_tb.do
+# -9
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim vmap 2019.3_2 Lib Mapping Utility 2019.09 Sep 24 2019
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+# Start time: 23:57:05 on Mar 12,2025
+# vlog -reportprogress 300 -work work radio_const_pkg.sv 
+# -- Compiling package radio_const_pkg
+# ** Warning: radio_const_pkg.sv(219): (vlog-2283) Extra semicolon in $unit (global) scope.
+# ** Warning: radio_const_pkg.sv(219): (vlog-2284) Empty $unit scope found.
+# -- Compiling package radio_const_pkg_sv_unit
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:57:05 on Mar 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+# Start time: 23:57:05 on Mar 12,2025
+# vlog -reportprogress 300 -work work fifo.sv 
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# End time: 23:57:05 on Mar 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+# Start time: 23:57:05 on Mar 12,2025
+# vlog -reportprogress 300 -work work fir.sv 
+# -- Compiling package fir_sv_unit
+# -- Importing package radio_const_pkg
+# -- Compiling module fir
+# 
+# Top level modules:
+# 	fir
+# End time: 23:57:05 on Mar 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+# Start time: 23:57:05 on Mar 12,2025
+# vlog -reportprogress 300 -work work fir_top.sv 
+# -- Compiling package fir_top_sv_unit
+# -- Importing package radio_const_pkg
+# -- Compiling module fir_top
+# 
+# Top level modules:
+# 	fir_top
+# End time: 23:57:05 on Mar 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim vlog 2019.3_2 Compiler 2019.09 Sep 24 2019
+# Start time: 23:57:05 on Mar 12,2025
+# vlog -reportprogress 300 -work work fir_tb.sv 
+# -- Compiling package fir_tb_sv_unit
+# -- Importing package radio_const_pkg
+# -- Compiling module fir_tb
+# 
+# Top level modules:
+# 	fir_tb
+# End time: 23:57:05 on Mar 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -classdebug -voptargs="+acc" "+notimingchecks" -L work work.fir_tb -wlf fir_tb.wlf 
+# Start time: 23:57:05 on Mar 12,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "fir(fast)".
+# Loading sv_std.std
+# Loading work.radio_const_pkg(fast)
+# Loading work.fir_tb_sv_unit(fast)
+# Loading work.fir_tb(fast)
+# Loading work.fir_top_sv_unit(fast)
+# Loading work.fir_top(fast)
+# Loading work.fifo(fast)
+# Loading work.fir_sv_unit(fast)
+# Loading work.fir(fast)
+# Output sample 0: 00000000
+# Output sample 1: 00000001
+# Output sample 2: 00000006
+# Output sample 3: 0000000f
+# Output sample 4: 0000001c
+# Output sample 5: 0000002d
+# Output sample 6: 00000042
+# Output sample 7: 0000005b
+# Output sample 8: 00000078
+# Output sample 9: 00000099
+# Output sample 10: 000000be
+# Output sample 11: 000000e7
+# Output sample 12: 00000114
+# Output sample 13: 00000145
+# Output sample 14: 0000017a
+# Output sample 15: 000001b3
+# Output sample 16: 000001f0
+# Output sample 17: 00000230
+# Output sample 18: 00000270
+# Output sample 19: 000002b0
+# Output sample 20: 000002f0
+# Output sample 21: 00000330
+# Output sample 22: 00000000
+# Output sample 28: 00000370
+# Output sample 29: 00000000
+# Output sample 35: 000003b0
+# Output sample 36: 00000000
+# Output sample 42: 000003f0
+# Output sample 43: 00000000
+# Output sample 49: 00000430
+# Output sample 50: 00000000
+# Output sample 56: 00000470
+# Output sample 57: 00000000
+# Output sample 63: 000004b0
+# Output sample 64: 00000000
+# Output sample 70: 000004f0
+# Output sample 71: 00000000
+# Output sample 77: 00000530
+# Output sample 78: 00000000
+# Output sample 84: 00000570
+# Output sample 85: 00000000
+# Output sample 91: 000005b0
+# Output sample 92: 00000000
+# Output sample 98: 000005f0
+# Output sample 99: 00000000
+# Output sample 105: 00000630
+# Output sample 106: 00000000
+# Output sample 112: 00000670
+# Output sample 113: 00000000
+# Output sample 119: 000006b0
+# Output sample 120: 00000000
+# Output sample 126: 000006f0
+# Output sample 127: 00000000
+# Output sample 133: 00000730
+# Output sample 134: 00000000
+# Output sample 140: 00000770
+# Output sample 141: 00000000
+# Output sample 147: 000007b0
+# Output sample 148: 00000000
+# Output sample 154: 000007f0
+# Output sample 155: 00000000
+# ** Note: $finish    : fir_tb.sv(93)
+#    Time: 3035 ns  Iteration: 0  Instance: /fir_tb
+# 1
+# Break in Module fir_tb at fir_tb.sv line 93
+# End time: 23:59:25 on Mar 12,2025, Elapsed time: 0:02:20
+# Errors: 3, Warnings: 0
